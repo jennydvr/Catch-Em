@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600" xmlns:componentes="componentes.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			[Bindable]
+			public var animal:Animal;
+		]]>
+	</fx:Script>
+	<s:states>
+		<s:State name="home">
+			
+		</s:State>
+		<s:State name="map">
+			
+		</s:State>
+	</s:states>
+	<mx:ViewStack id="menu" width="800" height="600">
+
+			<s:NavigatorContent>
+				
+				<s:Button id="home" x="725" y="470" width="40" icon="assets/home.gif"
+						  click="menu.selectedChild=casa"/>
+				<s:Button id="map" x="723" y="535" width="41" icon="assets/map.gif"
+						  click="menu.selectedChild=mapa"/>
+							
+			</s:NavigatorContent>
+
+
+			<s:NavigatorContent id="casa">
+				<componentes:casaExterior animal="{animal}">
+					
+				</componentes:casaExterior>
+			</s:NavigatorContent>
+			
+			<s:NavigatorContent id="mapa" >
+				<componentes:mapa animal="{animal}">
+					
+				</componentes:mapa>
+			</s:NavigatorContent>
+		
+	</mx:ViewStack>
+
+
+</s:Group>

@@ -1,0 +1,27 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+
+.Estilo
+{
+	backgroundColor: #FDB405;
+}
+global
+{
+	content-background-color: #FE9601;
+	chrome-color: #FFFA78;
+}
+s|NavigatorContent.contenido
+{
+	backgroundColor: #FB8800;
+	chromeColor: #FBAA0D;
+	focusColor: #FFF001;
+}
+s|TextInput
+{
+	color: #000000;
+	fontFamily: Verdana;
+	fontSize: 12;
+}
+	

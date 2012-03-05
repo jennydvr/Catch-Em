@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 xmlns:components="componentes.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>	
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			[Bindable]
+			public var animal:Animal;
+		]]>
+	</fx:Script>
+ <components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+	 
+ </components:menuSuperior>
+   <s:NavigatorContent width="800" height="333" backgroundColor="#F5FB96">
+	   
+
+	<s:Button x="144" y="104" width="329" chromeColor="#FFFFFF" icon="assets/trofeos.gif"/>
+	<s:Button x="539" y="104" width="200" icon="assets/myPics.gif"/>
+		   
+    </s:NavigatorContent>
+	
+	
+	<s:BorderContainer x="0" y="324" width="800" height="276" backgroundColor="#EE7E1B">
+		<s:Button x="617" y="69" label="Baul"/>
+	</s:BorderContainer>
+	<s:Image x="73" y="324" width="328" height="252" source="assets/mesa.gif"/>
+	<s:Button x="147" y="356" width="105" height="71" chromeColor="#868338" cornerRadius="12"
+			  icon="assets/achievement.gif"/>
+
+</s:Group>

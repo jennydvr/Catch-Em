@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 xmlns:components="componentes.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			[Bindable]
+			public var animal:Animal;
+		]]>
+	</fx:Script>
+	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+		
+	</components:menuSuperior>
+	
+	
+	<mx:ViewStack id="menuMapa" width="800" height="600">
+		
+		<!-- Mapa -->
+		<s:NavigatorContent width="800" height="600" backgroundColor="#C28ADA">
+
+				<s:Button x="584" y="314" click="menuMapa.selectedChild=tiro" icon="assets/tiro.gif"/>
+				<s:Button x="43" y="320" click="menuMapa.selectedChild=encontrado"
+						  icon="assets/perdidos.gif"/>
+				<s:Button x="43" y="125" click="menuMapa.selectedChild=carrera"
+						  icon="assets/carrera.gif"/>
+				<s:Button x="538" y="125" click="menuMapa.selectedChild=pelea"
+						  icon="assets/pelea.gif"/>
+			<s:Button x="313" y="181" width="167" height="191" click="menuMapa.selectedChild=casa"
+					  icon="assets/casaGrande.gif"/>
+			<s:Button x="296" y="433" width="198" height="167" click="menuMapa.selectedChild=mercado"
+					  icon="assets/mercado.gif"/>
+
+		</s:NavigatorContent>
+		
+		<!-- Mercado -->
+		<s:NavigatorContent id="mercado">
+			<components:mercado animal="{animal}">
+				
+			</components:mercado>
+		</s:NavigatorContent>
+		
+		<!-- Minijuego: Carrera -->
+		<s:NavigatorContent id="carrera">
+			<components:miniJuego animal="{animal}">
+				
+			</components:miniJuego>		
+		</s:NavigatorContent>
+		
+		<!-- Minijuego: Tiro -->
+		<s:NavigatorContent id="tiro">
+			<components:miniJuego animal="{animal}">
+				
+			</components:miniJuego>		
+		</s:NavigatorContent>	
+		
+		<!-- Minijuego: Pelea -->
+		<s:NavigatorContent id="pelea" >
+			<components:miniJuego animal="{animal}">
+				
+			</components:miniJuego>		
+		</s:NavigatorContent>			
+		
+		<!-- Minijuego: Perdidos y Encontrados -->
+		<s:NavigatorContent id="encontrado">
+			<components:perdidoEncontrado animal="{animal}">
+				
+			</components:perdidoEncontrado>
+		</s:NavigatorContent>
+		
+		<!-- Casa exterior -->
+		
+		<s:NavigatorContent id="casa">
+			<components:casaExterior animal="{animal}">
+			</components:casaExterior>
+		</s:NavigatorContent>
+		
+		
+	</mx:ViewStack>
+	
+
+
+
+</s:Group>

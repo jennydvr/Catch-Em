@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 xmlns:components="componentes.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			[Bindable]
+			public var animal:Animal;
+		]]>
+	</fx:Script>
+
+	<s:NavigatorContent>
+		
+
+	<s:BorderContainer x="10" y="78" width="780" height="321">
+		<s:Label x="347" y="142" text="Imagen juego"/>
+	</s:BorderContainer>
+	<s:BorderContainer x="10" y="406" width="781" height="184" backgroundColor="#FFFB8C">
+	</s:BorderContainer>
+	<s:NavigatorContent width="800" height="600" backgroundColor="#B0AAAA">
+
+		<s:BorderContainer x="0" y="73" width="800" height="330">
+			<s:Label x="347" y="142" text="Imagen juego"/>
+		</s:BorderContainer>
+		<s:BorderContainer x="0" y="401" width="800" height="184" backgroundColor="#FFFB8C">
+		</s:BorderContainer>	
+	</s:NavigatorContent>
+	</s:NavigatorContent>
+	
+	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+		
+	</components:menuSuperior>
+	<components:menuDerecho animal="{animal}" color="#103079" fontFamily="Verdana" fontSize="15"
+							fontWeight="bold">
+		
+		
+	</components:menuDerecho>
+	<s:Label x="107" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Apple"/>
+	<s:Label x="237" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Hat"/>
+	<s:Label x="386" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Card"/>
+	<s:Label x="550" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Cat"/>
+	<s:Label x="170" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Rainbow"/>
+	<s:Label x="320" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Bird"/>
+	<s:Label x="485" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+			 text="Bowl"/>
+</s:Group>

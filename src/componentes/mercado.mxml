@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 xmlns:components="componentes.*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			[Bindable]
+			public var animal:Animal;
+		]]>
+	</fx:Script>
+	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+		
+	</components:menuSuperior>
+
+		
+
+
+	<s:BorderContainer x="0" y="68" width="802" height="532" backgroundColor="#E97A7A">
+		<mx:TabNavigator x="162" y="54" width="459" height="377">
+			<s:NavigatorContent width="100%" height="100%" label="Food" backgroundColor="#B68033">
+				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
+					<s:Image x="20" y="6" source="assets/meat.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="281" y="10" width="90" height="69" cornerRadius="10">
+					<s:Image x="28" y="25" source="assets/banana.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="147" y="10" width="91" height="69" cornerRadius="10">
+					<s:Image x="29" y="18" source="assets/bone.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="27" y="121" width="90" height="68" cornerRadius="10">
+				</s:BorderContainer>
+				<s:BorderContainer x="153" y="122" width="90" height="68" cornerRadius="10">
+					<s:Image x="19" y="18" width="50" height="38" source="assets/apple.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="281" y="122" width="90" height="68" cornerRadius="10">
+					<s:Image x="29" y="10" width="43" height="52" source="assets/turkey.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="31" y="223" width="90" height="68" cornerRadius="10">
+					<s:Image x="10" y="10" width="68" height="44" source="assets/trigo.png"/>
+					
+				</s:BorderContainer>
+				<s:BorderContainer x="27" y="121" width="90" height="68" cornerRadius="10">
+					<s:Image x="22" y="9" width="56" height="47" source="assets/grape.png"/>
+				</s:BorderContainer>
+				<s:BorderContainer x="153" y="223" width="90" height="68" cornerRadius="10">
+					<s:Image x="23" y="10" width="42" height="34" source="assets/fish.png"/>
+					
+				</s:BorderContainer>
+				<s:BorderContainer x="281" y="223" width="90" height="68" cornerRadius="10">
+					<s:Image x="25" y="10" width="38" height="46" source="assets/waterbottle.png"/>
+					
+				</s:BorderContainer>
+				<s:Label x="88" y="87" width="32" backgroundColor="#FFFFFF" text="30"
+						 textAlign="center"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent width="100%" height="100%" label="Toys" backgroundColor="#B68033">
+				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
+					<s:Image x="20" y="6" width="44" height="48" source="assets/ball.png"/>
+				</s:BorderContainer>
+			</s:NavigatorContent>
+			<s:NavigatorContent width="100%" height="100%" label="Fishing" backgroundColor="#B68033">
+				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
+					<s:Image x="20" y="6" width="39" height="43" source="assets/fishing.png"/>
+				</s:BorderContainer>
+			</s:NavigatorContent>
+			<s:NavigatorContent width="100%" height="100%" label="Gardening"
+								backgroundColor="#B68033">
+				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
+					<s:Image x="20" y="6" width="37" height="57" source="assets/plant.png"/>
+				</s:BorderContainer>
+				
+			</s:NavigatorContent>
+		</mx:TabNavigator>
+		<s:Button x="551" y="428" label="Buy"/>
+		
+	</s:BorderContainer>
+	<components:menuIzquierdo animal="{animal}">
+		
+		
+	</components:menuIzquierdo>
+	<components:menuDerecho animal="{animal}">
+		
+	</components:menuDerecho>
+</s:Group>

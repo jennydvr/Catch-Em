@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="70"
+		 xmlns:components="components.*" 
+		 creationComplete="inicializarBarra()">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			[Bindable]
+			public var experiencia:int;
+			[Bindable]
+			public var dinero:int;
+			[Bindable]
+			public var nivel:int;
+			
+			public function inicializarBarra():void{
+				Exp.setProgress(experiencia,1000);
+			}
+		]]>
+	</fx:Script>
+<mx:ViewStack id="menu">
+	<s:NavigatorContent width="800" height="70" backgroundColor="#FEFFC4">
+		<mx:ProgressBar id="Exp" x="53" y="11" height="24" label="{experiencia}" chromeColor="#78C4FF"
+						labelPlacement="center" maximum="1000" minimum="0" mode="manual"/>
+		
+		<s:HGroup x="579" y="13" width="204" height="45">
+			<s:Button width="33" height="28" chromeColor="#FDFDFD" icon="assets/pause.gif"/>
+			<s:Button width="31" chromeColor="#FDFDFD" icon="assets/photo.gif"/>
+			<s:Button width="33" chromeColor="#FDFDFD" icon="assets/safe.gif"/>
+			<s:Button width="34" chromeColor="#FDFDFD" icon="assets/help.gif"/>
+			<s:Button width="30" chromeColor="#FDFDFD" icon="assets/exit.gif"/>
+		</s:HGroup>
+		<s:Label x="10" y="48" color="#FF7632" fontSize="17" text="{dinero}"/>	
+		<s:Label x="279" y="10" color="#3178C2" fontFamily="Verdana" fontSize="22" fontWeight="bold"
+				 text="{nivel}"/>
+		<s:Label x="17" y="15" color="#0B2A84" fontFamily="Verdana" fontSize="13" fontWeight="bold"
+				 text="EXP"/>
+	</s:NavigatorContent>
+	
+	
+</mx:ViewStack>	
+
+	
+</s:Group>

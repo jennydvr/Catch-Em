@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="800" height="600" currentState="init"
+		 xmlns:components="componentes.*">
+	<s:states>
+		<s:State name="init"/>
+		<s:State name="baul"/>
+		<s:State name="plato"/>
+	</s:states>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<fx:Script>
+		<![CDATA[
+			import clases.*;
+
+			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable]
+			public var animal:Animal;
+			
+		]]>
+	</fx:Script>
+
+	
+	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+		
+	</components:menuSuperior>
+
+	
+	<mx:ViewStack id="casaExt">
+		
+
+
+	<s:NavigatorContent>
+		
+		<s:BorderContainer x="2" y="266" width="800" height="334" backgroundColor="#65FD70">
+		
+				<s:Button x="50" y="218" icon="{animalSource.imagenSiembra}"
+						/>
+	
+			
+				<s:Button x="671" y="97"  click="currentState='baul'"
+						  icon="{animalSource.imagenBaul}" skinClass="skins.baulSkin"
+						  />
+			
+			<s:Button x="375" y="241" click="currentState='plato'" icon="{animalSource.imagenPlato}"
+					  skinClass="skins.platoSkin"/>
+			
+				<s:Button x="227" y="2"  icon="{animalSource.imagenLago}"
+						 />
+			
+		</s:BorderContainer>
+		<s:BorderContainer x="0" y="69" width="800" height="199" backgroundColor="#3789EF">
+			
+			<components:menuIzquierdo animal="{animal}">
+				
+			</components:menuIzquierdo>
+			<s:Button x="692" y="185" click="casaExt.selectedChild=casaInt"
+					  icon="{animalSource.imagenCasa}"
+					  />
+		</s:BorderContainer>
+		
+		<s:Button x="507" y="315" icon="{animalSource.imagenAnimal}"/>
+	</s:NavigatorContent>
+	
+	<s:NavigatorContent id="casaInt">
+		<components:casaInterna animal="{animal}">
+			
+			
+		</components:casaInterna>
+		
+	</s:NavigatorContent>
+		
+		
+	</mx:ViewStack>	
+	<components:menuDerecho animal="{animal}">
+		
+	</components:menuDerecho>
+	<s:Image includeIn="baul,plato" x="0" y="0" source="assets/fondo.jpg" alpha="0.5" click="currentState='init'"/>
+	<s:Image includeIn="baul" x="421" y="199" width="257" height="201" source="assets/DialogBox.png"/>
+	<s:Image includeIn="plato" x="391" y="331" width="222" height="174"
+			 source="assets/DialogBox2.png" />
+
+
+
+</s:Group> 

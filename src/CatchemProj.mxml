@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   width="800" height="600" backgroundColor="#C7C3C3"
+			   currentState="tigre"
+			   xmlns:components="componentes.*">
+	<fx:Style source="assets/Estilo.css"/>
+	
+	<fx:Script>
+		<![CDATA[
+			import clases.*;
+			
+			import mx.collections.*;
+			import mx.controls.Alert;
+			
+			[Bindable]
+			public var arregloSexo:ArrayList = new ArrayList ([ {label:"Select"},{label:"Femenino", data:"Femenino"},
+				{label:"Masculino", data:"Masculino"}]);
+			[Bindable]
+			public var arregloColor:ArrayList = new ArrayList ([{label:"Select"},{label:"Azul", data:"Azul"},
+				{label:"Rojo", data:"Rojo"}]);
+			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable]
+			public var animal:Animal = new Animal();
+
+			
+			/* Funcion donde verificamos el tipo del animal escogido y a partir de este
+			/  inicializamos las imagenes correspondientes a la casa particular y 
+		    /  la informacion del animal.
+			*/
+			public function informacionAnimal(event:MouseEvent):void{
+			// Inicializamos la informacion de la casa Exterior
+		    animalSource= new CasaExterior();
+			 if (currentState== "tigre"){
+				 animalSource.imagenAnimal="assets/gato.png";
+				 animalSource.imagenBaul="src/assets/help.gif";
+				 animalSource.imagenCasa="src/assets/home.gif";
+				 animalSource.imagenSiembra="assets/siembra.png";
+				 animalSource.imagenLago="assets/lago.png";
+				 animalSource.imagenPlato="src/assets/num3.gif";
+				 animalSource.imagenSuelo="#f4ef62";
+				 animalSource.imagenCielo="#3789EF";
+				
+				 // Habilidades segun animal
+				 animal.habFuerza=25;
+				 animal.habIntel=15;
+				 animal.habVelocidad=70;
+			 }
+			 else if (currentState == "dino"){
+				 animalSource.imagenAnimal="assets/dino.png";
+				 animalSource.imagenBaul="src/assets/help.gif";
+				 animalSource.imagenCasa="src/assets/home.gif";
+				 animalSource.imagenSiembra="assets/siembra.png";
+				 animalSource.imagenLago="assets/lago.png";
+				 animalSource.imagenPlato="src/assets/num3.gif";
+			
+				 // Habilidades segun animal
+				 animal.habFuerza=25;
+				 animal.habIntel=15;
+				 animal.habVelocidad=70;
+			 }
+			 else{
+				 animalSource.imagenAnimal="Otro";
+				 animalSource.imagenBaul="src/assets/help.gif";
+				 animalSource.imagenCasa="src/assets/home.gif";
+				 animalSource.imagenSiembra="assets/num1.gif";
+				 animalSource.imagenLago="assets/num2.gif";
+				 animalSource.imagenPlato="src/assets/num3.gif";
+
+				 
+				 //Habilidades
+				 animal.habFuerza=100;
+				 animal.habIntel=80;
+				 animal.habVelocidad=70;
+				 
+			 }
+			 
+			 //Creamos al animal
+			 
+			 animal.color=color.selectedItem.label;
+			 animal.dinero=500;
+			 animal.diversion = 20;
+			 animal.dormir= 100;
+			 animal.hambre= 50;
+			 animal.higiene=50;
+			 animal.experiencia= 400;
+			 
+			 
+			 animal.nivel=1;
+			 animal.nombre= nombre.text;
+			 animal.sexo=sexo.selectedItem.label;
+			 animal.tipo=currentState;
+		
+			 menuPrincipal.selectedChild=casa;
+	
+			}
+			
+			/* Funcion para movernos por las imagenes de las mascotas. Flecha izquierda
+			/
+			*/
+			public function cambiarAnimalIzq():void{
+				if (currentState=="tigre"){
+					currentState = "lobo";
+				}
+				else if(currentState=="lobo"){
+					currentState="buho";
+				}
+				else if(currentState=="buho"){
+					currentState="dino";
+				}
+				else{
+					currentState="tigre";
+				}
+			}
+			/* Funcion para movernos por las imagenes de las mascotas. Flecha derecha
+			/
+			*/			
+			public function cambiarAnimalDer():void{
+				if (currentState == "tigre"){
+					currentState="dino";
+				}
+				else if (currentState =="dino"){
+					currentState="buho";
+				}
+				else if (currentState =="buho"){
+					currentState="lobo";
+				}
+				else{
+					currentState="tigre";
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	
+	<s:states>
+		<s:State name="tigre"/>
+		<s:State name="dino"/>
+		<s:State name="buho"/>
+		<s:State name="lobo"/>
+	</s:states>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<mx:ViewStack id="menuPrincipal" x="4" y="0" width="100%">
+		
+		
+		<s:NavigatorContent id="pagPrincipal" x="141" y="52" width="800" height="600" color="#FBFAFA"
+							contentBackgroundColor="#FFFFFF"
+							>
+			<s:Image x="6" y="15" width="800" height="600" smooth="true" smoothingQuality="default"
+					 source="assets/menu.gif"/>
+			
+			<s:Image  x="-18" y="26" width="800" height="100" smooth="true" source="assets/catchem.gif"
+					/>
+			<mx:TabNavigator x="392" y="128" width="345" height="330" backgroundColor="#FB8800"
+							 borderColor="#000000" dropShadowVisible="true">
+				
+				<!-- Primera pestana -->
+				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num1.gif')">
+					<s:Label x="142" y="67" text="Bienvenido"/>
+				</s:NavigatorContent>
+				
+				
+				<!-- Segunda pestana -->
+				<s:NavigatorContent width="343" height="251" icon="@Embed('assets/num2.gif')"
+									styleName="contenido" >
+					
+					<s:layout>
+						<s:BasicLayout/>
+					</s:layout>
+					<s:FormHeading left="10" top="-4" label="Create a new account!" color="#FBF5F5"
+								   fontFamily="Verdana"/>
+					<s:Form x="11" y="31" width="297" height="203" styleName="Estilo">
+						<s:layout>
+							<s:FormLayout/>
+						</s:layout>
+						<s:FormItem width="224" height="41" label="Name" color="#FFFFFF"
+									fontFamily="Verdana">
+							<s:layout>
+								<s:FormItemLayout/>
+							</s:layout>
+							<s:TextInput id="nombreUsuario" width="130"/>
+						</s:FormItem>
+						<s:FormItem label="Email" color="#FFFFFF" fontFamily="Verdana">
+							<s:TextInput id="email"/>
+						</s:FormItem>
+						<s:FormItem label="User" color="#FFFFFF" fontFamily="Verdana">
+							<s:TextInput id="usuario"/>
+						</s:FormItem>
+						<s:FormItem label="Password" color="#FFFFFF" fontFamily="Verdana">
+							<s:TextInput id="password" displayAsPassword="true"/>
+						</s:FormItem>
+					</s:Form>
+				</s:NavigatorContent>
+			
+				<!-- Tercera pestana -->
+				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num3.gif')" >
+					<s:ComboBox id="sexo" x="113" y="26" color="#000000" fontFamily="Verdana" fontSize="11"
+								selectedIndex="0" dataProvider="{arregloSexo}"/>
+					<s:Label x="62" y="26" fontSize="14" fontWeight="bold" text="Sex"
+							 verticalAlign="middle"/>
+					
+					<s:ComboBox id="color" x="113" y="57" color="#000000" fontFamily="Verdana" fontSize="11"
+								selectedIndex="0" dataProvider="{arregloColor}"/>
+					<s:Label x="62" y="57" fontSize="14" fontWeight="bold" text="Color"
+							 verticalAlign="middle"/>
+					
+					
+					<s:Label x="57" y="120" fontFamily="Verdana" fontSize="20" text="Name your pet!"/>
+					<s:Label x="28" y="0" width="200" height="15" fontFamily="Verdana" fontSize="15"
+							 fontWeight="bold" text="Pet Information"/>
+					<s:TextInput id="nombre" x="57" y="158" />
+				</s:NavigatorContent>
+				
+
+			</mx:TabNavigator>
+
+				
+			
+			  <s:Image id="imagenTigre" includeIn="tigre" x="157" y="232" source="assets/gato.png"/>
+			  <s:Image id="imagenDino" includeIn="dino" x="157" y="232" source="assets/dino.png"/>
+		 	  <s:Image id="imagenBuho" includeIn="buho" x="184" y="270" source="assets/num3.gif"/>
+			  <s:Image id="imagenLobo" includeIn="lobo" x="184" y="270" source="assets/num1high.gif"/>
+		   
+			<s:Label x="83" y="176" color="#CC3B3B" fontFamily="Verdana" fontSize="33"
+					 text="Select your pet"/>
+			<!-- La transicion de las fotos de los animales -->
+			<s:Button x="105" y="410" chromeColor="#67E14F" icon="assets/leftArrow.gif"
+					  click="cambiarAnimalIzq()"/>
+			<s:Button x="235" y="410" chromeColor="#67E14F" icon="assets/rightArrow.gif"
+					  click="cambiarAnimalDer()"/>
+			<s:Button x="411" y="466" width="102" height="27" label="Submit" chromeColor="#B23F00"
+					  color="#FDFDFD" cornerRadius="2" enabled="true" fontFamily="Verdana" fontSize="16"
+					  fontWeight="bold" skinClass="spark.skins.spark.ButtonSkin"
+					  click="informacionAnimal(event)"/>
+		
+			
+		
+			
+		</s:NavigatorContent>
+		
+		<!-- Casa exterior -->
+		
+		<s:NavigatorContent id="casa">
+			<components:casaExterior width="800" height="600" animalSource="@{animalSource}" animal="@{animal}">
+				
+				
+		    </components:casaExterior>
+		</s:NavigatorContent>
+		
+
+				
+	
+	</mx:ViewStack>
+	
+	
+</s:Application>

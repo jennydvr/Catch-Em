@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 creationComplete="asignarNecesidades()">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			import mx.controls.Alert;
+			public var animal:Animal;
+			
+			public function asignarNecesidades():void{
+				//Se actualizan las necesidades y habilidades del animal
+				velocidad.setProgress(animal.habVelocidad,100);
+				inteligencia.setProgress(animal.habIntel,100);
+				fuerza.setProgress(animal.habFuerza,100);
+				hambre.setProgress(animal.hambre,100);
+				diversion.setProgress(animal.diversion,100);
+				higiene.setProgress(animal.higiene,100);
+				dormir.setProgress(animal.dormir,100);
+
+			}
+		]]>
+	</fx:Script>
+	
+		<!-- El modo de las barras esta en "Manual" para poder ser editados -->
+	
+		<s:SkinnableContainer x="0" y="179" width="147" height="162">
+			<s:RichText x="5" y="4" color="#FFFFFF" fontFamily="Verdana" fontSize="12"
+						fontWeight="bold" text="Powers"/>
+			<s:RichText x="7" y="74" color="#FFFFFF" fontFamily="Verdana" fontSize="12"
+						fontWeight="bold" text="Needs"/>
+			
+			<mx:ProgressBar id="velocidad" x="10" y="15" width="130" height="15" label=" "
+							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
+							minimum="0" mode="manual"/>
+			<mx:ProgressBar id="inteligencia" x="10" y="32" width="130" height="15" label=" " enabled="true"
+							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>	
+			<mx:ProgressBar id="fuerza" x="10" y="51" width="130" height="15" label=" " enabled="true"
+							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
+			
+			
+			<mx:ProgressBar id="hambre" x="10" y="84" width="131" height="18" label=" " enabled="true"
+							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
+			<mx:ProgressBar id="diversion" x="10" y="110" width="131" height="15" label=" " enabled="true"
+							fontSize="6" indeterminate="false" labelPlacement="left" maximum="100"
+							minimum="0" mode="manual"/>
+			<mx:ProgressBar id="higiene" x="10" y="125" width="131" height="15" label=" "
+							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
+							minimum="0" mode="manual"/>
+		    <mx:ProgressBar id="dormir" x="10" y="140" width="131" height="15" label=" "
+							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
+							minimum="0" mode="manual"/>
+				
+		</s:SkinnableContainer>
+
+
+</s:Group>
