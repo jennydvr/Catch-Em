@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="28.3496" viewWidth="28.3496" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="28.35" d:pageWidth="28.35" d:type="layer" d:userLabel="Artboard 1">
+    <Group ai:objID="7484280" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Path x="1.97717" y="1.97906" winding="nonZero" ai:objID="d8aa500" ai:seqID="3" data="M17.2006 12.1962 23.3568 6.04095C24.7377 4.6601 24.7377 2.41937 23.3558 1.03705 21.974 -0.344299 19.7328 -0.344299 18.351 1.03705L12.1967 7.19183 6.04041 1.03705C4.65906 -0.345764 2.41785 -0.345764 1.03601 1.03754 -0.345337 2.41791 -0.345337 4.65863
+ 1.03601 6.04095L7.19128 12.1962 1.03796 18.35C-0.34436 19.7309 -0.34436 21.9721 1.03796 23.3559 2.4198 24.7368 4.66101 24.7368 6.04333 23.3559L12.1967 17.2016 18.349 23.3559C19.7318 24.7368 21.972 24.7368 23.3558 23.3559 24.7367 21.9721 24.7367
+ 19.7309 23.3558 18.35L17.2006 12.1962Z">
+        <fill>
+          <SolidColor color="#C1272D"/>
+        </fill>
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+      </Path>
+      <Path x="1.97839" y="13.7598" winding="nonZero" ai:objID="d8aa080" ai:seqID="4" data="M23.3546 11.5752C23.8839 11.0439 24.2062 10.3877 24.3302 9.70313 19.1896 7.61328 10.7814 2.33691 7.1842 0L7.19006 0.415527 1.03674 6.56934C-0.345581 7.9502 -0.345581 10.1914 1.03674 11.5752 2.41858 12.9561 4.65979 12.9561 6.04211 11.5752L12.1954
+ 5.4209 18.3478 11.5752C19.7306 12.9561 21.9708 12.9561 23.3546 11.5752Z">
+        <fill>
+          <SolidColor color="#A1272D"/>
+        </fill>
+      </Path>
+      <Path x="1.97717" y="1.97906" winding="nonZero" ai:objID="d8a7b00" ai:seqID="5" d:id="3" data="M17.2006 12.1962 23.3568 6.04095C24.7377 4.6601 24.7377 2.41937 23.3558 1.03705 21.974 -0.344299 19.7328 -0.344299 18.351 1.03705L12.1967 7.19183 6.04041 1.03705C4.65906 -0.345764 2.41785 -0.345764 1.03601 1.03754 -0.345337 2.41791 -0.345337 4.65863
+ 1.03601 6.04095L7.19128 12.1962 1.03796 18.35C-0.34436 19.7309 -0.34436 21.9721 1.03796 23.3559 2.4198 24.7368 4.66101 24.7368 6.04333 23.3559L12.1967 17.2016 18.349 23.3559C19.7318 24.7368 21.972 24.7368 23.3558 23.3559 24.7367 21.9721 24.7367
+ 19.7309 23.3558 18.35L17.2006 12.1962Z">
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+        <filters>
+          <DropShadowFilter blurX="0" blurY="0" quality="2" distance="0.801718"/>
+        </filters>
+      </Path>
+    </Group>
+  </Group>
+  <Private>
+      <ai:PrivateElement d:ref="#1">
+        <ai:SaveOptions>
+          <ai:Dict data="B includeObjectOutsideArtboard 0 B aiEditCap 1 I versionKey 2 B includeSymbol 0 B writeImages 1 B includeXMP 0 I expandBlendsOption 5 B downsampleLinkedImages 0 I rasterizeResolution 72 I preserveGradientPolicy 4 I preserveFilterPolicy 3 I preserveTextPolicy 4 "/>
+        </ai:SaveOptions>
+        <ai:DocData base="cerrar.assets/images" rulerCanvasDiffH="14.5" rulerCanvasDiffV="14.5">
+          <ai:DocRasterSettings>
+            <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+          </ai:DocRasterSettings>
+        </ai:DocData>
+        <ai:AutoGenImageList>
+          <ai:Dict/>
+        </ai:AutoGenImageList>
+      </ai:PrivateElement>
+      <ai:PrivateElement flm:hashcode="3194DC9CF72DC46DBACEFC1E9EDD9855" d:ref="#2">
+        <ai:LayerOptions color="5 79.31 257 128.502"/>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="030B0B2F13B2B5928C9A99FB7676E317" d:ref="#3">
+        <ai:Path data="M 19.178 14.175L 25.334 8.02C 26.715 6.639 26.715 4.398 25.333 3.016C 23.951 1.635 21.71 1.635 20.328 3.016L 14.174 9.171L 8.018 3.016C 6.636 1.633 4.395 1.633 3.013 3.017C 1.632 4.397 1.632 6.638 3.013 8.02L 9.168 14.175L 3.015 20.329C 1.633 21.71 1.633 23.951 3.015 25.335C 4.397 26.716 6.638 26.716 8.021 25.335L 14.174 19.181L 20.326 25.335C 21.709 26.716 23.949 26.716 25.333 25.335C 26.714 23.951 26.714 21.71 25.333 20.329L 19.178 14.175Z" knockout="0">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" major="1" minor="0" name="Adobe Drop Shadow">
+                <ai:Dict data="R vert 0.567 R opac 1 B pair 1 R horz 0.567 R dark 100 I blnd 0 R blur 0 I csrc 0 ">
+                  <ai:Entry name="sclr" valueType="F">
+                    <ai:Fill color="5 0 0 0"/>
+                  </ai:Entry>
+                </ai:Dict>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Path>
+      </ai:PrivateElement>
+    </Private>
+  </Graphic>

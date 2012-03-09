@@ -9,9 +9,9 @@ package clases
 		public var imagenLago:String;
 		public var imagenSiembra:String;
 		public var imagenPlato:String;
-		public var imagenCielo:String;
-		public var imagenSuelo:String;
-		public var imagenAnimal:String; //Por ahora solo la imagen
+//		public var imagenCielo:String;
+	//	public var imagenSuelo:String;
+		public var animal:String; //Por ahora solo la imagen
 		
 		public function CasaExterior()
 		{

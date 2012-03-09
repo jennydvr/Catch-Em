@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="28.3496" viewWidth="28.3496" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="28.35" d:pageWidth="28.35" d:type="layer" d:userLabel="Artboard 1">
+    <Group ai:objID="721cd80" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Path x="7.14805" y="1.69758" winding="nonZero" ai:objID="cc54580" ai:seqID="3" d:id="3" data="M2.81191 15.9538C2.78457 14.6335 3.25332 11.3112 4.2875 10.4924 5.26308 9.71941 6.81044 10.9968 7.98671 10.5881 11.4359 9.3908 10.1107 5.39275 6.97207 5.63396 5.82265 5.72332 4.49892 6.78777 3.49746 7.35906 2.42226 7.97088 -0.623149 6.83025 0.113667
+ 4.24773 0.492085 2.91912 2.4291 0.794607 5.07753 0.189138 8.88222 -0.680491 13.3559 1.61101 14.9184 3.75213 17.266 6.9699 16.5883 11.4421 15.0248 12.9875 13.3529 14.6393 11.1098 15.4372 8.41738 15.571 7.9164 15.5954 7.9291 16.6774 7.63466 17.0846
+ 6.12783 19.1735 2.84267 17.4479 2.81191 15.9538Z">
+        <fill>
+          <SolidColor color="#E2AB2F"/>
+        </fill>
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+        <filters>
+          <DropShadowFilter blurX="0" blurY="0" quality="2" distance="0.801718"/>
+        </filters>
+      </Path>
+      <Ellipse rotation="15.001" x="8.44025" y="20.136" width="6.52712" height="5.80886" ai:objID="cc55780" ai:seqID="4" d:id="4">
+        <fill>
+          <SolidColor color="#D49824"/>
+        </fill>
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+        <filters>
+          <DropShadowFilter blurX="0" blurY="0" quality="2" distance="0.801718"/>
+        </filters>
+      </Ellipse>
+      <Path x="9.95884" y="13.71" winding="nonZero" ai:objID="c95fe00" ai:seqID="5" data="M4.82387 5.07227C4.84389 5.04492 4.85952 5.00781 4.87661 4.97461 3.25844 3.38086 1.57045 1.54199 0.61977 0 0.183735 1.32129 -0.0169487 3.06836 0.00111771 3.94141 0.0318794 5.43555 3.31704 7.16113 4.82387 5.07227Z">
+        <fill>
+          <SolidColor color="#D49824"/>
+        </fill>
+      </Path>
+      <Path x="7.14805" y="1.69758" winding="nonZero" ai:objID="c95fc80" ai:seqID="6" data="M2.81191 15.9538C2.78457 14.6335 3.25332 11.3112 4.2875 10.4924 5.26308 9.71941 6.81044 10.9968 7.98671 10.5881 11.4359 9.3908 10.1107 5.39275 6.97207 5.63396 5.82265 5.72332 4.49892 6.78777 3.49746 7.35906 2.42226 7.97088 -0.623149 6.83025 0.113667
+ 4.24773 0.492085 2.91912 2.4291 0.794607 5.07753 0.189138 8.88222 -0.680491 13.3559 1.61101 14.9184 3.75213 17.266 6.9699 16.5883 11.4421 15.0248 12.9875 13.3529 14.6393 11.1098 15.4372 8.41738 15.571 7.9164 15.5954 7.9291 16.6774 7.63466 17.0846
+ 6.12783 19.1735 2.84267 17.4479 2.81191 15.9538Z">
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+      </Path>
+    </Group>
+  </Group>
+  <Private>
+      <ai:PrivateElement d:ref="#1">
+        <ai:SaveOptions>
+          <ai:Dict data="B includeObjectOutsideArtboard 0 B writeImages 1 B includeXMP 0 B includeSymbol 0 B aiEditCap 1 I versionKey 2 I expandBlendsOption 5 B downsampleLinkedImages 0 I rasterizeResolution 72 I preserveGradientPolicy 4 I preserveFilterPolicy 3 I preserveTextPolicy 4 "/>
+        </ai:SaveOptions>
+        <ai:DocData base="ayuda.assets/images" rulerCanvasDiffH="14.5" rulerCanvasDiffV="14.5">
+          <ai:DocRasterSettings>
+            <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+          </ai:DocRasterSettings>
+        </ai:DocData>
+        <ai:AutoGenImageList>
+          <ai:Dict/>
+        </ai:AutoGenImageList>
+      </ai:PrivateElement>
+      <ai:PrivateElement flm:hashcode="0AEA1F566FE5D9DC137922A5C77DDD75" d:ref="#2">
+        <ai:LayerOptions color="5 79.31 257 128.502"/>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="71DA1869374A76B7BD0B3B80E104EB9A" d:ref="#3">
+        <ai:Path data="M 9.96 17.651C 9.933 16.331 10.401 13.009 11.436 12.19C 12.411 11.417 13.958 12.694 15.135 12.286C 18.584 11.088 17.259 7.09 14.12 7.332C 12.971 7.421 11.647 8.485 10.646 9.057C 9.57 9.668 6.525 8.528 7.262 5.945C 7.64 4.617 9.577 2.492 12.226 1.887C 16.03 1.017 20.504 3.309 22.066 5.45C 24.414 8.667 23.736 13.14 22.173 14.685C 20.501 16.337 18.258 17.135 15.565 17.269C 15.064 17.293 15.077 18.375 14.783 18.782C 13.276 20.871 9.991 19.146 9.96 17.651Z" knockout="0">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill color="5 0.886 0.184 0.671" focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" major="1" minor="0" name="Adobe Drop Shadow">
+                <ai:Dict data="R vert 0.567 R opac 1 B pair 1 R horz 0.567 R dark 100 I blnd 0 R blur 0 I csrc 0 ">
+                  <ai:Entry name="sclr" valueType="F">
+                    <ai:Fill color="5 0 0 0"/>
+                  </ai:Entry>
+                </ai:Dict>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Path>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="73E8B087E94F8F8D9E3108E4837CD74E" d:ref="#4">
+        <ai:Path data="M 13.993 24.631C 13.578 26.181 11.829 27.058 10.09 26.592C 8.348 26.125 7.273 24.491 7.688 22.941C 8.104 21.393 9.851 20.516 11.593 20.982C 13.333 21.448 14.408 23.082 13.993 24.631Z" knockout="0">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill color="5 0.831 0.141 0.596" focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" major="1" minor="0" name="Adobe Drop Shadow">
+                <ai:Dict data="R vert 0.567 R opac 1 B pair 1 R horz 0.567 R dark 100 I blnd 0 R blur 0 I csrc 0 ">
+                  <ai:Entry name="sclr" valueType="F">
+                    <ai:Fill color="5 0 0 0"/>
+                  </ai:Entry>
+                </ai:Dict>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Path>
+      </ai:PrivateElement>
+    </Private>
+  </Graphic>

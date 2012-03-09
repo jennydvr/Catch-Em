@@ -24,7 +24,7 @@
 			public var animalSource:CasaExterior;
 			[Bindable]
 			public var animal:Animal = new Animal();
-
+			
 			
 			/* Funcion donde verificamos el tipo del animal escogido y a partir de este
 			/  inicializamos las imagenes correspondientes a la casa particular y 
@@ -34,41 +34,24 @@
 			// Inicializamos la informacion de la casa Exterior
 		    animalSource= new CasaExterior();
 			 if (currentState== "tigre"){
-				 animalSource.imagenAnimal="assets/gato.png";
-				 animalSource.imagenBaul="src/assets/help.gif";
+				 animalSource.animal="tigre";
+				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
-				 animalSource.imagenSiembra="assets/siembra.png";
-				 animalSource.imagenLago="assets/lago.png";
-				 animalSource.imagenPlato="src/assets/num3.gif";
-				 animalSource.imagenSuelo="#f4ef62";
-				 animalSource.imagenCielo="#3789EF";
-				
-				 // Habilidades segun animal
-				 animal.habFuerza=25;
-				 animal.habIntel=15;
-				 animal.habVelocidad=70;
-			 }
-			 else if (currentState == "dino"){
-				 animalSource.imagenAnimal="assets/dino.png";
-				 animalSource.imagenBaul="src/assets/help.gif";
-				 animalSource.imagenCasa="src/assets/home.gif";
-				 animalSource.imagenSiembra="assets/siembra.png";
-				 animalSource.imagenLago="assets/lago.png";
-				 animalSource.imagenPlato="src/assets/num3.gif";
-			
+				 animalSource.imagenSiembra="src/assets/num2.gif";
+				 animalSource.imagenLago="skins.casa.lago";
+				 animalSource.imagenPlato="skins.casa.plato";
 				 // Habilidades segun animal
 				 animal.habFuerza=25;
 				 animal.habIntel=15;
 				 animal.habVelocidad=70;
 			 }
 			 else{
-				 animalSource.imagenAnimal="Otro";
-				 animalSource.imagenBaul="src/assets/help.gif";
+				 animalSource.animal="Otro";
+				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
-				 animalSource.imagenSiembra="assets/num1.gif";
-				 animalSource.imagenLago="assets/num2.gif";
-				 animalSource.imagenPlato="src/assets/num3.gif";
-
+				 animalSource.imagenSiembra="src/assets/num1.gif";
+				 animalSource.imagenLago="skins.casa.lago";
+				 animalSource.imagenPlato="skins.casa.plato";
 				 
 				 //Habilidades
 				 animal.habFuerza=100;
@@ -92,7 +75,7 @@
 			 animal.nombre= nombre.text;
 			 animal.sexo=sexo.selectedItem.label;
 			 animal.tipo=currentState;
-		
+
 			 menuPrincipal.selectedChild=casa;
 	
 			}
@@ -222,8 +205,8 @@
 
 				
 			
-			  <s:Image id="imagenTigre" includeIn="tigre" x="157" y="232" source="assets/gato.png"/>
-			  <s:Image id="imagenDino" includeIn="dino" x="157" y="232" source="assets/dino.png"/>
+			  <s:Image id="imagenTigre" includeIn="tigre" x="184" y="270" source="assets/num1.gif"/>
+			  <s:Image id="imagenDino" includeIn="dino" x="184" y="270" source="assets/num2.gif"/>
 		 	  <s:Image id="imagenBuho" includeIn="buho" x="184" y="270" source="assets/num3.gif"/>
 			  <s:Image id="imagenLobo" includeIn="lobo" x="184" y="270" source="assets/num1high.gif"/>
 		   
