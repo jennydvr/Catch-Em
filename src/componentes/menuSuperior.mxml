@@ -22,8 +22,8 @@
 			}
 		]]>
 	</fx:Script>
-<mx:ViewStack id="menu">
-	<s:NavigatorContent width="800" height="70" backgroundAlpha="0.0" backgroundColor="#FEFFC4"
+<mx:ViewStack id="menu" backgroundColor="#F5FB96">
+	<s:NavigatorContent width="800" height="70" backgroundAlpha="0.0" backgroundColor="#F6F868"
 						contentBackgroundAlpha="0.0">
 		
 		<!-- Barra de experiencia -->
@@ -31,7 +31,7 @@
 						chromeColor="#78C4FF" labelPlacement="center" maximum="1000" minimum="0"
 						mode="manual"/>
 		<botones:claro x="322" y="9" width="30" height="30"/>
-		<s:Label x="318" y="17" color="#3178C2" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+		<s:Label x="336" y="19" color="#3178C2" fontFamily="Verdana" fontSize="15" fontWeight="bold"
 				 text="{nivel}"/>
 		
 		<!-- Botones generales del juego -->

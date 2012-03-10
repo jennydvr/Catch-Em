@@ -30,6 +30,20 @@
 		<s:BorderContainer x="0" y="401" width="800" height="184" backgroundColor="#FFFB8C">
 		</s:BorderContainer>	
 	</s:NavigatorContent>
+		<s:Label x="107" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Apple"/>
+		<s:Label x="237" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Hat"/>
+		<s:Label x="386" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Card"/>
+		<s:Label x="550" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Cat"/>
+		<s:Label x="170" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Rainbow"/>
+		<s:Label x="320" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Bird"/>
+		<s:Label x="485" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Bowl"/>
 	</s:NavigatorContent>
 	
 	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
@@ -40,18 +54,5 @@
 		
 		
 	</components:menuDerecho>
-	<s:Label x="107" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Apple"/>
-	<s:Label x="237" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Hat"/>
-	<s:Label x="386" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Card"/>
-	<s:Label x="550" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Cat"/>
-	<s:Label x="170" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Rainbow"/>
-	<s:Label x="320" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Bird"/>
-	<s:Label x="485" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-			 text="Bowl"/>
+
 </s:Group>

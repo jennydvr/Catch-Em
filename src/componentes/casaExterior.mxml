@@ -35,7 +35,7 @@
 
 	<s:NavigatorContent>
 		
-		<s:BorderContainer x="2" y="266" width="800" height="334" backgroundColor="#65FD70">
+		<s:BorderContainer x="0" y="266" width="800" height="334" backgroundColor="#65FD70">
 			
 			<s:BorderContainer x="41" y="217" width="299" height="105">
 				<s:Button x="113" y="34" label="Siembra" icon="{animalSource.imagenSiembra}" />
@@ -44,7 +44,8 @@
 			<s:Button x="650" y="100" width="110" height="110" skinClass="skins.casa.baul"
 					  x.init="650" y.init="80" width.init="120" height.init="120"/>
 			
-			<s:Button x="95" y="85" width="260" height="100" skinClass="skins.casa.lago"/>
+			<s:Button x="95" y="85" width="260" height="100" skinClass="skins.casa.lago"
+					  x.init="114" y.init="33"/>
 			
 			<s:Button x="360" y="250" width="90" height="50" skinClass="skins.casa.plato"/>
 			
