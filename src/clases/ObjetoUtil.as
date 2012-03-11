@@ -5,11 +5,12 @@ package clases
 		public var nombre:String;
 		public var precio:String;
 		public var imagen:String;
-		public var necesidad:Necesidad;
+		public var necesidad:int;
+		public var experiencia:int;
 
 		
-		public function ObjetoUtil()
-		{
+		public function ObjetoUtil(){
+			
 		}
 	}
 }

@@ -8,8 +8,17 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import clases.CasaExterior;
+			
+			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable]
+			public var objetosComida:ArrayCollection;
+			[Bindable]
+			public var objetosJuguete:ArrayCollection;
 		]]>
 	</fx:Script>
 	<s:states>
@@ -39,7 +48,9 @@
 			</s:NavigatorContent>
 			
 			<s:NavigatorContent id="mapa" >
-				<componentes:mapa animal="{animal}">
+				<componentes:mapa animal="{animal}" animalSource="@{animalSource}"
+								  objetosComida = "{objetosComida}"
+								  objetosJuguete= "{objetosJuguete}">
 					
 				</componentes:mapa>
 			</s:NavigatorContent>

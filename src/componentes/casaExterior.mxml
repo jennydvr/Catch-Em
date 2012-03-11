@@ -16,16 +16,58 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
+			import mx.collections.ArrayCollection;
+	
 			[Bindable]
 			public var animalSource:CasaExterior;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable]
+			public var objetosComida:ArrayCollection;
+			[Bindable]
+			public var objetosJuguete: ArrayCollection;
+			
+			
+			/*Funcion para bañar al animal*/
+			public function bañarse():void{
+				this.animal.higiene = 100;
+				this.animal.experiencia = this.animal.experiencia + 20;
+				
+			}
+			
+			/*Funcion para alimentar al animal
+			/ Recibe el objeto Comida
+			*/
+			public function alimentar():void{
+				if((this.animal.hambre = this.animal.hambre + 20) >100){
+					this.animal.hambre = 100;
+					
+				}
+				this.animal.experiencia = this.animal.experiencia + 20;
+				
+			}
+		
+			/*Funcion para dormir*/
+			public function dormir():void{
+				this.animal.dormir=100;
+				this.animal.experiencia = this.animal.experiencia + 20;
+			}
+			
+			/*Funcion para diversion*/
+			public function diversion():void{
+				if ((this.animal.diversion= this.animal.diversion + 20) >100){
+				  this.animal.diversion = 100;
+				}
+				this.animal.experiencia = this.animal.experiencia + 20;
+			}
+		
+		
 		]]>
 	</fx:Script>
 	
 	<!-- Menu superior -->
 	
-	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+	<components:menuSuperior animal="@{animal}">
 	</components:menuSuperior>
 
 	
@@ -79,7 +121,10 @@
 	
 	<!-- Mapa -->
 	
-    <components:menuDerecho animal="{animal}">
+    <components:menuDerecho animal="{animal}"
+							animalSource="@{animalSource}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
 	   
     </components:menuDerecho>
 

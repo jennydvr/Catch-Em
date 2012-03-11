@@ -4,7 +4,8 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   width="800" height="600" backgroundColor="#C7C3C3"
 			   currentState="tigre"
-			   xmlns:components="componentes.*">
+			   xmlns:components="componentes.*"
+			   creationComplete="playSound()">
 	<fx:Style source="assets/Estilo.css"/>
 	
 	<fx:Script>
@@ -13,6 +14,9 @@
 			
 			import mx.collections.*;
 			import mx.controls.Alert;
+			import flash.media.*; 
+			
+			
 			
 			[Bindable]
 			public var arregloSexo:ArrayList = new ArrayList ([ {label:"Select"},{label:"Female", data:"Femenino"},
@@ -24,7 +28,31 @@
 			public var animalSource:CasaExterior;
 			[Bindable]
 			public var animal:Animal = new Animal();
+			public var baul: Baul = new Baul();
+			[Bindable]
+			public var objetosComida:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			public var objetosJuguete: ArrayCollection = new ArrayCollection();
+			[Bindable]
+			public var objetosPesca:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			public var objetosSiembra:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			[Embed(source="src/assets/swoosh.mp3")]
+			public var soundClass:Class;   
+			[Bindable]
+			[Embed(source="src/assets/click.mp3")]
+			public var soundClick:Class;
 			
+			[Bindable]
+			[Embed(source="src/assets/Main theme.mp3")]
+			public var sndCls:Class;
+			public var snd:Sound = new sndCls() as Sound; 
+			public var sndChannel:SoundChannel;
+			
+			public function playSound():void {
+				sndChannel=snd.play(0,int.MAX_VALUE);
+			}   
 			
 			/* Funcion donde verificamos el tipo del animal escogido y a partir de este
 			/  inicializamos las imagenes correspondientes a la casa particular y 
@@ -33,6 +61,9 @@
 			public function informacionAnimal(event:MouseEvent):void{
 			// Inicializamos la informacion de la casa Exterior
 		    animalSource= new CasaExterior();
+			// Primero vamos a la funcion donde creamos todos los objetos posibles
+		    // y llenamos el baul
+	
 			 if (currentState== "tigre"){
 				 animalSource.animal="tigre";
 				 animalSource.imagenBaul="skins.casa.baul";
@@ -40,13 +71,13 @@
 				 animalSource.imagenSiembra="src/assets/num2.gif";
 				 animalSource.imagenLago="skins.casa.lago";
 				 animalSource.imagenPlato="skins.casa.plato";
-				 // Habilidades segun animal
+				 // Habilidades
 				 animal.habFuerza=25;
-				 animal.habIntel=15;
-				 animal.habVelocidad=70;
+				 animal.habIntel=30;
+				 animal.habVelocidad=90;
 			 }
-			 else{
-				 animalSource.animal="Otro";
+			 else if (currentState == "dino"){
+				 animalSource.animal="dino";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -54,10 +85,36 @@
 				 animalSource.imagenPlato="skins.casa.plato";
 				 
 				 //Habilidades
-				 animal.habFuerza=100;
-				 animal.habIntel=80;
-				 animal.habVelocidad=70;
+				 animal.habFuerza=90;
+				 animal.habIntel=20;
+				 animal.habVelocidad=15;
 				 
+			 }
+			 else if(currentState =="buho"){
+				 animalSource.animal="buho";
+				 animalSource.imagenBaul="skins.casa.baul";
+				 animalSource.imagenCasa="src/assets/home.gif";
+				 animalSource.imagenSiembra="src/assets/num1.gif";
+				 animalSource.imagenLago="skins.casa.lago";
+				 animalSource.imagenPlato="skins.casa.plato";
+				 
+				 //Habilidades
+				 animal.habFuerza=15;
+				 animal.habIntel=90;
+				 animal.habVelocidad=30;				 
+			 }
+			 else if(currentState == "lobo"){
+				 animalSource.animal="lobo";
+				 animalSource.imagenBaul="skins.casa.baul";
+				 animalSource.imagenCasa="src/assets/home.gif";
+				 animalSource.imagenSiembra="src/assets/num1.gif";
+				 animalSource.imagenLago="skins.casa.lago";
+				 animalSource.imagenPlato="skins.casa.plato";
+				 
+				 //Habilidades
+				 animal.habFuerza=60;
+				 animal.habIntel=50;
+				 animal.habVelocidad=40;				 
 			 }
 			 
 			 //Creamos al animal
@@ -68,17 +125,59 @@
 			 animal.dormir= 100;
 			 animal.hambre= 50;
 			 animal.higiene=50;
-			 animal.experiencia= 400;
+			 animal.experiencia= 100;
 			 
 			 
 			 animal.nivel=1;
 			 animal.nombre= nombre.text;
 			 animal.sexo=sexo.selectedItem.label;
 			 animal.tipo=currentState;
-
+ 
+			 animal.miBaul = baul;
+		
 			 menuPrincipal.selectedChild=casa;
 	
 			}
+			
+			/*Funcion donde inicializamos todos los objetos utiles 
+			/ Comida, Anzuelo, Juguete, Semilla
+			*/
+			public function inicializarObjetos(event:MouseEvent):void{
+				//5 comidas
+				
+			 var c1:Comida = new Comida("Apple","30","src/assets/apple.png",10,5);
+			 var c2:Comida = new Comida("Meat","70","src/assets/meat.png",20,10);
+			 var c3:Comida = new Comida("Wheat", "60","src/assets/trigo.png",20,10);
+			 var c4:Comida = new Comida("Fish", "50", "src/assets/fish.png",20,10);
+			 var c5:Comida = new Comida("Bone", "20", "src/assets/bone.png",10,5);
+				objetosComida.addItem(c1);
+				objetosComida.addItem(c2);
+				objetosComida.addItem(c3);
+				objetosComida.addItem(c4);
+				objetosComida.addItem(c5);
+			 // 4 jugetes
+			 var j1:Juguete = new Juguete("Baseball","60","src/assets/baseball.png",10,30);
+			 var j2:Juguete = new Juguete("Football","30","src/assets/ball.png",25,30);
+				 objetosJuguete.addItem(j1);
+				 objetosJuguete.addItem(j2);
+			 // 1 caña
+			 var p1:Anzuelo = new Anzuelo("First fish road","100","src/assets/fishing.png",20,60);
+				 objetosPesca.addItem(p1);
+			 // 1 semilla
+			 var s1:Semilla = new Semilla("Tomato seed","90","src/assets/plant.png",20,80);
+			 	 objetosSiembra.addItem(s1);
+				
+				 //Baul inicial para todos
+				
+				 baul.objetos.addItem(c1);
+				 baul.objetos.addItem(c2);
+				 baul.objetos.addItem(j2);
+				 baul.objetos.addItem(p1);
+				 baul.objetos.addItem(s1);
+				
+				 informacionAnimal(event);
+			 }
+			
 			
 			/* Funcion para movernos por las imagenes de las mascotas. Flecha izquierda
 			/
@@ -128,6 +227,15 @@
 	
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<mx:SoundEffect id="sonidoDesplazo" 
+						useDuration="false" 
+						loops="0"
+						source="{soundClass}"/>
+		
+		<mx:SoundEffect id="sonidoClick"
+						useDuration="false"
+						loops="0"
+						source="{soundClick}"/>
 	</fx:Declarations>
 	<mx:ViewStack id="menuPrincipal" x="4" y="0" width="100%">
 		
@@ -145,9 +253,9 @@
 				
 				<!-- Primera pestana -->
 				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num1.gif')">
-					<s:Label x="142" y="67" text="Bienvenido"
-							 x.tigre="104" y.tigre="82" fontFamily.tigre="Verdana"
-							 fontSize.tigre="26" text.tigre="Welcome!"/>
+					<s:Label x="142" y="67"
+							 x.tigre="104" y.tigre="82" fontFamily="Verdana"
+							 fontSize="26" text="Welcome!"/>
 				</s:NavigatorContent>
 				
 				
@@ -214,15 +322,18 @@
 		   
 			<s:Label x="83" y="176" color="#CC3B3B" fontFamily="Verdana" fontSize="33"
 					 text="Select your pet"/>
+			
 			<!-- La transicion de las fotos de los animales -->
 			<s:Button x="105" y="410" chromeColor="#67E14F" icon="assets/leftArrow.gif"
-					  click="cambiarAnimalIzq()"/>
+					  click="cambiarAnimalIzq()" mouseDownEffect="{sonidoDesplazo}"/>
 			<s:Button x="235" y="410" chromeColor="#67E14F" icon="assets/rightArrow.gif"
-					  click="cambiarAnimalDer()"/>
+					  click="cambiarAnimalDer()" mouseDownEffect="{sonidoDesplazo}"/>
+			
 			<s:Button x="411" y="466" width="141" height="27" label="Get Started!" chromeColor="#B23F00"
-					  click="informacionAnimal(event)" color="#FDFDFD" cornerRadius="2"
+					  click="inicializarObjetos(event)" color="#FDFDFD" cornerRadius="2"
 					  enabled="true" fontFamily="Verdana" fontSize="16" fontWeight="bold"
-					  skinClass="spark.skins.spark.ButtonSkin"/>
+					  skinClass="spark.skins.spark.ButtonSkin"
+					  mouseDownEffect="{sonidoClick}"/>
 		
 			
 		
@@ -232,7 +343,11 @@
 		<!-- Casa exterior -->
 		
 		<s:NavigatorContent id="casa">
-			<components:casaExterior width="800" height="600" animalSource="@{animalSource}" animal="@{animal}">
+			<components:casaExterior width="800" height="600" 
+									 animalSource="@{animalSource}" 
+									 animal="@{animal}"
+									 objetosComida="{objetosComida}"
+									 objetosJuguete="{objetosJuguete}">
 				
 				
 		    </components:casaExterior>

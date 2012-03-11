@@ -11,8 +11,17 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import clases.CasaExterior;
+			
+			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable]
+			public var objetosComida:ArrayCollection;
+			[Bindable]
+			public var objetosJuguete:ArrayCollection;
 		]]>
 	</fx:Script>
 	
@@ -42,7 +51,9 @@
 		
 		<!-- Mercado -->
 		<s:NavigatorContent id="mercado">
-			<components:mercado animal="{animal}">
+			<components:mercado animal="@{animal}"
+								objetosComida = "{objetosComida}"
+								objetosJuguete="{objetosJuguete}">
 			</components:mercado>
 		</s:NavigatorContent>
 		
@@ -73,7 +84,7 @@
 		<!-- Casa exterior -->
 		
 		<s:NavigatorContent id="casa">
-			<components:casaExterior animal="{animal}">
+			<components:casaExterior animal="@{animal}" animalSource="@{animalSource}">
 			</components:casaExterior>
 		</s:NavigatorContent>
 		
@@ -81,7 +92,7 @@
 	</mx:ViewStack>
 	
 	<!-- Menu general -->
-	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+	<components:menuSuperior animal="@{animal}">
 	</components:menuSuperior>
 
 </s:Group>

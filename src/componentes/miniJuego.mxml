@@ -13,7 +13,7 @@
 			public var animal:Animal;
 		]]>
 	</fx:Script>
-	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+	<components:menuSuperior animal="@{animal}">
 		
 	</components:menuSuperior>
 	<s:NavigatorContent width="800" height="600">

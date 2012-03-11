@@ -46,7 +46,7 @@
 				 text="Bowl"/>
 	</s:NavigatorContent>
 	
-	<components:menuSuperior experiencia="{animal.experiencia}" nivel="{animal.nivel}" dinero="{animal.dinero}">
+	<components:menuSuperior animal="@{animal}">
 		
 	</components:menuSuperior>
 	<components:menuDerecho animal="{animal}" color="#103079" fontFamily="Verdana" fontSize="15"

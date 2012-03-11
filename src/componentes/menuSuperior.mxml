@@ -10,15 +10,36 @@
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
+			import clases.Animal;
+			
+			import flash.events.TimerEvent;
+			import flash.utils.Timer;
+			import flash.media.*; 
+			
 			[Bindable]
-			public var experiencia:int;
-			[Bindable]
-			public var dinero:int;
-			[Bindable]
-			public var nivel:int;
+			public var animal:Animal;
+			public var sndChannel:SoundChannel;
+			public var max:int = 1000;
+			public var timer:Timer = new Timer(1000);
 			
 			public function inicializarBarra():void{
-				Exp.setProgress(experiencia,1000);
+				timer.addEventListener( TimerEvent.TIMER, incrementarBarra);
+				timer.start();
+				
+				Exp.setProgress(animal.experiencia,max);
+			}
+			
+			public function incrementarBarra():void{
+				
+				if (animal.experiencia >= max){
+					animal.nivel = animal.nivel + 1;
+					max = max + 1000;
+				}
+				Exp.setProgress(animal.experiencia,max);
+			}
+			
+			public function stopSound():void{
+				sndChannel.stop()
 			}
 		]]>
 	</fx:Script>
@@ -27,12 +48,12 @@
 						contentBackgroundAlpha="0.0">
 		
 		<!-- Barra de experiencia -->
-		<mx:ProgressBar id="Exp" x="82" y="10" width="229" height="24" label="{experiencia}"
+		<mx:ProgressBar id="Exp" x="82" y="10" width="229" height="24" label="{animal.experiencia}"
 						chromeColor="#78C4FF" labelPlacement="center" maximum="1000" minimum="0"
 						mode="manual"/>
 		<botones:claro x="322" y="9" width="30" height="30"/>
 		<s:Label x="336" y="19" color="#3178C2" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{nivel}"/>
+				 text="{animal.nivel}"/>
 		
 		<!-- Botones generales del juego -->
 		<s:HGroup x="566" y="14" width="224" height="40">
@@ -44,7 +65,7 @@
 		</s:HGroup>
 		
 		<s:Label x="43" y="47" color="#FF7632" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{dinero}"/>	
+				 text="{animal.dinero}"/>	
 
 		<s:Label x="44" y="16" color="#0B2A84" fontFamily="Verdana" fontSize="15" fontWeight="bold"
 				 text="EXP"/>

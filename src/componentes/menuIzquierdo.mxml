@@ -9,10 +9,61 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
-			import mx.controls.Alert;
-			public var animal:Animal;
+			import flash.events.TimerEvent;
+			import flash.utils.Timer;
 			
+			import mx.controls.Alert;
+
+			public var animal:Animal;
+			public var timer:Timer = new Timer(180000); // Timer que se dispara cada 3 minutos
+			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
+			public var aviso:Boolean = true;
+
+			/* Funcion del Timer para que las necesidades vayan decreciendo */
+			
+			public function decrecerNecesidades( event:TimerEvent ):void
+			{
+				
+				if ((animal.dormir = animal.dormir - 2) < 0){
+					animal.dormir = 0;
+					if(aviso){
+						Alert.show(animal.nombre+" is exhausted! ");
+						aviso = false;
+					}
+				}
+				if ((animal.hambre = animal.hambre - 5) < 0){
+					animal.hambre = 0;
+					if(aviso){
+					Alert.show(animal.nombre+" is starving! ");
+					aviso=false;
+					}
+				}
+				if ((animal.higiene = animal.higiene - 5) < 0){
+					animal.higiene = 0;
+					if(aviso){
+					Alert.show(animal.nombre+" needs a bath! ");
+					aviso=false;
+					}
+				}
+				if ((animal.diversion = animal.diversion - 3) < 0){
+					animal.diversion = 0;
+					if(aviso){
+					Alert.show(animal.nombre+" is bored! Try playing with him ");
+					aviso=false;
+					}
+				}
+				this.asignarNecesidades();
+			}
+			
+			/* Funcion en la cual actualizamos la barra de estado */
 			public function asignarNecesidades():void{
+				//Inicializamos el timer
+				// add event listeners
+				timer.addEventListener( TimerEvent.TIMER, decrecerNecesidades );
+				timerAviso.addEventListener(TimerEvent.TIMER,avisos);
+				// start the timer
+				timer.start();
+				
 				//Se actualizan las necesidades y habilidades del animal
 				velocidad.setProgress(animal.habVelocidad,100);
 				inteligencia.setProgress(animal.habIntel,100);
@@ -22,6 +73,27 @@
 				higiene.setProgress(animal.higiene,100);
 				dormir.setProgress(animal.dormir,100);
 
+			}
+			
+			/*Funcion para avisar estado de la mascota */
+			public function avisos(event:TimerEvent):void{
+				if (animal.dormir == 0){
+					Alert.show(animal.nombre+" is exhausted! ");
+					
+				}
+				if (animal.higiene == 0){
+					Alert.show(animal.nombre+" needs a bath! ");
+				
+				}
+				if (animal.diversion == 0){
+					Alert.show(animal.nombre+" is bored! Try playing with him ");
+					
+				}
+				if (animal.hambre == 0){
+					Alert.show(animal.nombre+" is starving! ");
+					
+				}
+				aviso = true;
 			}
 		]]>
 	</fx:Script>
