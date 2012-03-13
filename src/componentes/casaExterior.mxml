@@ -16,22 +16,39 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
+			
 			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.managers.PopUpManager;
 	
 			[Bindable]
-			public var animalSource:CasaExterior;
+			public var animalSource:CasaExterior; //Parametro
 			[Bindable]
-			public var animal:Animal;
+			public var animal:Animal; //Parametro
+			[Bindable] 
+			public var objetosComida:ArrayCollection; //Parametro
 			[Bindable]
-			public var objetosComida:ArrayCollection;
+			public var objetosJuguete: ArrayCollection; //Parametro
 			[Bindable]
-			public var objetosJuguete: ArrayCollection;
+			public var sndChannel:SoundChannel; //Parametro
+			[Bindable]
+			public var snd:Sound;
+			//Timer
+			[Bindable]
+			public var timer:Timer = new Timer(120000); // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
+			
+			public var alert:Alert;
+
 			
 			
 			/*Funcion para bañar al animal*/
-			public function bañarse():void{
+			public function banarse():void{
 				this.animal.higiene = 100;
 				this.animal.experiencia = this.animal.experiencia + 20;
+				launchAlert("Swimming!", "Please wait");
+				setTimeout(hideAlert, 2000);
 				
 			}
 			
@@ -44,13 +61,17 @@
 					
 				}
 				this.animal.experiencia = this.animal.experiencia + 20;
-				
+				launchAlert("Eating!", "Please wait");
+				setTimeout(hideAlert, 2000);
 			}
 		
 			/*Funcion para dormir*/
 			public function dormir():void{
 				this.animal.dormir=100;
 				this.animal.experiencia = this.animal.experiencia + 20;
+				launchAlert("Sleeping!", "Please wait");
+				setTimeout(hideAlert, 2000);
+				casaExt.selectedChild=casaInt
 			}
 			
 			/*Funcion para diversion*/
@@ -58,20 +79,27 @@
 				if ((this.animal.diversion= this.animal.diversion + 20) >100){
 				  this.animal.diversion = 100;
 				}
+				launchAlert("Having fun!", "Please wait");
+				setTimeout(hideAlert, 2000);
 				this.animal.experiencia = this.animal.experiencia + 20;
+				
 			}
 		
+			private function launchAlert(message:String, title:String = ""):void {
+				alert = Alert.show(message, title);
+			}
+			private function hideAlert():void {
+				PopUpManager.removePopUp(alert);
+			}
 		
 		]]>
 	</fx:Script>
 	
-	<!-- Menu superior -->
-	
-	<components:menuSuperior animal="@{animal}">
-	</components:menuSuperior>
+
 
 	
-	<mx:ViewStack id="casaExt">
+	<mx:ViewStack id="casaExt"
+				  >
 		
 	<!-- Exterior -->
 
@@ -83,22 +111,27 @@
 				<s:Button x="113" y="34" label="Siembra" icon="{animalSource.imagenSiembra}" />
 			</s:BorderContainer>
 			
-			<s:Button x="650" y="100" width="110" height="110" skinClass="skins.casa.baul"
-					  x.init="650" y.init="80" width.init="120" height.init="120"/>
+			<s:Button id="botonBaul" x="650" y="100" width="110" height="110" skinClass="skins.casa.baul"
+					 
+					  click="diversion()"/>
 			
-			<s:Button x="95" y="85" width="260" height="100" skinClass="skins.casa.lago"
-					  x.init="114" y.init="33"/>
+			<s:Button id="botonLago" x="95" y="85" width="260" height="100" skinClass="skins.casa.lago"
+					  click="banarse()"/>
 			
-			<s:Button x="360" y="250" width="90" height="50" skinClass="skins.casa.plato"/>
+			<s:Button id="botonPlato" x="360" y="250" width="90" height="50" skinClass="skins.casa.plato"
+					  click="alimentar()"/>
 			
 		</s:BorderContainer>
 		
 		<s:BorderContainer x="0" y="69" width="800" height="199" backgroundColor="#3789EF">
 			
-			<s:Button x="650" y="120" width="120" height="100" skinClass="skins.casa.casa"
-					  click="casaExt.selectedChild=casaInt"/>
+			<s:Button id="botonCasa" x="650" y="120" width="120" height="100" skinClass="skins.casa.casa"
+					  click="dormir()"/>
 						  
-			<components:menuIzquierdo animal="{animal}"></components:menuIzquierdo>
+			<components:menuIzquierdo animal="@{animal}"
+									  timer="@{timer}"
+									  timerAviso="@{timerAviso}">
+			</components:menuIzquierdo>
 					
 		</s:BorderContainer>
 		
@@ -117,15 +150,25 @@
 	</s:NavigatorContent>
 		
 		
+		
 	</mx:ViewStack>
 	
 	<!-- Mapa -->
-	
-    <components:menuDerecho animal="{animal}"
+	<components:menuDerecho animal="@{animal}"
 							animalSource="@{animalSource}"
 							objetosComida = "{objetosComida}"
 							objetosJuguete= "{objetosJuguete}">
-	   
-    </components:menuDerecho>
+		
+	</components:menuDerecho>
+	
+    
+	<!-- Menu superior -->
+	
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 snd="{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
+	</components:menuSuperior>
 
 </s:Group>

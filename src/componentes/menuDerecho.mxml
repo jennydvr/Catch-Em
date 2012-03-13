@@ -42,7 +42,8 @@
 
 
 			<s:NavigatorContent id="casa">
-				<componentes:casaExterior animal="{animal}">
+				<componentes:casaExterior animal="@{animal}"
+										  animalSource="@{animalSource}">
 					
 				</componentes:casaExterior>
 			</s:NavigatorContent>

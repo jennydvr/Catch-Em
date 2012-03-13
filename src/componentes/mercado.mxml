@@ -9,6 +9,8 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.events.ListEvent;
+			import mx.controls.Alert;
 			
 			import mx.collections.ArrayCollection;
 			[Bindable]
@@ -17,63 +19,64 @@
 			public var objetosComida:ArrayCollection;
 			[Bindable]
 			public var objetosJuguete:ArrayCollection;
+			//Timer
+			[Bindable]
+			public var timer:Timer = new Timer(120000); // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
+			
+		
+			
+			private function onItemClick( e:ListEvent ):void {
+				Alert.show("You selected: "+e.itemRenderer.data.nombre);
+			
+			}
+			
+			private function comprarArticulo(e:ListEvent):void{
+				Alert.show("You're buying: "+e.itemRenderer.data.nombre+" for: "+ e.itemRenderer.data.precio);
+				animal.dinero = animal.dinero - e.itemRenderer.data.precio;
+				animal.experiencia = animal.experiencia + 10;
+				animal.miBaul.objetos.addItem(e.itemRenderer.data);
+			}
+			
+			
 		]]>
 	</fx:Script>
-	<components:menuSuperior animal="@{animal}">
-		
-	</components:menuSuperior>
 
 		
 
 
 	<s:BorderContainer x="0" y="68" width="802" height="532" backgroundColor="#E97A7A">
-		<mx:TabNavigator x="162" y="54" width="459" height="377">
+		<mx:TabNavigator x="162" y="54" width="459" height="377" backgroundColor="#B68033">
+			<!-- Pestana de Comida -->
 			<s:NavigatorContent width="100%" height="100%" label="Food" backgroundColor="#B68033">
-				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
-					<s:Image x="20" y="6" source="assets/meat.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="281" y="10" width="90" height="69" cornerRadius="10">
-					<s:Image x="28" y="25" source="assets/banana.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="147" y="10" width="91" height="69" cornerRadius="10">
-					<s:Image x="29" y="18" source="assets/bone.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="27" y="121" width="90" height="68" cornerRadius="10">
-				</s:BorderContainer>
-				<s:BorderContainer x="153" y="122" width="90" height="68" cornerRadius="10">
-					<s:Image x="19" y="18" width="50" height="38" source="assets/apple.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="281" y="122" width="90" height="68" cornerRadius="10">
-					<s:Image x="29" y="10" width="43" height="52" source="assets/turkey.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="31" y="223" width="90" height="68" cornerRadius="10">
-					<s:Image x="10" y="10" width="68" height="44" source="assets/trigo.png"/>
-					
-				</s:BorderContainer>
-				<s:BorderContainer x="27" y="121" width="90" height="68" cornerRadius="10">
-					<s:Image x="22" y="9" width="56" height="47" source="assets/grape.png"/>
-				</s:BorderContainer>
-				<s:BorderContainer x="153" y="223" width="90" height="68" cornerRadius="10">
-					<s:Image x="23" y="10" width="42" height="34" source="assets/fish.png"/>
-					
-				</s:BorderContainer>
-				<s:BorderContainer x="281" y="223" width="90" height="68" cornerRadius="10">
-					<s:Image x="25" y="10" width="38" height="46" source="assets/waterbottle.png"/>
-					
-				</s:BorderContainer>
-				<s:Label x="88" y="87" width="32" backgroundColor="#FFFFFF" text="30"
-						 textAlign="center"/>
+				<mx:DataGrid id="empDg" x="5" y="-4" width="447" height="323"
+							 dataProvider="{objetosComida}" itemClick="comprarArticulo( event );">
+					<mx:columns>
+						
+						<mx:DataGridColumn headerText="Food" dataField="imagen" itemRenderer="mx.controls.Image"/>
+						<mx:DataGridColumn headerText="Price" dataField="precio"/>
+					</mx:columns>
+				</mx:DataGrid>
 			</s:NavigatorContent>
+			<!-- Pestana de Juguetes -->
 			<s:NavigatorContent width="100%" height="100%" label="Toys" backgroundColor="#B68033">
-				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
-					<s:Image x="20" y="6" width="44" height="48" source="assets/ball.png"/>
-				</s:BorderContainer>
+				<mx:DataGrid x="5" y="-4" width="447" height="323"
+							 dataProvider="{objetosJuguete}" itemClick="comprarArticulo( event );">
+					<mx:columns>
+						
+						<mx:DataGridColumn headerText="Toys" dataField="imagen" itemRenderer="mx.controls.Image"/>
+						<mx:DataGridColumn headerText="Price" dataField="precio"/>
+					</mx:columns>
+				</mx:DataGrid>
 			</s:NavigatorContent>
+			<!-- Pestana de Pesca -->
 			<s:NavigatorContent width="100%" height="100%" label="Fishing" backgroundColor="#B68033">
 				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
 					<s:Image x="20" y="6" width="39" height="43" source="assets/fishing.png"/>
 				</s:BorderContainer>
 			</s:NavigatorContent>
+			<!-- Pestana de siembra -->
 			<s:NavigatorContent width="100%" height="100%" label="Gardening"
 								backgroundColor="#B68033">
 				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
@@ -82,14 +85,22 @@
 				
 			</s:NavigatorContent>
 		</mx:TabNavigator>
-		<s:Button x="551" y="428" label="Buy"/>
+		<s:Label x="389" y="54" color="#FFFFFF" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Select an item for purchase!"/>
+
 		
 	</s:BorderContainer>
-	<components:menuIzquierdo animal="{animal}">
-		
-		
+	
+	<components:menuIzquierdo animal="@{animal}"
+							  timer="@{timer}"
+							  timerAviso="@{timerAviso}">
 	</components:menuIzquierdo>
-	<components:menuDerecho animal="{animal}">
+	
+	<!-- Mapa -->
+	<components:menuDerecho animal="@{animal}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
 		
 	</components:menuDerecho>
+	
 </s:Group>

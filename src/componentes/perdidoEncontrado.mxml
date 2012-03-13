@@ -9,8 +9,13 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable] 
+			public var objetosComida:ArrayCollection; //Parametro
+			[Bindable]
+			public var objetosJuguete: ArrayCollection; //Parametro
 		]]>
 	</fx:Script>
 
@@ -46,13 +51,13 @@
 				 text="Bowl"/>
 	</s:NavigatorContent>
 	
-	<components:menuSuperior animal="@{animal}">
-		
-	</components:menuSuperior>
-	<components:menuDerecho animal="{animal}" color="#103079" fontFamily="Verdana" fontSize="15"
-							fontWeight="bold">
-		
+
+	<!-- Mapa -->
+	<components:menuDerecho animal="@{animal}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
 		
 	</components:menuDerecho>
+	
 
 </s:Group>

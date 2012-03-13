@@ -25,10 +25,10 @@
 		]]>
 	</fx:Script>
 	
-	<mx:ViewStack id="menuMapa" width="800" height="600">
+	<mx:ViewStack id="menuMapa">
 		
 		<!-- Mapa -->
-		<s:NavigatorContent width="800" height="600" backgroundColor="#C28ADA">
+		<s:NavigatorContent y="-70" width="800" height="600" backgroundColor="#C28ADA">
 
 			<s:Button x="584" y="314" click="menuMapa.selectedChild=tiro" icon="assets/tiro.gif"/>
 			
@@ -59,32 +59,39 @@
 		
 		<!-- Minijuego: Carrera -->
 		<s:NavigatorContent id="carrera">
-			<components:miniJuego animal="{animal}">
+			<components:miniJuego animal="{animal}"
+								  objetosComida = "{objetosComida}"
+								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>		
 		</s:NavigatorContent>
 		
 		<!-- Minijuego: Tiro -->
 		<s:NavigatorContent id="tiro">
-			<components:miniJuego animal="{animal}">
+			<components:miniJuego animal="{animal}"
+								  objetosComida = "{objetosComida}"
+								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>		
 		</s:NavigatorContent>	
 		
 		<!-- Minijuego: Pelea -->
 		<s:NavigatorContent id="pelea" >
-			<components:miniJuego animal="{animal}">
+			<components:miniJuego animal="{animal}" objetosComida = "{objetosComida}"
+								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>		
 		</s:NavigatorContent>			
 		
 		<!-- Minijuego: Perdidos y Encontrados -->
 		<s:NavigatorContent id="encontrado">
-			<components:perdidoEncontrado animal="{animal}">
+			<components:perdidoEncontrado animal="{animal}" objetosComida = "{objetosComida}"
+										  objetosJuguete="{objetosJuguete}">
 			</components:perdidoEncontrado>
 		</s:NavigatorContent>
 		
 		<!-- Casa exterior -->
 		
 		<s:NavigatorContent id="casa">
-			<components:casaExterior animal="@{animal}" animalSource="@{animalSource}">
+			<components:casaExterior animal="@{animal}" animalSource="@{animalSource}" objetosComida = "{objetosComida}"
+									 objetosJuguete="{objetosJuguete}">
 			</components:casaExterior>
 		</s:NavigatorContent>
 		
@@ -92,7 +99,6 @@
 	</mx:ViewStack>
 	
 	<!-- Menu general -->
-	<components:menuSuperior animal="@{animal}">
-	</components:menuSuperior>
+
 
 </s:Group>

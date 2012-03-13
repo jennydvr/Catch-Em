@@ -9,13 +9,16 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable] 
+			public var objetosComida:ArrayCollection; //Parametro
+			[Bindable]
+			public var objetosJuguete: ArrayCollection; //Parametro
 		]]>
 	</fx:Script>
-	<components:menuSuperior animal="@{animal}">
-		
-	</components:menuSuperior>
+
 	<s:NavigatorContent width="800" height="600">
 		
 		<s:SkinnableContainer x="0" y="69" width="800" height="198" backgroundColor="#7CB0FF">
@@ -26,8 +29,10 @@
 		
 	</s:NavigatorContent>
 	
-	<components:menuDerecho animal="{animal}">
-		
+	<!-- Mapa -->
+	<components:menuDerecho animal="@{animal}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
 		
 	</components:menuDerecho>
 	

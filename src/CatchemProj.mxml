@@ -12,9 +12,10 @@
 		<![CDATA[
 			import clases.*;
 			
+			import flash.media.*;
+			
 			import mx.collections.*;
-			import mx.controls.Alert;
-			import flash.media.*; 
+			import mx.controls.Alert; 
 			
 			
 			
@@ -28,6 +29,8 @@
 			public var animalSource:CasaExterior;
 			[Bindable]
 			public var animal:Animal = new Animal();
+			[Bindable]
+			public var max:int = 1000; //Inicializamos el nivel maximo
 			public var baul: Baul = new Baul();
 			[Bindable]
 			public var objetosComida:ArrayCollection = new ArrayCollection();
@@ -37,13 +40,13 @@
 			public var objetosPesca:ArrayCollection = new ArrayCollection();
 			[Bindable]
 			public var objetosSiembra:ArrayCollection = new ArrayCollection();
+			//Musica
 			[Bindable]
 			[Embed(source="src/assets/swoosh.mp3")]
 			public var soundClass:Class;   
 			[Bindable]
 			[Embed(source="src/assets/click.mp3")]
 			public var soundClick:Class;
-			
 			[Bindable]
 			[Embed(source="src/assets/Main theme.mp3")]
 			public var sndCls:Class;
@@ -53,6 +56,9 @@
 			public function playSound():void {
 				sndChannel=snd.play(0,int.MAX_VALUE);
 			}   
+			public function stopSound():void{
+				sndChannel.stop()
+			}
 			
 			/* Funcion donde verificamos el tipo del animal escogido y a partir de este
 			/  inicializamos las imagenes correspondientes a la casa particular y 
@@ -129,6 +135,7 @@
 			 
 			 
 			 animal.nivel=1;
+			 animal.nivelMax = 1000;
 			 animal.nombre= nombre.text;
 			 animal.sexo=sexo.selectedItem.label;
 			 animal.tipo=currentState;
@@ -144,24 +151,32 @@
 			*/
 			public function inicializarObjetos(event:MouseEvent):void{
 				//5 comidas
-				
-			 var c1:Comida = new Comida("Apple","30","src/assets/apple.png",10,5);
-			 var c2:Comida = new Comida("Meat","70","src/assets/meat.png",20,10);
+				[Embed(source="src/assets/apple.png")]
+			     var imagen:String;
+			 var c1:Comida = new Comida("Apple","30",imagen,10,5);
+			 [Embed(source="src/assets/meat.png")]
+			 var imagen2:String
+			 var c2:Comida = new Comida("Meat","70",imagen2,20,10);
+			 
 			 var c3:Comida = new Comida("Wheat", "60","src/assets/trigo.png",20,10);
 			 var c4:Comida = new Comida("Fish", "50", "src/assets/fish.png",20,10);
-			 var c5:Comida = new Comida("Bone", "20", "src/assets/bone.png",10,5);
+			 var c5:Comida = new Comida("Bone", "20", "src/assets/bone.png",10,5); 
 				objetosComida.addItem(c1);
-				objetosComida.addItem(c2);
+/* 				objetosComida.addItem(c2);
 				objetosComida.addItem(c3);
 				objetosComida.addItem(c4);
-				objetosComida.addItem(c5);
+				objetosComida.addItem(c5); */
 			 // 4 jugetes
-			 var j1:Juguete = new Juguete("Baseball","60","src/assets/baseball.png",10,30);
-			 var j2:Juguete = new Juguete("Football","30","src/assets/ball.png",25,30);
+				[Embed(source="src/assets/baseball.png")]
+				var imagen3:String
+			 var j1:Juguete = new Juguete("Baseball","60",imagen3,10,30);
+			/*  var j2:Juguete = new Juguete("Football","30","src/assets/ball.png",25,30); */
 				 objetosJuguete.addItem(j1);
-				 objetosJuguete.addItem(j2);
+				/*  objetosJuguete.addItem(j2); */
 			 // 1 caña
-			 var p1:Anzuelo = new Anzuelo("First fish road","100","src/assets/fishing.png",20,60);
+				 [Embed(source="src/assets/fishing.png")]
+				 var imagen4:String
+			 var p1:Anzuelo = new Anzuelo("First fish road","100",imagen4,20,60);
 				 objetosPesca.addItem(p1);
 			 // 1 semilla
 			 var s1:Semilla = new Semilla("Tomato seed","90","src/assets/plant.png",20,80);
@@ -170,8 +185,8 @@
 				 //Baul inicial para todos
 				
 				 baul.objetos.addItem(c1);
-				 baul.objetos.addItem(c2);
-				 baul.objetos.addItem(j2);
+				// baul.objetos.addItem(c2);
+			//	 baul.objetos.addItem(j2);
 				 baul.objetos.addItem(p1);
 				 baul.objetos.addItem(s1);
 				
@@ -237,6 +252,10 @@
 						loops="0"
 						source="{soundClick}"/>
 	</fx:Declarations>
+	<!-- Menu superior -->
+	
+	
+
 	<mx:ViewStack id="menuPrincipal" x="4" y="0" width="100%">
 		
 		
@@ -347,16 +366,19 @@
 									 animalSource="@{animalSource}" 
 									 animal="@{animal}"
 									 objetosComida="{objetosComida}"
-									 objetosJuguete="{objetosJuguete}">
+									 objetosJuguete="{objetosJuguete}"
+									 sndChannel="{sndChannel}"
+									 snd="{snd}">
 				
 				
 		    </components:casaExterior>
 		</s:NavigatorContent>
-		
 
 				
 	
 	</mx:ViewStack>
 	
+	
+
 	
 </s:Application>

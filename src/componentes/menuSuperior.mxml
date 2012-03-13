@@ -11,36 +11,90 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.controls.Alert;
 			
 			import flash.events.TimerEvent;
+			import flash.media.*;
 			import flash.utils.Timer;
-			import flash.media.*; 
-			
+
 			[Bindable]
 			public var animal:Animal;
+			public var reanudar:int = 0;
+			[Bindable]
+			public var dinero:int;
+			[Bindable]
+			public var experiencia:int;
+			[Bindable]
+			public var nivel:int;
+			// Musica
+			[Bindable]
+			[Embed(source="src/assets/Main theme.mp3")]
+			public var sndCls:Class;
+			public var snd:Sound; 
+			[Bindable]
 			public var sndChannel:SoundChannel;
-			public var max:int = 1000;
-			public var timer:Timer = new Timer(1000);
+			//Salir
+			private var browserType:String = "";
+			private var urlString:String;
+			private var request:URLRequest;
+			//Timer
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
+		 	public var timerBar:Timer;//cada segundo
+			private var interval:uint;
 			
 			public function inicializarBarra():void{
-				timer.addEventListener( TimerEvent.TIMER, incrementarBarra);
-				timer.start();
+				interval = setInterval(incrementarBarra,1000);
 				
-				Exp.setProgress(animal.experiencia,max);
+				Exp.setProgress(animal.experiencia,animal.nivelMax);
+				dinero = animal.dinero;
+				nivel = animal.nivel;
+				experiencia = animal.experiencia;
 			}
 			
 			public function incrementarBarra():void{
 				
-				if (animal.experiencia >= max){
+				if (animal.experiencia >= animal.nivelMax){
 					animal.nivel = animal.nivel + 1;
-					max = max + 1000;
+					animal.nivelMax= animal.nivelMax + 1000;
+					Alert.show("LEVEL UP! Congratulations!! ");
 				}
-				Exp.setProgress(animal.experiencia,max);
+				Exp.setProgress(animal.experiencia,animal.nivelMax);
+				dinero = animal.dinero;
+				nivel = animal.nivel;
+				experiencia = animal.experiencia;
 			}
 			
-			public function stopSound():void{
-				sndChannel.stop()
+			public function pause():void{
+				reanudar = reanudar + 1;
+				if (reanudar%2 == 0){
+				
+					sndChannel=snd.play(0,int.MAX_VALUE);
+					timer.start();
+					timerAviso.start();
+				}
+				else{
+					sndChannel.stop();
+					timer.stop();
+					timerAviso.stop();
+				}
+				
 			}
+			
+			private function exit():void
+			{
+				/**
+				 * For this to work in Firefox,
+				 * Type in "about:config" in firefox address bar 
+				 * set dom.allow_scripts_to_close_windows to true.
+				 */
+				urlString = "javascript:window.close();";
+				request = new URLRequest(urlString);
+				navigateToURL(request, "_self");    
+			}
+			
 		]]>
 	</fx:Script>
 <mx:ViewStack id="menu" backgroundColor="#F5FB96">
@@ -48,24 +102,24 @@
 						contentBackgroundAlpha="0.0">
 		
 		<!-- Barra de experiencia -->
-		<mx:ProgressBar id="Exp" x="82" y="10" width="229" height="24" label="{animal.experiencia}"
+		<mx:ProgressBar id="Exp" x="82" y="10" width="229" height="24" label="{experiencia}"
 						chromeColor="#78C4FF" labelPlacement="center" maximum="1000" minimum="0"
 						mode="manual"/>
 		<botones:claro x="322" y="9" width="30" height="30"/>
 		<s:Label x="336" y="19" color="#3178C2" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{animal.nivel}"/>
+				 text="{nivel}"/>
 		
 		<!-- Botones generales del juego -->
 		<s:HGroup x="566" y="14" width="224" height="40">
-			<s:Button x="0" y="0" width="40" height="40" skinClass="skins.generales.pausa"/>
+			<s:Button x="0" y="0" width="40" height="40" skinClass="skins.generales.pausa" click="pause()"/>
 			<s:Button x="50" y="0" width="40" height="40" skinClass="skins.generales.camara"/>
 			<s:Button x="100" y="0" width="40" height="40" skinClass="skins.generales.ayuda"/>
 			<s:Button x="150" y="0" width="40" height="40" skinClass="skins.generales.guardar"/>
-			<s:Button x="200" y="0" width="40" height="40" skinClass="skins.generales.cerrar"/>
+			<s:Button x="200" y="0" width="40" height="40" skinClass="skins.generales.cerrar" click="exit()"/>
 		</s:HGroup>
 		
 		<s:Label x="43" y="47" color="#FF7632" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{animal.dinero}"/>	
+				 text="{dinero}"/>	
 
 		<s:Label x="44" y="16" color="#0B2A84" fontFamily="Verdana" fontSize="15" fontWeight="bold"
 				 text="EXP"/>
