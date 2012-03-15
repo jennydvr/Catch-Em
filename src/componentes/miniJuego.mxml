@@ -18,22 +18,29 @@
 			public var objetosJuguete: ArrayCollection; //Parametro
 		]]>
 	</fx:Script>
-
-	<s:NavigatorContent width="800" height="600">
 		
-		<s:SkinnableContainer x="0" y="69" width="800" height="198" backgroundColor="#7CB0FF">
-		</s:SkinnableContainer>
-		<s:SkinnableContainer x="0" y="262" width="800" height="338" backgroundColor="#CBF3B3">
+	<s:NavigatorContent width="800" height="600">
+		<!-- Fondo -->
+		<s:Image x="0" y="0" source="assets/casa/cielo.png"/>
+		<s:Image x="0" y="160" source="assets/casa/grama.png"/>
+        
+		<s:Image x="5" y="180" source="assets/gente.png"/>
+        <s:Image x="202" y="180" source="assets/gente.png"/>
+		<s:Image x="401" y="180" source="assets/gente.png"/>
+		<s:Image x="599" y="180" source="assets/gente.png"/>
+		
+		<s:SkinnableContainer x="0" y="262" width="800" height="338" backgroundAlpha="0">
 			<s:Label x="325" y="109" width="149" height="62" fontSize="31" text="Carrera, Pelea, Tiro"/>
 		</s:SkinnableContainer>
 		
 	</s:NavigatorContent>
-	
-	<!-- Mapa -->
+    
+	<components:menuSuperior animal="@{animal}">
+	</components:menuSuperior>
+    
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
 							objetosJuguete= "{objetosJuguete}">
-		
 	</components:menuDerecho>
 	
 </s:Group>

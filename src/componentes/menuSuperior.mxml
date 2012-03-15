@@ -97,8 +97,8 @@
 			
 		]]>
 	</fx:Script>
-<mx:ViewStack id="menu" backgroundColor="#F5FB96">
-	<s:NavigatorContent width="800" height="70" backgroundAlpha="0.0" backgroundColor="#F6F868"
+<mx:ViewStack id="menu">
+	<s:NavigatorContent width="800" height="70" backgroundAlpha="0.0" backgroundColor="#FEFFC4"
 						contentBackgroundAlpha="0.0">
 		
 		<!-- Barra de experiencia -->
@@ -106,8 +106,8 @@
 						chromeColor="#78C4FF" labelPlacement="center" maximum="1000" minimum="0"
 						mode="manual"/>
 		<botones:claro x="322" y="9" width="30" height="30"/>
-		<s:Label x="336" y="19" color="#3178C2" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{nivel}"/>
+		<s:Label x="327" y="17" color="#3178C2"
+                 fontFamily="Verdana" fontSize="15" fontWeight="bold" text="{nivel}"/>
 		
 		<!-- Botones generales del juego -->
 		<s:HGroup x="566" y="14" width="224" height="40">
@@ -118,16 +118,16 @@
 			<s:Button x="200" y="0" width="40" height="40" skinClass="skins.generales.cerrar" click="exit()"/>
 		</s:HGroup>
 		
-		<s:Label x="43" y="47" color="#FF7632" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="{dinero}"/>	
+		<s:Label x="43" y="47" color="#FF7632"
+                 fontFamily="Verdana" fontSize="15" fontWeight="bold" text="{dinero}"/>	
 
-		<s:Label x="44" y="16" color="#0B2A84" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="EXP"/>
+		<s:Label x="44" y="16" color="#0B2A84"
+                 fontFamily="Verdana" fontSize="15" fontWeight="bold" text="EXP"/>
+		<s:Image x="10" y="5" source="assets/extras/estrella.png"/>
+		<s:Image x="10" y="40" source="assets/extras/moneda.png"/>
 		
 	</s:NavigatorContent>
 	
-	
 </mx:ViewStack>	
 
-	
 </s:Group>

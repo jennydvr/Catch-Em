@@ -51,7 +51,9 @@
 				 text="Bowl"/>
 	</s:NavigatorContent>
 	
-
+	<components:menuSuperior animal="@{animal}">
+	</components:menuSuperior>
+    
 	<!-- Mapa -->
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"

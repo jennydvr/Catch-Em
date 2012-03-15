@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="300" viewWidth="400" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group blendMode="layer" ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="300" d:pageWidth="400" d:type="layer" d:userLabel="Artboard 1">
+    <Group blendMode="normal" ai:objID="552e300" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Rect x="10" y="7" blendMode="softlight" alpha="0.5" width="383" height="285" radiusX="11.9992" radiusY="11.9992" ai:objID="140b6380" ai:seqID="3">
+        <fill>
+          <SolidColor color="#FF0000"/>
+        </fill>
+      </Rect>
+      <Group x="24.5" y="24.5" blendMode="normal" ai:objID="d1fd200" ai:seqID="4">
+        <Group blendMode="normal" ai:objID="d200d00" ai:seqID="5" flm:knockout="false" d:id="3">
+          <Group x="3" y="3" blendMode="multiply" ai:objID="d1fc900" ai:seqID="6" flm:isolated="false">
+            <Rect x="0.5" y="0.5" width="350" height="250" radiusX="1.99102" radiusY="1.99102" ai:objID="140b2a80" ai:seqID="7">
+              <fill>
+                <SolidColor/>
+              </fill>
+            </Rect>
+            <Rect x="0.5" y="0.5" width="350" height="250" radiusX="1.99102" radiusY="1.99102" ai:objID="140af480" ai:seqID="8">
+              <stroke>
+                <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+              </stroke>
+            </Rect>
+          </Group>
+          <Rect x="0.5" y="0.5" width="350" height="250" radiusX="1.99102" radiusY="1.99102" ai:objID="140aa080" ai:seqID="9">
+            <fill>
+              <SolidColor color="#534741"/>
+            </fill>
+          </Rect>
+          <Rect x="0.5" y="0.5" width="350" height="250" radiusX="1.99102" radiusY="1.99102" ai:objID="140acc00" ai:seqID="10">
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Rect>
+        </Group>
+        <Group x="25.375" y="23.75" ai:objID="d1fd700" ai:seqID="11" flm:knockout="false" d:id="4">
+          <Rect x="0.5" y="0.5" width="299.25" height="202.5" radiusX="1.99102" radiusY="1.99102" ai:objID="140b0800" ai:seqID="12">
+            <fill>
+              <SolidColor color="#D2C1AD"/>
+            </fill>
+          </Rect>
+          <Rect x="0.5" y="0.5" width="299.25" height="202.5" radiusX="1.99102" radiusY="1.99102" ai:objID="140b6980" ai:seqID="13">
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Rect>
+        </Group>
+        <Group x="128.652" y="35.2227" ai:objID="d20ae00" ai:seqID="14">
+          <Path x="0.375153" y="0.374798" winding="nonZero" ai:objID="140ab400" ai:seqID="15" data="M92.0575 39.1003C90.0516 41.4362 2.52328 40.698 1.29379 39.1003 -0.375641 36.9314 -0.485992 3.58712 1.29379 1.34932 2.53891 -0.216106 90.5223 -0.669231 92.0575 1.34932 93.4344 3.16329 93.0301 37.9665 92.0575 39.1003Z">
+            <fill>
+              <SolidColor color="#FFFFFF"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Path x="8.20068" y="27.5225" winding="nonZero" flm:variant="1" d:id="5" data="M17.4049 -0.0268646C17.414 0.0447043 17.4466 0.0961248 17.5022 0.127607 17.5578 0.158879 17.6273 0.17462 17.7107 0.17462 17.7848 0.17462 17.9029 0.172311 18.0652 0.167903 18.2272 0.163286 18.4058 0.154471 18.6004 0.141039 18.795 0.127607 18.9942
+ 0.109557 19.1982 0.0873098 19.4019 0.0648527 19.5826 0.0402968 19.7403 0.0134323 19.9163 -0.0134323 20.0045 -0.111866 20.0045 -0.282078 20.0045 -0.299918 20.0045 -0.320066 20.0045 -0.342523 20.0045 -0.36477 19.9997 -0.393944 19.9906 -0.429833
+L18.0999 -15.8232C18.0721 -16.0291 17.9422 -16.1322 17.7107 -16.1322 17.6364 -16.1322 17.523 -16.1276 17.3701 -16.1187 17.2172 -16.1097 17.048 -16.0963 16.8627 -16.0784 16.6772 -16.0604 16.4873 -16.0402 16.2927 -16.018 16.0981 -15.9955 15.9265
+ -15.971 15.7784 -15.9441 15.6022 -15.9082 15.5142 -15.8142 15.5142 -15.662 15.5142 -15.5993 15.5188 -15.5634 15.5281 -15.5546L15.6672 -14.4397 10.5652 -3.15659 5.58846 -15.8232C5.54198 -15.9217 5.49115 -15.9978 5.43554 -16.0516 5.37994 -16.1053
+ 5.30109 -16.1322 5.19921 -16.1322 5.12493 -16.1322 5.00915 -16.1276 4.85167 -16.1187 4.69398 -16.1097 4.52021 -16.0963 4.33036 -16.0784 4.1403 -16.0604 3.94568 -16.0402 3.74649 -16.018 3.54709 -15.9955 3.37332 -15.971 3.22518 -15.9441 3.03968
+ -15.9173 2.94715 -15.832 2.94715 -15.6889 2.94715 -15.653 2.95627 -15.6083 2.97495 -15.5546L3.4198 -14.3725 0.708984 -0.107458C0.699644 -0.0805937 0.695082 -0.0356795 0.695082 0.0268646 0.695082 0.125298 0.759812 0.17462 0.889705 0.17462 1.1584
+ 0.17462 1.41558 0.167903 1.66125 0.154471 1.9067 0.141039 2.11305 0.125298 2.27987 0.107458 2.42801 0.0984334 2.51142 0.0402968 2.5301 -0.0671614L4.12879 -12.4383 8.99436 -0.0268646C9.04997 0.107458 9.15184 0.17462 9.3002 0.17462 9.51328 0.17462
+ 9.7242 0.170002 9.93272 0.161187 10.1412 0.152163 10.3289 0.13873 10.4957 0.120891 10.6254 0.102841 10.7088 0.0447043 10.746 -0.0537291L15.9313 -12.2771 17.4049 -0.0268646ZM27.4974 -2.87451 27.4418 -2.87451 24.7588 -9.56378C24.6939 -9.71595 24.6289
+ -9.83453 24.5642 -9.91974 24.4992 -10.0047 24.3974 -10.0473 24.2584 -10.0473 24.1934 -10.0473 24.045 -10.0293 23.8135 -9.99362 23.5817 -9.95773 23.2991 -9.90631 22.9655 -9.83915 22.6319 -9.77198 22.2704 -9.69349 21.8812 -9.60408 21.4919 -9.51446
+ 21.1072 -9.41603 20.7273 -9.30857L20.8107 -8.66382C20.922 -8.68166 21.0286 -8.69509 21.1305 -8.70412 21.2324 -8.71293 21.3297 -8.71755 21.4224 -8.71755 21.7096 -8.71755 21.9552 -8.64577 22.1592 -8.50263 22.3629 -8.35929 22.5576 -8.07721 22.7431
+ -7.6564L26.2046 0 25.3983 1.71933C25.1481 2.2476 24.9 2.68184 24.6545 3.02226 24.4089 3.36248 24.1656 3.63343 23.9247 3.83492 23.6836 4.0364 23.4382 4.17744 23.1879 4.25803 22.9377 4.33863 22.6827 4.37892 22.4233 4.37892 22.21 4.37892 22.0063
+ 4.35416 21.8117 4.30505 21.617 4.25572 21.4131 4.17282 21.2 4.05655 21.0794 4.18185 20.9939 4.32289 20.9428 4.47967 20.892 4.63624 20.8664 4.7863 20.8664 4.92965 20.8664 5.1177 20.9035 5.29232 20.9776 5.45351 21.0519 5.61469 21.1583 5.75783 21.2973
+ 5.88334 21.4363 6.00864 21.6031 6.10707 21.7978 6.17885 21.9924 6.25042 22.21 6.28631 22.4511 6.28631 23.0441 6.28631 23.5585 6.14737 23.9942 5.86991 24.4297 5.59224 24.8075 5.24531 25.1272 4.8289 25.4469 4.4125 25.718 3.96252 25.9405 3.47896
+ 26.1629 2.9954 26.3575 2.55213 26.5243 2.14916 26.7189 1.69247 26.9483 1.17071 27.2125 0.584304 27.4766 -0.00209879 27.7661 -0.6267 28.0813 -1.2895 28.3963 -1.95209 28.7277 -2.64154 29.0753 -3.35807 29.4228 -4.07439 29.7773 -4.79302 30.1387 -5.51395
+ 30.5002 -6.23468 30.8592 -6.94659 31.2161 -7.64968 31.5728 -8.35257 31.9182 -9.02188 32.2518 -9.65781 32.2981 -9.74722 32.3213 -9.8234 32.3213 -9.88616 32.3213 -9.99362 32.2379 -10.0473 32.0711 -10.0473 32.0061 -10.0473 31.9158 -10.0406 31.8
+ -10.0272 31.684 -10.0138 31.5567 -9.99802 31.4177 -9.98018 31.2787 -9.96213 31.1349 -9.93989 30.9867 -9.91302 30.8384 -9.88616 30.6948 -9.85468 30.5558 -9.819 30.4259 -9.78311 30.3286 -9.73609 30.2639 -9.67796 30.1989 -9.61961 30.1433 -9.5323
+ 30.097 -9.41603L27.4974 -2.87451ZM44.8189 -6.46093C45.7642 -6.49661 46.6769 -6.61309 47.5575 -6.81017 48.4379 -7.00703 49.2163 -7.30926 49.893 -7.71685 50.5694 -8.12422 51.1115 -8.65039 51.5195 -9.29514 51.9272 -9.93989 52.1311 -10.7278 52.1311
+ -11.6592 52.1311 -12.2502 52.0408 -12.7674 51.86 -13.2106 51.6793 -13.6539 51.4313 -14.0367 51.1163 -14.3591 50.8011 -14.6815 50.4282 -14.9455 49.9972 -15.1516 49.5663 -15.3575 49.1027 -15.5231 48.6071 -15.6486 48.1112 -15.7739 47.5899 -15.8612
+ 47.0431 -15.9105 46.4962 -15.9596 45.9495 -15.9844 45.4027 -15.9844 44.2072 -15.9844 43.132 -15.9261 42.1776 -15.8098 41.2229 -15.6933 40.3378 -15.568 39.5223 -15.4337L39.6057 -14.6949C39.8282 -14.7218 40.0319 -14.7352 40.2174 -14.7352 40.5417
+ -14.7352 40.8058 -14.6613 41.0098 -14.5136 41.2136 -14.3658 41.3156 -14.0636 41.3156 -13.6069L41.3156 -0.161187C41.3156 0.0625441 41.4269 0.17462 41.6493 0.17462 41.7234 0.17462 41.837 0.172311 41.9899 0.167903 42.1428 0.163286 42.3096 0.154471
+ 42.4903 0.141039 42.6711 0.127607 42.8563 0.109557 43.0464 0.0873098 43.2362 0.0648527 43.41 0.0402968 43.5677 0.0134323 43.7901 -0.0222472 43.9014 -0.147755 43.9014 -0.362672L43.9014 -14.3054C43.9014 -14.6009 44.0078 -14.7732 44.2211 -14.8225
+ 44.4342 -14.8716 44.7494 -14.8964 45.1664 -14.8964 45.7687 -14.8964 46.3224 -14.8135 46.8276 -14.6479 47.3327 -14.4821 47.766 -14.2403 48.1275 -13.9226 48.4889 -13.6046 48.7715 -13.2127 48.9755 -12.7472 49.1792 -12.2815 49.2813 -11.7532 49.2813
+ -11.1622 49.2813 -10.4816 49.1816 -9.904 48.9824 -9.42946 48.783 -8.95471 48.4889 -8.56308 48.0996 -8.25414 47.7104 -7.94519 47.2308 -7.71013 46.6608 -7.54894 46.0909 -7.38775 45.4351 -7.2803 44.6937 -7.22657L44.8189 -6.46093ZM53.0069 -8.66382
+C53.1459 -8.69069 53.2641 -8.70622 53.3614 -8.71083 53.4587 -8.71524 53.5582 -8.71755 53.6603 -8.71755 53.9939 -8.71755 54.2394 -8.63024 54.3971 -8.45562 54.5546 -8.281 54.6334 -7.95632 54.6334 -7.48178L54.6334 -0.161187C54.6334 0.0625441 54.7446
+ 0.17462 54.967 0.17462 55.0411 0.17462 55.1478 0.172311 55.2868 0.167903 55.4258 0.163286 55.5787 0.154471 55.7455 0.141039 55.9124 0.127607 56.0861 0.109557 56.2668 0.0873098 56.4476 0.0648527 56.6166 0.0402968 56.7743 0.0134323 56.9967 -0.0222472
+ 57.1079 -0.147755 57.1079 -0.362672L57.1079 -9.57722C57.1079 -9.89959 56.9595 -10.0608 56.663 -10.0608 56.5981 -10.0608 56.4615 -10.0473 56.2529 -10.0205 56.0444 -9.99362 55.7755 -9.9487 55.4467 -9.88616 55.1176 -9.8234 54.7398 -9.74512 54.3137
+ -9.65109 53.8873 -9.55707 53.424 -9.44289 52.9235 -9.30857L53.0069 -8.66382ZM56.8716 -15.2389C56.6583 -15.4761 56.3433 -15.5949 55.9263 -15.5949 55.4258 -15.5949 55.0387 -15.4895 54.7655 -15.2792 54.492 -15.0687 54.3554 -14.7218 54.3554 -14.2382
+ 54.3554 -13.8084 54.4666 -13.4726 54.689 -13.2308 54.9114 -12.989 55.2312 -12.8681 55.6482 -12.8681 56.1487 -12.8681 56.531 -12.9756 56.7951 -13.1905 57.0592 -13.4054 57.1913 -13.7547 57.1913 -14.2382 57.1913 -14.668 57.0847 -15.0015 56.8716
+ -15.2389ZM66.5471 -6.86389C66.7509 -6.83703 66.9548 -6.8236 67.1588 -6.8236 67.6406 -6.8236 68.0437 -6.92875 68.3682 -7.13926 68.6925 -7.34956 68.8548 -7.69208 68.8548 -8.16683 68.8548 -8.54293 68.769 -8.85628 68.5976 -9.10709 68.426 -9.35768
+ 68.2014 -9.55917 67.9234 -9.71154 67.6453 -9.8637 67.3326 -9.97116 66.985 -10.0339 66.6375 -10.0965 66.2875 -10.1279 65.9354 -10.1279 65.0642 -10.1279 64.2486 -9.99802 63.4887 -9.7384 62.7287 -9.47857 62.066 -9.10919 61.5008 -8.63024 60.9354
+ -8.15109 60.4906 -7.5735 60.1663 -6.89748 59.8417 -6.22124 59.6797 -5.46694 59.6797 -4.63414 59.6797 -3.98939 59.7816 -3.3715 59.9855 -2.78048 60.1893 -2.18946 60.486 -1.6677 60.8752 -1.21562 61.2645 -0.763331 61.7441 -0.402968 62.3141 -0.134323
+ 62.884 0.134323 63.5396 0.268646 64.2811 0.268646 64.5314 0.268646 64.8511 0.235065 65.2403 0.167903 65.6296 0.100742 66.0512 0.00671614 66.5054 -0.114174 66.9594 -0.235065 67.4275 -0.378203 67.9095 -0.544007 68.3912 -0.709602 68.85 -0.886531
+ 69.2857 -1.07458L68.966 -1.82679C68.7714 -1.76404 68.5581 -1.70359 68.3265 -1.64545 68.0947 -1.58711 67.8584 -1.538 67.6175 -1.4977 67.3764 -1.4574 67.1401 -1.42382 66.9085 -1.39696 66.6768 -1.37009 66.4683 -1.35666 66.283 -1.35666 65.5692 -1.35666
+ 64.953 -1.46853 64.4341 -1.69247 63.9149 -1.9162 63.4864 -2.22514 63.1482 -2.61929 62.8097 -3.01324 62.5573 -3.47224 62.3905 -3.9961 62.2237 -4.51996 62.1403 -5.08622 62.1403 -5.69529 62.1403 -6.13393 62.1911 -6.54593 62.2932 -6.93106 62.3951
+ -7.31598 62.5573 -7.65178 62.7798 -7.93848 63.0022 -8.22496 63.2917 -8.45331 63.6486 -8.62352 64.0053 -8.79353 64.4432 -8.87874 64.9623 -8.87874 65.3238 -8.87874 65.6087 -8.83613 65.8173 -8.75113 66.0258 -8.66592 66.1857 -8.54503 66.2969 -8.38846
+ 66.4081 -8.23168 66.4776 -8.04594 66.5054 -7.83102 66.5332 -7.6161 66.5471 -7.37873 66.5471 -7.11911L66.5471 -6.86389ZM78.1689 -6.91762C78.1689 -7.0339 78.1665 -7.21523 78.1619 -7.46163 78.1571 -7.70782 78.1502 -7.96975 78.1411 -8.24742 78.1317
+ -8.52488 78.1202 -8.79583 78.1063 -9.06007 78.0924 -9.3241 78.0761 -9.5323 78.0577 -9.68467 78.0577 -9.7384 78.0205 -9.77408 77.9464 -9.79213 77.5294 -9.91743 77.1076 -10.007 76.6814 -10.0608 76.255 -10.1145 75.8147 -10.1414 75.3607 -10.1414
+ 74.8881 -10.1414 74.3828 -10.0897 73.8455 -9.9869 73.3079 -9.88385 72.8098 -9.71364 72.351 -9.47647 71.8923 -9.2391 71.5122 -8.93016 71.2111 -8.54965 70.9098 -8.16893 70.7593 -7.7011 70.7593 -7.14597 70.7593 -6.68928 70.8542 -6.29974 71.0443
+ -5.97736 71.2341 -5.65499 71.4798 -5.37963 71.7811 -5.15128 72.0821 -4.92293 72.4227 -4.72816 72.8028 -4.56698 73.1827 -4.40579 73.5626 -4.25803 73.9428 -4.12371 74.2671 -3.9982 74.5822 -3.87731 74.8881 -3.76104 75.1939 -3.64456 75.465 -3.51254
+ 75.7013 -3.36479 75.9377 -3.21703 76.1275 -3.04682 76.2713 -2.85436 76.4149 -2.66169 76.4868 -2.42663 76.4868 -2.14916 76.4868 -1.92522 76.4333 -1.73046 76.3269 -1.56486 76.2203 -1.39906 76.0812 -1.26263 75.9099 -1.15518 75.7383 -1.04772 75.5391
+ -0.967124 75.3121 -0.913395 75.0849 -0.859666 74.8464 -0.832801 74.5961 -0.832801 73.9195 -0.832801 73.4354 -0.99168 73.1434 -1.30965 72.8515 -1.6274 72.7055 -2.082 72.7055 -2.67302L72.7055 -2.90137C72.6034 -2.91921 72.5155 -2.93034 72.4414 -2.93495
+ 72.3671 -2.93936 72.2791 -2.94167 72.1773 -2.94167 71.7046 -2.94167 71.3154 -2.84303 71.0095 -2.64616 70.7037 -2.44908 70.5508 -2.13112 70.5508 -1.69247 70.5508 -1.32518 70.6711 -1.01624 70.9122 -0.76564 71.1531 -0.514834 71.452 -0.31335 71.8089
+ -0.161187 72.1655 -0.00881493 72.5478 0.100742 72.9558 0.167903 73.3635 0.235065 73.7295 0.268646 74.054 0.268646 74.5914 0.268646 75.1453 0.2082 75.7152 0.0873098 76.2852 -0.0335807 76.8065 -0.221633 77.2792 -0.476846 77.7518 -0.732059 78.1387
+ -1.06115 78.4399 -1.46412 78.741 -1.86709 78.8918 -2.35065 78.8918 -2.9148 78.8918 -3.35345 78.7966 -3.73187 78.6068 -4.04983 78.4167 -4.36759 78.171 -4.64295 77.87 -4.87592 77.5687 -5.10867 77.2281 -5.31016 76.8482 -5.48037 76.4681 -5.65037
+ 76.0836 -5.80274 75.6944 -5.93707 75.3699 -6.05334 75.0549 -6.16982 74.7491 -6.28631 74.4432 -6.40258 74.1743 -6.53019 73.9428 -6.66913 73.711 -6.80786 73.5257 -6.96674 73.3867 -7.14597 73.2477 -7.325 73.1782 -7.53551 73.1782 -7.77729 73.1782
+ -8.01907 73.2383 -8.22056 73.3589 -8.38174 73.4792 -8.54293 73.6369 -8.67264 73.8316 -8.77128 74.0262 -8.86971 74.2438 -8.94128 74.4849 -8.9862 74.7258 -9.0309 74.9667 -9.05336 75.2078 -9.05336 75.5971 -9.05336 75.9168 -9.00173 76.167 -8.89889
+ 76.4173 -8.79583 76.6234 -8.64808 76.7857 -8.45562 76.9477 -8.26295 77.0798 -8.0325 77.1819 -7.76386 77.2837 -7.49521 77.3856 -7.19509 77.4877 -6.86389L78.1689 -6.91762Z">
+            <fill>
+              <SolidColor color="#29ABE2"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Path x="2.21289" y="4.47656" winding="nonZero" ai:objID="140a9600" ai:seqID="17" data="M5.55127 4.63525 3.54834 4.32764 2.15967 5.80371 1.83301 3.80371 0 2.93896 1.80127 2.01025 2.05713 0 3.49707 1.42627 5.48828 1.04834 4.57666 2.8584 5.55127 4.63525Z">
+            <fill>
+              <SolidColor color="#39B54A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Path x="2.50684" y="32.0166" winding="nonZero" ai:objID="140b4880" ai:seqID="18" data="M5.79834 1.97119 4.41406 3.45068 4.85059 5.43018 3.01465 4.57275 1.2666 5.59814 1.51611 3.5874 0 2.24268 1.99023 1.85791 2.80029 0 3.78125 1.77295 5.79834 1.97119Z">
+            <fill>
+              <SolidColor color="#FF0000"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Path x="84.4229" y="32.1582" winding="nonZero" ai:objID="140af780" ai:seqID="19" data="M5.33203 0.790527 4.55859 2.6626 5.66211 4.36182 3.64063 4.20459 2.36719 5.77979 1.89258 3.81006 0 3.0835 1.72656 2.02393 1.83398 0 3.375 1.31494 5.33203 0.790527Z">
+            <fill>
+              <SolidColor color="#FFFF00"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Path x="84.8701" y="3.43506" winding="nonZero" ai:objID="140afc00" ai:seqID="20" data="M5.75977 3.24902 3.80469 3.78564 3.14063 5.69922 2.02539 4.00732 0 3.96582 1.26563 2.38281 0.677734 0.442871 2.57422 1.15771 4.23828 0 4.14453 2.02441 5.75977 3.24902Z">
+            <fill>
+              <SolidColor color="#FF00FF"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+        </Group>
+        <Path x="0.5" y="135.227" blendMode="darken" alpha="0.47" winding="nonZero" ai:objID="140b4e80" ai:seqID="21" data="M350 84.0508 0 0 0 115.273 350 115.273 350 84.0508Z">
+          <fill>
+            <SolidColor color="#534741"/>
+          </fill>
+        </Path>
+      </Group>
+    </Group>
+  </Group>
+  <Private variant:using="" mngo:using="" xmlns:mngo="http://ns.adobe.com/flamingo/apd" xmlns:variant="http://ns.adobe.com/flame/2008/apd">
+    <mngo:VariantContent fpdNS="http://ns.adobe.com/flame/2008/apd" fpdPRE="variant" flm:hashcode="AAAC8661E715AE3A97AF6BE350F66431" flm:original="1" d:ref="#5">
+      <variant:RichText x="8.20068" y="27.5225" fontFamily="Arial" whiteSpaceCollapse="preserve" ai:aa="2" ai:objID="d207400" ai:seqID="16" d:id="6">
+        <variant:content><variant:p fontFamily="Arial" d:id="7"><variant:span fontFamily="Arial" d:id="8">My Pics</variant:span></variant:p></variant:content>
+      </variant:RichText>
+    </mngo:VariantContent>
+    <ai:PrivateElement d:ref="#1">
+      <ai:SaveOptions>
+        <ai:Dict data="I expandBlendsOption 5 B downsampleLinkedImages 0 I rasterizeResolution 72 I preserveGradientPolicy 4 I preserveFilterPolicy 3 I preserveTextPolicy 4 B writeImages 1 B includeXMP 0 B aiEditCap 1 I versionKey 2 B includeSymbol 0 B includeObjectOutsideArtboard 0 "/>
+      </ai:SaveOptions>
+      <ai:DocData base="down.assets/images" rulerCanvasDiffH="200.5" rulerCanvasDiffV="150.5">
+        <ai:DocRasterSettings>
+          <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+        </ai:DocRasterSettings>
+      </ai:DocData>
+      <ai:AutoGenImageList>
+        <ai:Dict/>
+      </ai:AutoGenImageList>
+    </ai:PrivateElement>
+    <ai:PrivateElement flm:hashcode="A22D430B8BC8F55FE0EB983A9B16D070" d:ref="#2">
+      <ai:LayerOptions color="5 79.31 257 128.502"/>
+    </ai:PrivateElement>
+    <ai:PrivateElement alternate="1" flm:hashcode="C8910659F213EAC4959F8096F116F84B" d:ref="#3">
+      <ai:Rect height="250" knockout="0" width="350" x="0.5" y="0.5">
+        <ai:ArtStyle>
+          <ai:PaintFields>
+            <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+            <ai:Fill color="5 0.325 0.255 0.278" focus="1"/>
+          </ai:PaintFields>
+          <ai:LiveEffects>
+            <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+              <ai:Dict data="R radius 2 "/>
+            </ai:LiveEffect>
+            <ai:LiveEffect index="0" major="1" minor="0" name="Adobe Drop Shadow">
+              <ai:Dict data="I csrc 0 R blur 0 I blnd 1 R dark 100 R horz 3 B pair 1 R opac 1 R vert 3 ">
+                <ai:Entry name="sclr" valueType="F">
+                  <ai:Fill color="5 0 0 0"/>
+                </ai:Entry>
+              </ai:Dict>
+            </ai:LiveEffect>
+          </ai:LiveEffects>
+        </ai:ArtStyle>
+      </ai:Rect>
+    </ai:PrivateElement>
+    <ai:PrivateElement alternate="1" flm:hashcode="6EB88D9B3F37858C3C0A3E8660274AFE" d:ref="#4">
+      <ai:Rect height="202.5" knockout="0" width="299.25" x="25.875" y="24.25">
+        <ai:ArtStyle>
+          <ai:PaintFields>
+            <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+            <ai:Fill color="5 0.824 0.678 0.757" focus="1"/>
+          </ai:PaintFields>
+          <ai:LiveEffects>
+            <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+              <ai:Dict data="R radius 2 "/>
+            </ai:LiveEffect>
+          </ai:LiveEffects>
+        </ai:ArtStyle>
+      </ai:Rect>
+    </ai:PrivateElement>
+    <ATE:ATEAttributes ATE:C_autoLeading="true" ATE:C_baseLine="normal" ATE:C_baselineShift="0" ATE:C_charRotation="0" ATE:C_color="#29abe2" ATE:C_fill="true" ATE:C_fillFirst="true" ATE:C_fillOverprint="false" ATE:C_fillVisible="true" ATE:C_font="Nyala-Regular" ATE:C_fontCaps="normal" ATE:C_fontSize="27.5093" ATE:C_horizontalScale="1.03494" ATE:C_kerning="metric" ATE:C_leading="33.0112" ATE:C_lineCapType="buttCap" ATE:C_lineDashOffset="0" ATE:C_lineJoinType="miterJoin" ATE:C_lineWidth="0.75" ATE:C_miterLimit="10" ATE:C_noBreak="false" ATE:C_strikethroughPos="off" ATE:C_stroke="true" ATE:C_strokeColor="#000000" ATE:C_strokeOverprint="false" ATE:C_strokeVisible="true" ATE:C_tracking="0" ATE:C_underlineOffset="0" ATE:C_underlinePos="off" ATE:C_verticalScale="1" ATE:JC_leftAki="-1" ATE:JC_rightAki="-1" ATE:JC_styleRunAlign="byRomanHori_centerVertical" ATE:JC_tusme="0" ATE:JO_japAltFeature="default" ATE:JO_kana="false" ATE:JO_language="UKEnglish" ATE:JO_proportionalMetrics="false" ATE:JO_romanItalics="false" ATE:JO_ruby="false" ATE:JP_autoTCY="0" ATE:JP_burasagariType="none" ATE:JP_hangingRoman="false" ATE:JP_kurikaeshiMojiShori="false" ATE:JP_leadingType="roman" ATE:MC_diacVPosition="openType" ATE:MC_diacXPos="0" ATE:MC_diacYPos="0" ATE:MC_digitSet="default" ATE:MC_directionOverride="default" ATE:MC_kashidas="default" ATE:MO_justificationAlt="false" ATE:MO_overlapSwash="false" ATE:MO_stretchedAlt="false" ATE:MP_justificationMethod="default" ATE:O_alternateLigatures="false" ATE:O_connectionForms="true" ATE:O_contextualLigatures="true" ATE:O_discretionaryLigatures="false" ATE:O_figureStyle="default" ATE:O_fontOTPos="normal" ATE:O_fractions="false" ATE:O_ligature="true" ATE:O_oldStyle="false" ATE:O_ordinals="false" ATE:O_ornaments="false" ATE:O_stylisticAlternates="false" ATE:O_swash="false" ATE:O_titling="false" ATE:P_autoHyphenate="true" ATE:P_autoLeadingPercentage="1.2" ATE:P_composerEngine="latinCJK" ATE:P_consecutiveHyphenLimit="0" ATE:P_defaultTabWidth="48.8067" ATE:P_endIndent="0" ATE:P_everyLineComposer="false" ATE:P_firstlineIndent="0" ATE:P_glyphScaling="1" ATE:P_hyphenateCapitalized="true" ATE:P_hyphenatedWordSize="6" ATE:P_hyphenationPreference="0.5" ATE:P_hyphenationZone="36" ATE:P_letterSpacing="0" ATE:P_maxGlyphScaling="1" ATE:P_maxLetterSpacing="0" ATE:P_maxWordSpacing="1.33" ATE:P_minGlyphScaling="1" ATE:P_minLetterSpacing="0" ATE:P_minWordSpacing="0.8" ATE:P_paragraphDirection="ltr" ATE:P_postHyphenSize="2" ATE:P_preHyphenSize="2" ATE:P_singleWordJustif="fullJustifyLastLineFull" ATE:P_spaceAfter="0" ATE:P_spaceBefore="0" ATE:P_startIndent="0" ATE:P_textAlign="left" ATE:P_wordSpacing="1" ATE:TA_columnCount="1" ATE:TA_height="0" ATE:TA_lineOrientation="horiz" ATE:TA_spacing="0" ATE:TA_width="0" ATE:T_baselineDirection="withStream" ATE:T_leftRightAdjust="0" ATE:T_upDownAdjust="0" ATE:W_lineCount="2" ATE:W_lineGap="0" ATE:W_orphanAmount="2" ATE:W_scale="0.5" ATE:W_warichuEnabled="false" ATE:W_warichuJustification="autoJustify" ATE:W_widowAmount="2" flm:hashcode="7802CD0329425D3524FFF677737F6728" d:ref="#6"/>
+    <ATE:ATEAttributes ATE:C_kerning="metric" d:ref="#7"/>
+    <ATE:ATEAttributes ATE:C_kerning="metric" d:ref="#8"/>
+  </Private>
+</Graphic>

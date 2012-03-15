@@ -43,10 +43,8 @@
 		]]>
 	</fx:Script>
 
-		
-
-
 	<s:BorderContainer x="0" y="68" width="802" height="532" backgroundColor="#E97A7A">
+    
 		<mx:TabNavigator x="162" y="54" width="459" height="377" backgroundColor="#B68033">
 			<!-- Pestana de Comida -->
 			<s:NavigatorContent width="100%" height="100%" label="Food" backgroundColor="#B68033">
@@ -87,20 +85,17 @@
 		</mx:TabNavigator>
 		<s:Label x="389" y="54" color="#FFFFFF" fontFamily="Verdana" fontSize="15" fontWeight="bold"
 				 text="Select an item for purchase!"/>
-
-		
+                 
 	</s:BorderContainer>
-	
-	<components:menuIzquierdo animal="@{animal}"
-							  timer="@{timer}"
-							  timerAviso="@{timerAviso}">
-	</components:menuIzquierdo>
+
+	<components:menuSuperior animal="@{animal}">
+	</components:menuSuperior>
+    
 	
 	<!-- Mapa -->
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
 							objetosJuguete= "{objetosJuguete}">
-		
 	</components:menuDerecho>
 	
 </s:Group>

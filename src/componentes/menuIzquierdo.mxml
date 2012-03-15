@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		 xmlns:s="library://ns.adobe.com/flex/spark" 
-		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="175" height="257" contentBackgroundAlpha="1.0"
 		 creationComplete="iniciar()">
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
@@ -112,32 +113,46 @@
 	
 		<!-- El modo de las barras esta en "Manual" para poder ser editados -->
 	
-		<s:SkinnableContainer x="0" y="179" width="147" height="162">
-			<s:RichText x="5" y="4" color="#FFFFFF" fontFamily="Verdana" fontSize="12"
-						fontWeight="bold" text="Powers"/>
-			<s:RichText x="7" y="74" color="#FFFFFF" fontFamily="Verdana" fontSize="12"
+		<s:SkinnableContainer x="0" y="0" width="175" height="142" backgroundAlpha="0.3" backgroundColor="#FFFFFF">
+			
+			<s:RichText x="124" y="10" color="#5A5A5A" fontFamily="Verdana" fontSize="12"
 						fontWeight="bold" text="Needs"/>
 			
-			<mx:ProgressBar id="velocidad" x="10" y="15" width="130" height="15" label=" "
-							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
-							minimum="0" mode="manual"/>
-			<mx:ProgressBar id="inteligencia" x="10" y="32" width="130" height="15" label=" " enabled="true"
-							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>	
-			<mx:ProgressBar id="fuerza" x="10" y="51" width="130" height="15" label=" " enabled="true"
+			<mx:ProgressBar id="hambre" x="33" y="25" width="131" height="18" label=" " enabled="true"
 							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
-			
-			
-			<mx:ProgressBar id="hambre" x="10" y="84" width="131" height="18" label=" " enabled="true"
-							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
-			<mx:ProgressBar id="diversion" x="10" y="110" width="131" height="15" label=" " enabled="true"
+			<mx:ProgressBar id="diversion" x="33" y="55" width="131" height="15" label=" " enabled="true"
 							fontSize="6" indeterminate="false" labelPlacement="left" maximum="100"
 							minimum="0" mode="manual"/>
-			<mx:ProgressBar id="higiene" x="10" y="125" width="131" height="15" label=" "
+			<mx:ProgressBar id="higiene" x="33" y="86" width="131" height="15" label=" "
 							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
 							minimum="0" mode="manual"/>
-		    <mx:ProgressBar id="dormir" x="10" y="140" width="131" height="15" label=" "
+		    <mx:ProgressBar id="dormir" x="33" y="114" width="131" height="15" label=" "
 							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
 							minimum="0" mode="manual"/>
+			
+			<s:Image x="13" y="107" source="assets/extras/risa.png"/>
+			<s:Image x="13" y="47" source="assets/extras/sueno.png"/>
+			<s:Image x="13" y="17" source="assets/extras/pollo.png"/>
+			<s:Image x="13" y="78" source="assets/extras/jabon.png"/>
+			
+		</s:SkinnableContainer>
+	
+		<s:SkinnableContainer x="-1" y="154" width="175" height="105" backgroundAlpha="0.3" backgroundColor="#FFFFFF">
+			
+			<s:RichText x="115" y="10" color="#5A5A5A" fontFamily="Verdana" fontSize="12"
+						fontWeight="bold" text="Powers"/>
+			
+			<mx:ProgressBar id="velocidad" x="34" y="25" width="130" height="15" label=" "
+							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
+							minimum="0" mode="manual"/>
+			<mx:ProgressBar id="inteligencia" x="34" y="53" width="130" height="15" label=" " enabled="true"
+							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
+			<mx:ProgressBar id="fuerza" x="34" y="82" width="130" height="15" label=" " enabled="true"
+							fontSize="6" labelPlacement="left" maximum="100" minimum="0" mode="manual"/>
+			
+			<s:Image x="14" y="48" width="25" height="25" source="assets/extras/rayo.png"/>
+			<s:Image x="14" y="17" source="assets/extras/puno.png"/>
+			<s:Image x="14" y="75" source="assets/extras/lentes.png"/>
 				
 		</s:SkinnableContainer>
 

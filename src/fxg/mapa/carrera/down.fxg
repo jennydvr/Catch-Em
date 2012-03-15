@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="120" viewWidth="120" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group blendMode="layer" ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="120" d:pageWidth="120" d:type="layer" d:userLabel="Artboard 1">
+    <Group blendMode="normal" ai:objID="7572680" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Ellipse rotation="24.9715" x="20.4495" y="-20.1813" blendMode="softlight" alpha="0.5" width="143.258" height="115.352" ai:objID="c9d7c80" ai:seqID="3">
+        <fill>
+          <SolidColor color="#FF0000"/>
+        </fill>
+      </Ellipse>
+      <BitmapImage x="-14" y="3" source="@Embed('down.assets/images/Image_0001.png')" fillMode="clip" ai:embed="1" ai:objID="13092f00" ai:seqID="4" d:id="3"/>
+    </Group>
+  </Group>
+  <Private>
+      <ai:PrivateElement d:ref="#1">
+        <ai:SaveOptions>
+          <ai:Dict data="B includeObjectOutsideArtboard 0 B downsampleLinkedImages 0 I expandBlendsOption 5 I preserveGradientPolicy 4 I preserveFilterPolicy 3 I rasterizeResolution 72 I preserveTextPolicy 4 B writeImages 1 B includeSymbol 0 B includeXMP 0 B aiEditCap 1 I versionKey 2 "/>
+        </ai:SaveOptions>
+        <ai:DocData base="down.assets/images" rulerCanvasDiffH="60.5" rulerCanvasDiffV="60.5">
+          <ai:DocRasterSettings>
+            <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+          </ai:DocRasterSettings>
+        </ai:DocData>
+        <ai:AutoGenImageList>
+          <ai:Dict>
+            <ai:Entry name="0" value="Image_0001.png" valueType="U"/>
+          </ai:Dict>
+        </ai:AutoGenImageList>
+      </ai:PrivateElement>
+      <ai:PrivateElement flm:hashcode="F7AFDC1D5571699F269052D914BF5F89" d:ref="#2">
+        <ai:LayerOptions color="5 79.31 257 128.502"/>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="2F12FEBE36810633F6A285D041DC13B1" d:ref="#3">
+        <ai:Group x="-13.413" y="3.606">
+          <ai:Path data="M 72.601 90.185L 112.591 90.185C 137.002 90.185 155.665 77.618 155.665 57.607C 155.665 30.963 135.958 22.796 115.095 22.796L 72.392 22.796L 80.258 22.796L 30.393 22.796C 9.529 22.796 -10.177 30.963 -10.177 57.607C -10.177 77.618 8.486 90.185 32.896 90.185L 82.552 90.185" knockout="0">
+            <ai:Stroke color="5 0 0 0" miterLimit="10" weight="1"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Path data="M 72.602 90.015L 112.394 90.015C 136.681 90.015 155.25 77.512 155.25 57.602C 155.25 31.091 135.643 22.963 114.885 22.963L 72.393 22.963L 80.22 22.963L 30.605 22.963C 9.846 22.963 -9.762 31.091 -9.762 57.602C -9.762 77.512 8.808 90.015 33.096 90.015L 82.503 90.015" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Path data="M 72.608 85.388L 110.11 85.388C 133.002 85.388 150.501 74.417 150.501 56.947C 150.501 33.682 132.021 26.551 112.46 26.551L 72.414 26.551L 79.791 26.551L 33.031 26.551C 13.466 26.551 -5.013 33.682 -5.013 56.947C -5.013 74.417 12.488 85.388 35.377 85.388L 81.942 85.388" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Path data="M 72.319 81.007L 107.493 81.007C 128.963 81.007 145.379 71.55 145.379 56.498C 145.379 36.451 128.046 30.307 109.697 30.307L 72.135 30.307L 79.055 30.307L 35.198 30.307C 16.848 30.307 -0.485 36.451 -0.485 56.498C -0.485 71.55 15.929 81.007 37.399 81.007L 81.073 81.007" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Path data="M 72.013 76.207L 105.122 76.207C 125.332 76.207 140.783 68.384 140.783 55.936C 140.783 39.353 124.468 34.271 107.194 34.271L 71.84 34.271L 78.353 34.271L 37.067 34.271C 19.794 34.271 3.479 39.353 3.479 55.936C 3.479 68.384 18.93 76.207 39.139 76.207L 80.252 76.207" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Path data="M 72.321 72.244L 103.165 72.244C 121.989 72.244 136.382 65.937 136.382 55.906C 136.382 42.54 121.184 38.443 105.093 38.443L 72.164 38.443L 78.229 38.443L 39.773 38.443C 23.682 38.443 8.486 42.54 8.486 55.906C 8.486 65.937 22.879 72.244 41.702 72.244L 79.996 72.244" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+            <ai:Fill color="5 0.702 0.4 0.475"/>
+          </ai:Path>
+          <ai:Rect height="31.921" knockout="0" width="81.158" x="31.552" y="39.277">
+            <ai:ArtStyle>
+              <ai:PaintFields>
+                <ai:Stroke color="5 0 0.216 0.408" focus="1" miterLimit="10" weight="0.5"/>
+                <ai:Fill color="5 0 0.271 0.573" focus="1"/>
+              </ai:PaintFields>
+              <ai:LiveEffects>
+                <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+                  <ai:Dict data="R radius 1 "/>
+                </ai:LiveEffect>
+              </ai:LiveEffects>
+            </ai:ArtStyle>
+          </ai:Rect>
+          <ai:Rect height="28.375" knockout="0" width="77.821" x="33.012" y="40.945">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Rect>
+          <ai:Rect height="20.448" knockout="0" width="13.144" x="33.012" y="44.283">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Rect>
+          <ai:Rect height="11.683" knockout="0" width="6.573" x="33.012" y="48.874">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Rect>
+          <ai:Path data="M 46.156 48.978C 49.21 48.978 51.685 51.455 51.685 54.506C 51.685 57.561 49.21 60.037 46.156 60.037" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Path>
+          <ai:Rect height="20.446" knockout="0" width="13.143" x="97.659" y="44.91">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Rect>
+          <ai:Rect height="11.683" knockout="0" width="6.574" x="104.23" y="48.874">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Rect>
+          <ai:Path data="M 97.659 48.978C 94.604 48.978 92.13 51.455 92.13 54.506C 92.13 57.561 94.604 60.037 97.659 60.037" knockout="0">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Path>
+          <ai:Line knockout="0" xFrom="71.923" xTo="71.923" yFrom="40.945" yTo="69.321">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Line>
+          <ai:Ellipse height="9.805" knockout="0" width="9.805" x="67.019" y="49.604">
+            <ai:Stroke color="5 1 1 1" miterLimit="10" weight="0.5"/>
+          </ai:Ellipse>
+          <ai:Path alpha="0.5" blendMode="8" data="M 112.71 66.381L 31.552 55.086L 31.552 71.198L 112.71 71.198L 112.71 66.381Z" knockout="0">
+            <ai:Fill color="5 0 0.216 0.408"/>
+          </ai:Path>
+          <ai:Path alpha="0.5" blendMode="8" data="M 112.71 67.938L 112.71 71.198L 31.552 71.198L 31.552 54.15L -7.869 47.453C -9.755 51.771 -10.177 51.432 -10.177 57.607C -10.177 77.618 8.486 90.185 32.896 90.185L 72.601 90.185L 82.552 90.185L 112.591 90.185C 129.204 90.185 143.146 84.361 150.365 74.335L 112.71 67.938Z" knockout="0">
+            <ai:Fill color="5 0.459 0.141 0.298"/>
+          </ai:Path>
+          <ai:ArtStyle>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" major="1" minor="0" name="Adobe Drop Shadow">
+                <ai:Dict data="I csrc 0 R blur 0 I blnd 1 R dark 100 R horz 1 B pair 1 R opac 1 R vert 1 ">
+                  <ai:Entry name="sclr" valueType="F">
+                    <ai:Fill color="5 0 0 0"/>
+                  </ai:Entry>
+                </ai:Dict>
+              </ai:LiveEffect>
+              <ai:LiveEffect index="1" major="1" minor="0" name="Adobe 3D Effect">
+                <ai:Dict data="B paramsDictionaryInitialized 1 I numLights 1 B preserveSpots 0 I shadeMode 3 B invisibleGeo 0 R blendSteps 25 R surfaceGloss 10 R surfaceMatte 40 R surfaceAmbient 50 I surfaceStyle 1 I revolveAxisMode 0 R revolveOffset 0 B revolveCap 1 R revolveAngle 360 I numArtMaps 0 B shadeMaps 0 R extrudeDepth 50 B extrudeCap 1 I effectStyle 2 R bevelHeight 4 I 3Dversion 2 B bevelExtentIn 1 R mat_01 -0.523 R mat_33 1 R mat_13 0 R mat_31 0 R mat_32 0 R mat_03 0 R mat_22 0.642 R mat_21 -0.764 R rotX 29.629 R mat_30 0 R mat_12 0.365 R rotY 42.416 R mat_02 -0.675 R mat_23 0 R mat_00 0.521 R mat_20 0.063 R mat_11 0.377 R rotZ -45.139 R mat_10 0.851 R cameraPerspective 0 B showHiddenSurfaces 0 I rotationPresetKey 0 ">
+                  <ai:Entry name="DisplayString" value="3D Rotate" valueType="S"/>
+                  <ai:Entry name="shadeColor" valueType="F">
+                    <ai:Fill color="5 1 0 0" overprint="1"/>
+                  </ai:Entry>
+                  <ai:Entry name="light0" valueType="D">
+                    <ai:Dict data="R lightDirX 0.39 R lightIntensity 1 R lightDirZ -0.85 R lightPosY 0 R lightPosX 0 R lightPosZ -1 R lightDirY 0.33 "/>
+                  </ai:Entry>
+                </ai:Dict>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Group>
+      </ai:PrivateElement>
+    </Private>
+  </Graphic>

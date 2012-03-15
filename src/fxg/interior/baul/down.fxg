@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="200" viewWidth="200" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group blendMode="layer" ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="200" d:pageWidth="200" d:type="layer" d:userLabel="Artboard 1">
+    <Group blendMode="normal" ai:objID="77a9880" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Group x="-3.04102" y="34.1665" blendMode="softlight" alpha="0.5" ai:objID="d718680" ai:seqID="3" flm:isolated="false" flm:knockout="false" d:id="3">
+        <Path x="-9.56059e-005" y="9.91821e-005" winding="nonZero" ai:objID="1313be80" ai:seqID="4" data="M4.6749 131.316C4.87607 134.058 7.29111 136.302 10.0411 136.302L146.03 136.302C148.78 136.302 152.985 135.189 155.375 133.828L204.44 105.889C206.829 104.528 208.726 101.165 208.655 98.4164L206.239 4.93642C206.169 2.18691 203.86 -0.0337906 201.11
+ 0.000389099L18.3292 2.28213C15.5797 2.31631 12.8404 4.54092 12.2418 7.225L0.781346 58.6435C0.182713 61.3275 -0.141506 65.768 0.0596659 68.5102L4.6749 131.316Z">
+          <fill>
+            <SolidColor color="#FF0000"/>
+          </fill>
+        </Path>
+      </Group>
+      <Group x="4.44434" y="39.5" blendMode="normal" ai:objID="d71cd80" ai:seqID="5">
+        <Group x="138.954" y="21.0771" ai:objID="d71e980" ai:seqID="6" flm:knockout="false" d:id="4">
+          <Path x="0.5" y="0.500145" winding="nonZero" ai:objID="d48c800" ai:seqID="7" data="M48.4736 0.219093C49.4375 -0.31118 50.2256 0.15464 50.2256 1.25474L50.2256 65.7928C50.2256 66.8924 49.4609 68.2674 48.5254 68.8465L1.7002 97.869C0.764648 98.4481 0 98.0223 0 96.9227L0 28.9012C0 27.8011 0.788086 26.4671 1.75195 25.9369L48.4736
+ 0.219093Z">
+            <fill>
+              <SolidColor color="#314754"/>
+            </fill>
+          </Path>
+          <Path x="0.5" y="0.500145" winding="nonZero" ai:objID="d48cf80" ai:seqID="8" data="M48.4736 0.219093C49.4375 -0.31118 50.2256 0.15464 50.2256 1.25474L50.2256 65.7928C50.2256 66.8924 49.4609 68.2674 48.5254 68.8465L1.7002 97.869C0.764648 98.4481 0 98.0223 0 96.9227L0 28.9012C0 27.8011 0.788086 26.4671 1.75195 25.9369L48.4736
+ 0.219093Z">
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+        </Group>
+        <Group x="1.64258" y="46.9077" ai:objID="d71ec80" ai:seqID="9" flm:knockout="false" d:id="5">
+          <Rect x="0.5" y="0.5" width="139.688" height="72.2661" radiusX="1.9919" radiusY="1.9919" ai:objID="d493880" ai:seqID="10">
+            <fill>
+              <SolidColor color="#415E70"/>
+            </fill>
+          </Rect>
+          <Rect x="0.5" y="0.5" width="139.688" height="72.2661" radiusX="1.9919" radiusY="1.9919" ai:objID="d48cc80" ai:seqID="11">
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Rect>
+        </Group>
+        <Group x="1.76758" y="102.627" ai:objID="d71bb80" ai:seqID="12">
+          <Path x="0.375" y="0.59375" winding="nonZero" ai:objID="d49b080" ai:seqID="13" data="M0 0 0 16.4531 18.5278 16.4531C14.5039 10.1396 6.98535 3.32324 0 0Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="7.2041" y="8.82031" width="2.43457" height="1.82813" ai:objID="d49ad80" ai:seqID="14">
+            <fill>
+              <SolidColor color="#333333"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Group x="122.619" y="102.627" ai:objID="d71e280" ai:seqID="15">
+          <Path x="0.683594" y="0.59375" winding="nonZero" ai:objID="d49ac00" ai:seqID="16" data="M18.5283 0 18.5283 16.4531 0 16.4531C4.02441 10.1396 11.543 3.32324 18.5283 0Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="9.94824" y="8.82031" width="2.43457" height="1.82813" ai:objID="d49aa80" ai:seqID="17">
+            <fill>
+              <SolidColor color="#333333"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Group x="141.456" y="103.11" ai:objID="d71ba80" ai:seqID="18">
+          <Path x="0.375" y="0.4375" winding="nonZero" ai:objID="d49a900" ai:seqID="19" data="M0 0 0 15.3672 13.7285 6.96973C11.1377 3.36523 9.26465 1.43457 0 0Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="5.98633" y="3.59863" width="2.43555" height="1.82813" ai:objID="d49a780" ai:seqID="20">
+            <fill>
+              <SolidColor color="#333333"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Group x="181.258" y="77.7637" ai:objID="d71b980" ai:seqID="21">
+          <Path x="0.375" y="0.59375" winding="nonZero" ai:objID="d49a600" ai:seqID="22" data="M8.04688 0 8.04688 10.6367 0 15.998C0 10.2529 1.06152 3.32422 8.04688 0Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="3.18066" y="7.68066" width="2.43555" height="1.82617" ai:objID="d49a480" ai:seqID="23">
+            <fill>
+              <SolidColor color="#333333"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke weight="0.75" caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Path x="2.14258" y="41.9097" blendMode="darken" alpha="0.5" winding="nonZero" ai:objID="d499e80" ai:seqID="24" data="M137.312 78.5903 138.646 77.7642 139.688 77.7642 139.688 77.1167 187.537 47.4604 187.537 0C176.772 20.1929 157.302 52.3989 139.688 58.771 112.087 68.7554 32.4131 51.5737 0 43.8735L0 77.7642 137.312 77.7642 137.312 78.5903Z">
+          <fill>
+            <SolidColor color="#39444B"/>
+          </fill>
+        </Path>
+        <Path x="0.555664" y="0.554329" winding="nonZero" ai:objID="d49a000" ai:seqID="25" data="M0 57.6361 142.296 57.6361C142.296 57.6361 168.674 7.89196 168.747 0.385124 168.762 -1.04993 29.8501 1.90124 25.9292 3.09362 5.08301 9.43395 0 57.6361 0 57.6361Z">
+          <fill>
+            <SolidColor color="#5A6C76"/>
+          </fill>
+          <stroke>
+            <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+          </stroke>
+        </Path>
+        <Path x="141.104" y="0.500149" winding="nonZero" ai:objID="d499b80" ai:seqID="26" data="M0 57.6903 49.4258 30.9261C49.4258 30.9261 51.0859 -4.30386 28.1992 0.439304 0.837891 6.10971 0 57.6903 0 57.6903Z">
+          <fill>
+            <SolidColor color="#314754"/>
+          </fill>
+          <stroke>
+            <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+          </stroke>
+        </Path>
+        <Group x="24.1523" y="0.945313" ai:objID="d71c680" ai:seqID="27">
+          <Path x="0.5" y="0.499985" winding="nonZero" ai:objID="d499d00" ai:seqID="28" data="M25.0728 1.06935C16.417 4.04689 -0.0336914 42.2051 2.48633 57.3423 0.941406 59.2627 0 61.7588 0 64.4961 0 70.5479 4.57031 75.4551 10.208 75.4551 15.8442 75.4551 20.4146 70.5479 20.4146 64.4961 20.4146 61.7881 19.4946 59.313 17.9771 57.4014 13.8496
+ 42.6504 23.4575 11.2359 40.0122 1.74855 43.9556 -0.510239 29.3628 -0.406723 25.0728 1.06935Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="16.896" y="21.9126" width="1.18896" height="1.2041" ai:objID="d49a180" ai:seqID="29">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="20.8408" y="11.8799" width="1.18945" height="1.20313" ai:objID="d499700" ai:seqID="30">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="27.001" y="4.49268" width="1.18896" height="1.2002" ai:objID="d499880" ai:seqID="31">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="12.3604" y="33.9224" width="1.18945" height="1.2002" ai:objID="d499400" ai:seqID="32">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="9.46533" y="45.043" width="1.18945" height="1.20313" ai:objID="d499580" ai:seqID="33">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="8.87061" y="55.5435" width="1.18945" height="1.20215" ai:objID="d499a00" ai:seqID="34">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="9.50293" y="65.8438" width="1.41211" height="2.10352" ai:objID="13067900" ai:seqID="35">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Group x="85.5166" ai:objID="d71d780" ai:seqID="36">
+          <Path x="0.5" y="0.500034" winding="nonZero" ai:objID="13062500" ai:seqID="37" data="M25.0713 1.0693C16.416 4.04684 -0.034668 42.205 2.48633 57.3418 0.940918 59.2622 0 61.7588 0 64.4961 0 70.5478 4.56982 75.4541 10.207 75.4541 15.8438 75.4541 20.4141 70.5478 20.4141 64.4961 20.4141 61.7871 19.4941 59.313 17.9756 57.4008 13.8486
+ 42.6504 23.4561 11.2353 40.0107 1.74899 43.9541 -0.510288 29.3623 -0.406773 25.0713 1.0693Z">
+            <fill>
+              <SolidColor color="#FBB03B"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Path>
+          <Ellipse x="16.8955" y="21.9141" width="1.18848" height="1.20215" ai:objID="13061d80" ai:seqID="38">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="20.8398" y="11.8809" width="1.18945" height="1.20215" ai:objID="1306c580" ai:seqID="39">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="26.999" y="4.49219" width="1.18945" height="1.2002" ai:objID="13064180" ai:seqID="40">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="12.3594" y="33.9219" width="1.18945" height="1.20117" ai:objID="13067180" ai:seqID="41">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="9.46436" y="45.043" width="1.18945" height="1.20313" ai:objID="13068e00" ai:seqID="42">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="8.86963" y="55.542" width="1.18945" height="1.2041" ai:objID="13061780" ai:seqID="43">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+          <Ellipse x="9.50244" y="65.8438" width="1.41211" height="2.10352" ai:objID="13064780" ai:seqID="44">
+            <fill>
+              <SolidColor color="#1A1A1A"/>
+            </fill>
+            <stroke>
+              <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+            </stroke>
+          </Ellipse>
+        </Group>
+        <Path x="19.1938" y="0.501385" blendMode="lighten" alpha="0.5" winding="nonZero" ai:objID="d48e600" ai:seqID="45" data="M163.278 3.39022C160.198 0.634357 155.96 -0.774822 150.109 0.438068 150.124 -0.99699 11.212 1.95418 7.29105 3.14656 6.76029 3.30819 6.24271 3.50301 5.73246 3.71737 0.964394 11.691 -1.91256 20.3375 1.4766 24.6695 22.1182 51.0543 105.108 32.8072
+ 136.366 20.2481 142.818 17.6558 155.01 10.8253 163.278 3.39022Z">
+          <fill>
+            <SolidColor color="#FFFFFF"/>
+          </fill>
+        </Path>
+      </Group>
+    </Group>
+  </Group>
+  <Private>
+      <ai:PrivateElement d:ref="#1">
+        <ai:SaveOptions>
+          <ai:Dict data="B includeSymbol 0 I versionKey 2 B aiEditCap 1 B writeImages 1 B includeXMP 0 I preserveFilterPolicy 3 I preserveTextPolicy 4 I rasterizeResolution 72 I preserveGradientPolicy 4 I expandBlendsOption 5 B downsampleLinkedImages 0 B includeObjectOutsideArtboard 0 "/>
+        </ai:SaveOptions>
+        <ai:DocData base="down.assets/images" rulerCanvasDiffH="100.5" rulerCanvasDiffV="100.5">
+          <ai:DocRasterSettings>
+            <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+          </ai:DocRasterSettings>
+        </ai:DocData>
+        <ai:AutoGenImageList>
+          <ai:Dict/>
+        </ai:AutoGenImageList>
+      </ai:PrivateElement>
+      <ai:PrivateElement flm:hashcode="18D7A1C4A4C1A98C2C4CC5B6929726AE" d:ref="#2">
+        <ai:LayerOptions color="5 79.31 257 128.502"/>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="7FCA067BBEA7E47735A2E2CA29B225A4" d:ref="#3">
+        <ai:Path alpha="0.5" blendMode="4" data="M 2 170.469L 147.989 170.469L 205.743 137.581L 203.069 34.104L 10.289 36.511L -3.348 97.69L 2 170.469Z" knockout="0">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill color="5 1 0 0" focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+                <ai:Dict data="R radius 5 "/>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Path>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="FE1E1623F329E90F062E8A3DF0687954" d:ref="#4">
+        <ai:Path data="M 189.68 20.832L 189.68 89.37L 139.454 120.5L 139.454 48.479L 189.68 20.832Z" knockout="0">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill color="5 0.192 0.329 0.278" focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+                <ai:Dict data="R radius 2 "/>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Path>
+      </ai:PrivateElement>
+      <ai:PrivateElement alternate="1" flm:hashcode="6600257D7D9D8908BCD5E6BE433FB6E4" d:ref="#5">
+        <ai:Rect height="72.266" knockout="0" width="139.688" x="2.143" y="47.408">
+          <ai:ArtStyle>
+            <ai:PaintFields>
+              <ai:Stroke color="5 0 0 0" focus="1" miterLimit="10" weight="1"/>
+              <ai:Fill color="5 0.255 0.439 0.369" focus="1"/>
+            </ai:PaintFields>
+            <ai:LiveEffects>
+              <ai:LiveEffect index="0" isPre="1" major="1" minor="0" name="Adobe Round Corners">
+                <ai:Dict data="R radius 2 "/>
+              </ai:LiveEffect>
+            </ai:LiveEffects>
+          </ai:ArtStyle>
+        </ai:Rect>
+      </ai:PrivateElement>
+    </Private>
+  </Graphic>

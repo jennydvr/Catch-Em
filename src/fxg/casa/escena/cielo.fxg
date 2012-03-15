@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" viewHeight="200" viewWidth="800" ai:appVersion="15.1.0.39" ATE:version="1.0.0" flm:version="1.0.0" d:id="1" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008">
+  <Library/>
+  <Group blendMode="layer" ai:artboardActive="1" ai:artboardIndex="0" ai:seqID="1" d:layerType="page" d:pageHeight="200" d:pageWidth="800" d:type="layer" d:userLabel="Artboard 1">
+    <Group blendMode="normal" ai:objID="d72ec80" ai:seqID="2" d:id="2" d:type="layer" d:userLabel="Layer 1">
+      <Rect width="800" height="200" ai:objID="1b2e6780" ai:seqID="3">
+        <fill>
+          <SolidColor color="#D4EEF9"/>
+        </fill>
+        <stroke>
+          <SolidColorStroke caps="none" joints="miter" miterLimit="10"/>
+        </stroke>
+      </Rect>
+      <Group x="25.5669" y="32.1421" blendMode="normal" ai:objID="d72ed80" ai:seqID="4">
+        <Path x="1" y="1" winding="nonZero" ai:objID="da94b00" ai:seqID="5" data="M149.714 44.5713C149.714 25.7939 134.492 10.5718 115.714 10.5718 109.008 10.5718 102.762 12.521 97.4941 15.8726 92.4663 6.35107 83.4429 0 73.1436 0 63.0615 0 54.2056 6.08887 49.1201 15.2769 43.9048 10.5771 37.002 7.71436 29.4287 7.71436 13.1758
+ 7.71436 0 20.8901 0 37.1436 0 43.6045 2.08789 49.5762 5.61914 54.4307 3.84863 58.1025 2.85693 62.2217 2.85693 66.5713 2.85693 82.0356 15.3931 94.5708 30.8569 94.5708 35.5566 94.5708 39.9824 93.4067 43.8716 91.3599 48.0967 101.467 58.0752 108.571
+ 69.7144 108.571 79.9478 108.571 88.895 103.079 93.7793 94.8833 98.2271 98.4399 103.863 100.571 110 100.571 124.36 100.571 136 88.9302 136 74.5728 136 73.688 135.956 72.813 135.869 71.9517 144.265 65.7607 149.714 55.8037 149.714 44.5713Z">
+          <fill>
+            <SolidColor color="#FFFFFF"/>
+          </fill>
+          <stroke>
+            <SolidColorStroke weight="2" caps="none" joints="miter" miterLimit="10"/>
+          </stroke>
+        </Path>
+        <Path x="3.85693" y="55.874" blendMode="multiply" alpha="0.5" winding="nonZero" ai:objID="da96300" ai:seqID="6" data="M28 39.6968C32.6997 39.6968 37.1255 38.5327 41.0146 36.4858 45.2397 46.5933 55.2183 53.6968 66.8574 53.6968 77.0908 53.6968 86.0381 48.2046 90.9224 40.0093 95.3701 43.5659 101.006 45.6968 107.144 45.6968 119.618 45.6968 130.035 36.9097 132.557
+ 25.1909 123.03 28.7729 110.821 31.5796 100 33.9819 90.1484 36.1694 60.3315 39.312 34.0459 29.0269 26.0615 25.9038 13.1074 12.7891 2.56299 0 0.922363 3.56055 0 7.51953 0 11.6973 0 27.1616 12.5361 39.6968 28 39.6968Z">
+          <fill>
+            <SolidColor color="#D9E1F5"/>
+          </fill>
+        </Path>
+      </Group>
+      <Group x="195.365" y="89.6987" blendMode="normal" ai:objID="d727f80" ai:seqID="7">
+        <Path x="1.00017" y="0.999954" winding="nonZero" ai:objID="da97380" ai:seqID="8" data="M118.366 14.9449C114.386 2.82573 99.3704 -3.1274 84.8275 1.64897 79.6336 3.35503 75.2098 6.20171 71.8402 9.70464 65.9285 4.83842 57.5941 3.03374 49.6175 5.65385 41.8094 8.21831 36.2415 14.3999 34.2508 21.6236 29.2157 19.9175 23.2625 19.8257 17.3973
+ 21.7515 4.81038 25.8853 -2.60075 37.7408 0.84407 48.229 2.2137 52.4009 5.09651 55.7232 8.86018 57.9576 8.26741 60.7779 8.37239 63.689 9.29475 66.4957 12.5721 76.4761 24.9383 81.3794 36.9144 77.4458 40.5535 76.2515 43.7347 74.3736 46.3128 72.063
+ 51.7274 77.5123 60.9608 79.5582 69.9749 76.5982 77.9002 73.9957 83.6654 68.1753 85.7113 61.6431 89.9095 62.8082 94.7259 62.7496 99.4793 61.188 110.6 57.5357 117.147 47.0621 114.104 37.7945 113.916 37.2242 113.696 36.6705 113.447 36.1363 118.638
+ 30.0054 120.747 22.1939 118.366 14.9449Z">
+          <fill>
+            <SolidColor color="#FFFFFF"/>
+          </fill>
+          <stroke>
+            <SolidColorStroke weight="2" caps="none" joints="miter" miterLimit="10"/>
+          </stroke>
+        </Path>
+        <Path x="9.49608" y="42.4888" blendMode="multiply" alpha="0.5" winding="nonZero" ai:objID="da91200" ai:seqID="9" data="M28.4185 35.957C32.0576 34.7627 35.2388 32.8848 37.8169 30.5742 43.2315 36.0234 52.4649 38.0693 61.479 35.1094 69.4043 32.5068 75.1694 26.6865 77.2153 20.1543 81.4136 21.3193 86.23 21.2607 90.9834 19.6992 100.644 16.5264 106.849 8.20605 106.318
+ 0 99.6992 4.73633 90.8389 9.65234 82.9683 13.9561 75.8018 17.873 53.376 27.4854 30.8389 27.5322 23.9932 27.5469 11.1812 22.3779 0.304214 16.8066 -0.211899 19.5215 -0.0868988 22.3115 0.798843 25.0068 4.07619 34.9873 16.4424 39.8906 28.4185 35.957Z">
+          <fill>
+            <SolidColor color="#D9E1F5"/>
+          </fill>
+        </Path>
+      </Group>
+      <Group x="307.862" y="9.29932" blendMode="normal" ai:objID="d729a80" ai:seqID="10">
+        <Path x="1" y="1" winding="nonZero" ai:objID="da90780" ai:seqID="11" data="M119.428 28.6196C119.428 16.5625 107.286 6.78809 92.3062 6.78809 86.9575 6.78809 81.9741 8.03955 77.772 10.1919 73.7612 4.07813 66.563 0 58.3472 0 50.3052 0 43.2402 3.90967 39.1836 9.80957 35.0234 6.7915 29.5171 4.95361 23.4756 4.95361 10.5103
+ 4.95361 0 13.4136 0 23.8496 0 27.999 1.66553 31.833 4.48242 34.9497 3.07031 37.3081 2.27881 39.9521 2.27881 42.7461 2.27881 52.6748 12.2793 60.7256 24.6147 60.7256 28.3638 60.7256 31.8945 59.9775 34.9966 58.6631 38.3672 65.1533 46.3271 69.7148
+ 55.6118 69.7148 63.7759 69.7148 70.9126 66.1885 74.8091 60.9258 78.3569 63.21 82.853 64.5781 87.7485 64.5781 99.2036 64.5781 108.49 57.1035 108.49 47.8828 108.49 47.3145 108.454 46.7529 108.384 46.2002 115.082 42.2246 119.428 35.8315 119.428
+ 28.6196Z">
+          <fill>
+            <SolidColor color="#FFFFFF"/>
+          </fill>
+          <stroke>
+            <SolidColorStroke weight="2" caps="none" joints="miter" miterLimit="10"/>
+          </stroke>
+        </Path>
+        <Path x="3.27881" y="36.2349" blendMode="multiply" alpha="0.5" winding="nonZero" ai:objID="da96780" ai:seqID="12" data="M22.3359 25.4907C26.085 25.4907 29.6157 24.7427 32.7178 23.4282 36.0884 29.9185 44.0483 34.48 53.333 34.48 61.4971 34.48 68.6338 30.9536 72.5303 25.6909 76.0781 27.9751 80.5742 29.3433 85.4697 29.3433 95.4209 29.3433 103.73 23.7007 105.741 16.1763
+ 98.1426 18.4761 88.4043 20.2778 79.7715 21.8208 71.9121 23.2251 48.127 25.2437 27.1592 18.6392 20.7896 16.6323 10.4561 8.21143 2.04492 0 0.73584 2.28662 0 4.82861 0 7.51123 0 17.4399 10.0005 25.4907 22.3359 25.4907Z">
+          <fill>
+            <SolidColor color="#D9E1F5"/>
+          </fill>
+        </Path>
+      </Group>
+    </Group>
+  </Group>
+  <Private>
+      <ai:PrivateElement d:ref="#1">
+        <ai:SaveOptions>
+          <ai:Dict data="I preserveTextPolicy 4 I expandBlendsOption 5 I preserveGradientPolicy 4 I preserveFilterPolicy 3 B downsampleLinkedImages 0 I rasterizeResolution 72 B includeSymbol 0 B aiEditCap 1 B writeImages 1 B includeXMP 0 B includeObjectOutsideArtboard 0 I versionKey 2 "/>
+        </ai:SaveOptions>
+        <ai:DocData base="cielo.assets/images" rulerCanvasDiffH="400.5" rulerCanvasDiffV="100.5">
+          <ai:DocRasterSettings>
+            <ai:Dict data="R padd 36 B mask 0 B spot 1 B alis 0 I dpi. 72 I colr 4 "/>
+          </ai:DocRasterSettings>
+        </ai:DocData>
+        <ai:AutoGenImageList>
+          <ai:Dict/>
+        </ai:AutoGenImageList>
+      </ai:PrivateElement>
+      <ai:PrivateElement flm:hashcode="02F137C198D618D1F0AA599D070C0A5C" d:ref="#2">
+        <ai:LayerOptions color="5 79.31 257 128.502"/>
+      </ai:PrivateElement>
+    </Private>
+  </Graphic>

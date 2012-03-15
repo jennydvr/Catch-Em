@@ -43,7 +43,7 @@
 
 			
 			
-			/*Funcion para bañar al animal*/
+			/*Funcion para banar al animal*/
 			public function banarse():void{
 				this.animal.higiene = 100;
 				this.animal.experiencia = this.animal.experiencia + 20;
@@ -95,73 +95,60 @@
 		]]>
 	</fx:Script>
 	
-
-
+	<mx:ViewStack id="casaExt" backgroundAlpha="0">
 	
-	<mx:ViewStack id="casaExt"
-				  >
-		
 	<!-- Exterior -->
 
-	<s:NavigatorContent>
+	<s:NavigatorContent x="0" y="0" backgroundAlpha="0">
 		
-		<s:BorderContainer x="0" y="266" width="800" height="334" backgroundColor="#65FD70">
+		<!-- Fondo -->
+		<s:Image x="0" y="0" source="assets/casa/cielo.png"/>
+		<s:Image x="0" y="160" source="assets/casa/grama.png"/>
+		
+		
+		<s:BorderContainer x="0" y="0" width="800" height="200" backgroundAlpha="0"
+						   borderVisible.init="false">
 			
-			<s:BorderContainer x="41" y="217" width="299" height="105">
-				<s:Button x="113" y="34" label="Siembra" icon="{animalSource.imagenSiembra}" />
-			</s:BorderContainer>
+			<s:Button x="650" y="120" width="120" height="100" skinClass="skins.casa.casa" click="dormir()"/>
+
+		</s:BorderContainer>
+		
+		<s:BorderContainer x="0" y="195" width="800" height="410" backgroundAlpha="0"
+						   borderVisible.init="false">
 			
-			<s:Button id="botonBaul" x="650" y="100" width="110" height="110" skinClass="skins.casa.baul"
-					 
-					  click="diversion()"/>
+			<s:Button x="15" y="270" width="330" height="120" skinClass="skins.casa.siembra"/>
 			
-			<s:Button id="botonLago" x="95" y="85" width="260" height="100" skinClass="skins.casa.lago"
-					  click="banarse()"/>
+			<s:Button x="620" y="100" width="150" height="150" skinClass="skins.casa.baul" click="diversion()"/>
 			
-			<s:Button id="botonPlato" x="360" y="250" width="90" height="50" skinClass="skins.casa.plato"
-					  click="alimentar()"/>
+			<s:Button x="93" y="165" width="280" height="100" skinClass="skins.casa.lago" click="banarse()"/>
+			
+			<s:Button x="360" y="300" width="100" height="50" skinClass="skins.casa.plato" click="alimentar()"/>
 			
 		</s:BorderContainer>
 		
-		<s:BorderContainer x="0" y="69" width="800" height="199" backgroundColor="#3789EF">
-			
-			<s:Button id="botonCasa" x="650" y="120" width="120" height="100" skinClass="skins.casa.casa"
-					  click="dormir()"/>
-						  
-			<components:menuIzquierdo animal="@{animal}"
-									  timer="@{timer}"
-									  timerAviso="@{timerAviso}">
-			</components:menuIzquierdo>
-					
-		</s:BorderContainer>
+		<s:Image x="400" y="200" source="{animalSource.animal}"/>
 		
+		<components:menuIzquierdo x="12" y="104"
+                                  animal="@{animal}"
+                                  timer="@{timer}"
+                                  timerAviso="@{timerAviso}">
+        </components:menuIzquierdo>
 		
-		<s:Label x="496" y="296" text="{animal.tipo}"/>
 	</s:NavigatorContent>
 	
 	<!-- Interior -->
 		
 	<s:NavigatorContent id="casaInt">
-		<components:casaInterna animal="{animal}">
-			
-			
-		</components:casaInterna>
-		
+		<components:casaInterna animal="{animal}"
+								objetosComida="{objetosComida}"
+								objetosJuguete="{objetosJuguete}"
+								animalSource="{animalSource}"></components:casaInterna>
 	</s:NavigatorContent>
-		
-		
-		
+
 	</mx:ViewStack>
 	
 	<!-- Mapa -->
-	<components:menuDerecho animal="@{animal}"
-							animalSource="@{animalSource}"
-							objetosComida = "{objetosComida}"
-							objetosJuguete= "{objetosJuguete}">
-		
-	</components:menuDerecho>
 	
-    
 	<!-- Menu superior -->
 	
 	<components:menuSuperior animal="@{animal}"
@@ -170,5 +157,12 @@
 							 timer="@{timer}"
 							 timerAviso="@{timerAviso}">
 	</components:menuSuperior>
-
+	
+	<components:menuDerecho x="0" y="0"
+                            animal="@{animal}"
+							animalSource="@{animalSource}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
+	</components:menuDerecho>
+	
 </s:Group>

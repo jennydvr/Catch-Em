@@ -8,28 +8,37 @@
 	</fx:Declarations>	
 	<fx:Script>
 		<![CDATA[
-			import clases.Animal;
+			import clases.*;
+			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable] 
+			public var objetosComida:ArrayCollection; //Parametro
+			[Bindable]
+			public var objetosJuguete: ArrayCollection; //Parametro
 		]]>
 	</fx:Script>
- <components:menuSuperior animal="@{animal}">
-	 
- </components:menuSuperior>
-   <s:NavigatorContent width="800" height="333" backgroundColor="#F5FB96">
-	   
-
-	<s:Button x="144" y="104" width="329" chromeColor="#FFFFFF" icon="assets/trofeos.gif"/>
-	<s:Button x="539" y="104" width="200" icon="assets/myPics.gif"/>
+    
+    <s:Image x="0" y="0" width="800" height="600" source="assets/escena.png"/>
+    <s:Image x="100" y="353" width="40%" height="243" scaleMode="stretch"
+			 source="assets/outdoor-end-table-cartoon.png"/>
+    
+    <s:NavigatorContent width="800" height="333" backgroundAlpha="0">
+ 
+		<s:Button x="36" y="49" width="416" height="274" skinClass="skins.interior.trofeos"/>
 		   
+		<s:Button x="463" y="60" width="329" height="243" skinClass="skins.interior.fotos"/>
+		
     </s:NavigatorContent>
-	
-	
-	<s:BorderContainer x="0" y="324" width="800" height="276" backgroundColor="#EE7E1B">
-		<s:Button x="617" y="69" label="Baul"/>
-	</s:BorderContainer>
-	<s:Image x="73" y="324" width="328" height="252" source="assets/mesa.gif"/>
-	<s:Button x="147" y="356" width="105" height="71" chromeColor="#868338" cornerRadius="12"
-			  icon="assets/achievement.gif"/>
 
+	<s:Button x="162" y="364" width="16%" height="21%"  skinClass="skins.interior.logros" rotation="-35"/>
+	<s:Button x="463" y="342" width="219" height="149" label="Baul" skinClass="skins.interior.baul"/>
+	<components:menuDerecho x="0" y="0"
+							animal="@{animal}"
+							animalSource="@{animalSource}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}">
+	</components:menuDerecho>
 </s:Group>

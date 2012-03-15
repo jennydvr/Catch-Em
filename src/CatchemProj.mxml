@@ -2,7 +2,7 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
-			   width="800" height="600" backgroundColor="#C7C3C3"
+			   width="800" height="600"
 			   currentState="tigre"
 			   xmlns:components="componentes.*"
 			   creationComplete="playSound()">
@@ -71,7 +71,7 @@
 		    // y llenamos el baul
 	
 			 if (currentState== "tigre"){
-				 animalSource.animal="tigre";
+				 animalSource.animal="assets/gato.png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num2.gif";
@@ -83,7 +83,7 @@
 				 animal.habVelocidad=90;
 			 }
 			 else if (currentState == "dino"){
-				 animalSource.animal="dino";
+				 animalSource.animal="assets/dino.png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -97,7 +97,7 @@
 				 
 			 }
 			 else if(currentState =="buho"){
-				 animalSource.animal="buho";
+				 animalSource.animal="assets/buho.png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -110,7 +110,7 @@
 				 animal.habVelocidad=30;				 
 			 }
 			 else if(currentState == "lobo"){
-				 animalSource.animal="lobo";
+				 animalSource.animal="assets/lobo.gif";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -256,107 +256,126 @@
 	
 	
 
-	<mx:ViewStack id="menuPrincipal" x="4" y="0" width="100%">
+	<mx:ViewStack id="menuPrincipal" x="4" y="0" width="100%" backgroundAlpha="0.0">
 		
+
 		
-		<s:NavigatorContent id="pagPrincipal" x="141" y="52" width="800" height="600" color="#FBFAFA"
-							contentBackgroundColor="#FFFFFF"
-							>
-			<s:Image x="6" y="15" width="800" height="600" smooth="true" smoothingQuality="default"
-					 source="assets/menu.gif"/>
+		<s:NavigatorContent id="pagPrincipal" width="800" height="600" backgroundAlpha="0.0">
+			<s:Image x="-2" y="0" source="assets/fondoprincipal.png"/>
+			<s:Image x="162" y="70" source="assets/titulo.png"/>
 			
-			<s:Image  x="-18" y="26" width="800" height="100" smooth="true" source="assets/catchem.gif"
-					/>
-			<mx:TabNavigator x="392" y="128" width="345" height="330" backgroundColor="#FB8800"
-							 borderColor="#000000" dropShadowVisible="true">
+			<mx:TabNavigator x="390" y="200" width="345" height="285" backgroundAlpha="0"
+							 borderVisible.tigre="false" contentBackgroundAlpha.tigre="1.0">
 				
 				<!-- Primera pestana -->
-				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num1.gif')">
-					<s:Label x="142" y="67"
-							 x.tigre="104" y.tigre="82" fontFamily="Verdana"
-							 fontSize="26" text="Welcome!"/>
+				<s:NavigatorContent width="100%" height="100%" backgroundAlpha="0" icon="@Embed('assets/num1.png')">
+					<s:Image x="0" y="0" width="100%" height="100%" scaleMode="stretch" source="assets/texto.png"/>					
+					<s:Label x="83" y="78" fontFamily="Verdana" text="Welcome!" color="#FFFFFF" fontSize="32" fontWeight="bold"/>
 				</s:NavigatorContent>
 				
 				
 				<!-- Segunda pestana -->
-				<s:NavigatorContent width="343" height="251" icon="@Embed('assets/num2.gif')"
-									styleName="contenido" >
+				<s:NavigatorContent width="343" height="251" styleName="contenido" backgroundAlpha="0" icon="@Embed('assets/num2.png')">
 					
 					<s:layout>
 						<s:BasicLayout/>
 					</s:layout>
-					<s:FormHeading left="10" top="-4" label="Create a new account!" color="#FBF5F5"
-								   fontFamily="Verdana"/>
-					<s:Form x="11" y="31" width="297" height="203" styleName="Estilo">
+					
+					<s:Image x="0" y="0" width="100%" height="100%" scaleMode="stretch" source="assets/texto.png"/>
+					
+					<s:FormHeading label="Create a new account!" color="#FBF5F5"
+								   fontFamily="Verdana" left="10" top="0" backgroundAlpha="0.0"/>
+					
+					<s:Form x="11" y="24" width="297" height="210" styleName="Estilo" backgroundAlpha="0.0">
+						
 						<s:layout>
 							<s:FormLayout/>
 						</s:layout>
-						<s:FormItem width="224" height="41" label="Name" color="#FFFFFF"
-									fontFamily="Verdana">
+						
+						<s:FormItem width="220" height="35" label="Name" color="#FFFFFF" fontFamily="Verdana">
+							
 							<s:layout>
 								<s:FormItemLayout/>
 							</s:layout>
+							
 							<s:TextInput id="nombreUsuario" width="130"/>
+							
 						</s:FormItem>
-						<s:FormItem label="Email" color="#FFFFFF" fontFamily="Verdana">
+						
+						<s:FormItem label="Email" color="#FFFFFF" fontFamily="Verdana" height="35">
+							
 							<s:TextInput id="email"/>
+							
 						</s:FormItem>
-						<s:FormItem label="User" color="#FFFFFF" fontFamily="Verdana">
+						
+						<s:FormItem label="User" color="#FFFFFF" fontFamily="Verdana" width="223" height="35">
+							
 							<s:TextInput id="usuario"/>
+							
 						</s:FormItem>
-						<s:FormItem label="Password" color="#FFFFFF" fontFamily="Verdana">
+						
+						<s:FormItem label="Password" color="#FFFFFF" fontFamily="Verdana" height="35">
+							
 							<s:TextInput id="password" displayAsPassword="true"/>
+							
 						</s:FormItem>
+						
 					</s:Form>
+					
 				</s:NavigatorContent>
 			
 				<!-- Tercera pestana -->
-				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num3.gif')" >
-					<s:ComboBox id="sexo" x="113" y="26" color="#000000" fontFamily="Verdana" fontSize="11"
-								selectedIndex="0" dataProvider="{arregloSexo}"/>
-					<s:Label x="62" y="26" fontSize="14" fontWeight="bold" text="Sex"
-							 verticalAlign="middle"/>
+				<s:NavigatorContent width="100%" height="100%" icon="@Embed('assets/num3.png')" backgroundAlpha="0.0">
+					<s:Image x="0" y="0" width="100%" height="100%" scaleMode="stretch" source="assets/texto.png"/>
 					
-					<s:ComboBox id="color" x="113" y="57" color="#000000" fontFamily="Verdana" fontSize="11"
-								selectedIndex="0" dataProvider="{arregloColor}"/>
-					<s:Label x="62" y="57" fontSize="14" fontWeight="bold" text="Color"
-							 verticalAlign="middle"/>
+					<s:ComboBox id="sexo" x="113" y="46" color="#000000" dataProvider="{arregloSexo}"
+								fontFamily="Verdana" fontSize="11" selectedIndex="0"/>
 					
+					<s:Label x="62" y="46" fontSize="14" fontWeight="bold" text="Sex"
+							 verticalAlign="middle" color="#FFFFFF"/>
 					
-					<s:Label x="57" y="120" fontFamily="Verdana" fontSize="20" text="Name your pet!"/>
-					<s:Label x="28" y="0" width="200" height="15" fontFamily="Verdana" fontSize="15"
-							 fontWeight="bold" text="Pet Information"/>
-					<s:TextInput id="nombre" x="57" y="158" />
+					<s:ComboBox id="color" x="113" y="77" color="#000000"
+								dataProvider="{arregloColor}" fontFamily="Verdana" fontSize="11"
+								selectedIndex="0"/>
+					
+					<s:Label x="62" y="77" fontSize="14" fontWeight="bold" text="Color"
+							 verticalAlign="middle" color="#FFFFFF"/>
+					
+					<s:Label x="96" y="126" fontFamily="Verdana" fontSize="20" text="Name your pet!" color="#FFFFFF"/>
+					
+					<s:Label x="28" y="14" width="200" height="15" fontFamily="Verdana" fontSize="15"
+							 fontWeight="bold" text="Pet Information" color="#FFFFFF"/>
+					
+					<s:TextInput id="nombre" x="113" y="148"/>
+					
 				</s:NavigatorContent>
 				
 
 			</mx:TabNavigator>
-
 				
 			
-			  <s:Image id="imagenTigre" includeIn="tigre" x="157" y="221" source="assets/gato.png"/>
-			  <s:Image id="imagenDino" includeIn="dino" x="157" y="221" source="assets/dino.png"/>
-		 	  <s:Image id="imagenBuho" includeIn="buho" x="157" y="221" source="assets/num3.gif"/>
-			  <s:Image id="imagenLobo" includeIn="lobo" x="157" y="221" source="assets/num1high.gif"/>
+			  <s:Image id="imagenTigre" includeIn="tigre" x="142" y="259" height="155"
+					   source="assets/gato.png"/>
+			  <s:Image id="imagenDino" includeIn="dino" x="48" y="185" source="assets/dino.png"/>
+		 	  <s:Image id="imagenBuho" includeIn="buho" x="89" y="199" source="assets/buho.png"/>
+			  <s:Image id="imagenLobo" includeIn="lobo" x="148" y="256" source="assets/lobo.gif"/>
 		   
-			<s:Label x="83" y="176" color="#CC3B3B" fontFamily="Verdana" fontSize="33"
-					 text="Select your pet"/>
+			<s:Label x="148" y="213" color="#FFFFFF" fontFamily="Verdana" fontSize="16"
+					 fontWeight="bold" text="Select your pet"/>
 			
 			<!-- La transicion de las fotos de los animales -->
-			<s:Button x="105" y="410" chromeColor="#67E14F" icon="assets/leftArrow.gif"
+			<s:Button x="105" y="410" skinClass="skins.menu.flechaizq"
 					  click="cambiarAnimalIzq()" mouseDownEffect="{sonidoDesplazo}"/>
-			<s:Button x="235" y="410" chromeColor="#67E14F" icon="assets/rightArrow.gif"
+			
+			<s:Button x="235" y="410" skinClass="skins.menu.flechader"
 					  click="cambiarAnimalDer()" mouseDownEffect="{sonidoDesplazo}"/>
 			
-			<s:Button x="411" y="466" width="141" height="27" label="Get Started!" chromeColor="#B23F00"
-					  click="inicializarObjetos(event)" color="#FDFDFD" cornerRadius="2"
-					  enabled="true" fontFamily="Verdana" fontSize="16" fontWeight="bold"
-					  skinClass="spark.skins.spark.ButtonSkin"
-					  mouseDownEffect="{sonidoClick}"/>
-		
-			
-		
-			
+			<s:Button x="565" y="494" width="141" height="27" label="Get Started!"
+					  chromeColor="#B2D0DA" click="inicializarObjetos(event)" color="#495298"
+					  cornerRadius="2" enabled="true" fontFamily="Verdana" fontSize="16"
+					  fontWeight="bold" mouseDownEffect="{sonidoClick}"
+					  skinClass="spark.skins.spark.ButtonSkin"/>
+
 		</s:NavigatorContent>
 		
 		<!-- Casa exterior -->
