@@ -2,21 +2,12 @@
 <s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
 		 xmlns:s="library://ns.adobe.com/flex/spark"
 		 xmlns:mx="library://ns.adobe.com/flex/mx"
-		 width="800" height="600" currentState="init"
+		 width="800" height="600"
 		 xmlns:components="componentes.*">
-	<s:states>
-		<s:State name="init"/>
-		<s:State name="baul"/>
-		<s:State name="plato"/>
-	</s:states>
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
 
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
-			
 			import mx.collections.ArrayCollection;
 			import mx.controls.Alert;
 			import mx.managers.PopUpManager;
@@ -40,16 +31,13 @@
 			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
 			
 			public var alert:Alert;
-
-			
-			
-			/*Funcion para banar al animal*/
+            
+			/* Funcion para banar al animal */
 			public function banarse():void{
 				this.animal.higiene = 100;
 				this.animal.experiencia = this.animal.experiencia + 20;
 				launchAlert("Swimming!", "Please wait");
 				setTimeout(hideAlert, 2000);
-				
 			}
 			
 			/*Funcion para alimentar al animal
@@ -106,15 +94,13 @@
 		<s:Image x="0" y="160" source="assets/casa/grama.png"/>
 		
 		
-		<s:BorderContainer x="0" y="0" width="800" height="200" backgroundAlpha="0"
-						   borderVisible.init="false">
+		<s:BorderContainer x="0" y="0" width="800" height="200" backgroundAlpha="0" borderVisible="false">
 			
 			<s:Button x="650" y="120" width="120" height="100" skinClass="skins.casa.casa" click="dormir()"/>
 
 		</s:BorderContainer>
 		
-		<s:BorderContainer x="0" y="195" width="800" height="410" backgroundAlpha="0"
-						   borderVisible.init="false">
+		<s:BorderContainer x="0" y="195" width="800" height="410" backgroundAlpha="0" borderVisible="false">
 			
 			<s:Button x="15" y="270" width="330" height="120" skinClass="skins.casa.siembra"/>
 			
@@ -142,7 +128,12 @@
 		<components:casaInterna animal="{animal}"
 								objetosComida="{objetosComida}"
 								objetosJuguete="{objetosJuguete}"
-								animalSource="{animalSource}"></components:casaInterna>
+                                animalSource="{animalSource}"
+                                sndChannel="@{sndChannel}"
+                                snd="{snd}"
+                                timer="@{timer}"
+                                timerAviso="@{timerAviso}">
+         </components:casaInterna>
 	</s:NavigatorContent>
 
 	</mx:ViewStack>

@@ -3,12 +3,30 @@
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
 		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
 		 xmlns:components="componentes.*">
+	
+	<s:states>
+		<s:State name="fishing"/>
+		<s:State name="food"/>
+		<s:State name="plants"/>
+		<s:State name="toys"/>
+	</s:states>
+	
 	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<fx:XML id="food" source="food.xml"/>
+		<fx:XML id="fishing" source="fishing.xml"/>
+		<fx:XML id="plants" source="plants.xml"/>
+		<fx:XML id="toys" source="toys.xml"/>
+		
+		<s:XMLListCollection id="xmlListColl"
+							 source.food="{food.image}"
+							 source.fishing="{fishing.image}"
+							 source.plants="{plants.image}"
+							 source.toys="{toys.image}"/>
 	</fx:Declarations>
+	
 	<fx:Script>
 		<![CDATA[
-			import clases.Animal;
+			import clases.*;
 			import mx.events.ListEvent;
 			import mx.controls.Alert;
 			
@@ -16,86 +34,69 @@
 			[Bindable]
 			public var animal:Animal;
 			[Bindable]
+			public var animalSource:CasaExterior;
+			[Bindable]
 			public var objetosComida:ArrayCollection;
 			[Bindable]
 			public var objetosJuguete:ArrayCollection;
-			//Timer
 			[Bindable]
-			public var timer:Timer = new Timer(120000); // Timer que se dispara cada 2 minutos
+			public var sndChannel:SoundChannel; //Parametro
 			[Bindable]
-			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
+			public var snd:Sound;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
 			
 		
 			
 			private function onItemClick( e:ListEvent ):void {
 				Alert.show("You selected: "+e.itemRenderer.data.nombre);
-			
 			}
 			
 			private function comprarArticulo(e:ListEvent):void{
-				Alert.show("You're buying: "+e.itemRenderer.data.nombre+" for: "+ e.itemRenderer.data.precio);
+				Alert.show("You're buying: " + e.itemRenderer.data.nombre + " for: "+ e.itemRenderer.data.precio);
 				animal.dinero = animal.dinero - e.itemRenderer.data.precio;
 				animal.experiencia = animal.experiencia + 10;
 				animal.miBaul.objetos.addItem(e.itemRenderer.data);
 			}
 			
-			
 		]]>
 	</fx:Script>
-
-	<s:BorderContainer x="0" y="68" width="802" height="532" backgroundColor="#E97A7A">
-    
-		<mx:TabNavigator x="162" y="54" width="459" height="377" backgroundColor="#B68033">
-			<!-- Pestana de Comida -->
-			<s:NavigatorContent width="100%" height="100%" label="Food" backgroundColor="#B68033">
-				<mx:DataGrid id="empDg" x="5" y="-4" width="447" height="323"
-							 dataProvider="{objetosComida}" itemClick="comprarArticulo( event );">
-					<mx:columns>
-						
-						<mx:DataGridColumn headerText="Food" dataField="imagen" itemRenderer="mx.controls.Image"/>
-						<mx:DataGridColumn headerText="Price" dataField="precio"/>
-					</mx:columns>
-				</mx:DataGrid>
-			</s:NavigatorContent>
-			<!-- Pestana de Juguetes -->
-			<s:NavigatorContent width="100%" height="100%" label="Toys" backgroundColor="#B68033">
-				<mx:DataGrid x="5" y="-4" width="447" height="323"
-							 dataProvider="{objetosJuguete}" itemClick="comprarArticulo( event );">
-					<mx:columns>
-						
-						<mx:DataGridColumn headerText="Toys" dataField="imagen" itemRenderer="mx.controls.Image"/>
-						<mx:DataGridColumn headerText="Price" dataField="precio"/>
-					</mx:columns>
-				</mx:DataGrid>
-			</s:NavigatorContent>
-			<!-- Pestana de Pesca -->
-			<s:NavigatorContent width="100%" height="100%" label="Fishing" backgroundColor="#B68033">
-				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
-					<s:Image x="20" y="6" width="39" height="43" source="assets/fishing.png"/>
-				</s:BorderContainer>
-			</s:NavigatorContent>
-			<!-- Pestana de siembra -->
-			<s:NavigatorContent width="100%" height="100%" label="Gardening"
-								backgroundColor="#B68033">
-				<s:BorderContainer x="27" y="10" width="90" height="69" cornerRadius="10">
-					<s:Image x="20" y="6" width="37" height="57" source="assets/plant.png"/>
-				</s:BorderContainer>
-				
-			</s:NavigatorContent>
-		</mx:TabNavigator>
-		<s:Label x="389" y="54" color="#FFFFFF" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Select an item for purchase!"/>
-                 
-	</s:BorderContainer>
-
-	<components:menuSuperior animal="@{animal}">
+	
+	<s:Image width="800" height="600" fillMode="repeat" source="assets/pattern.png"
+			 source.fishing="@Embed('assets/pattern.png')"/>
+	
+	<s:Image x="127" y="144" width="542" height="334" scaleMode="stretch"
+			 smooth="true" source="@Embed('assets/texto.png')"/>
+	
+	<s:NavigatorContent x="0" y="0" width="800" height="600">
+		<s:Button id="foodbutton" x="150" y="115" label="Food" click="currentState='food'"/>
+		<s:Button id="plantsbutton" x="288" y="115" label="Plants" click="currentState='plants'"/>
+		<s:Button id="fishingbutton" x="436" y="115" label="Fishing" click="currentState='fishing'"/>
+		<s:Button id="toysbutton" x="580" y="115" label="Toys" click="currentState='toys'"/>
+		
+		<s:DataGroup x="150" y="160" width="500" height="300" dataProvider="{xmlListColl}"
+					 itemRenderer="ItemRendererMercado">
+			<s:layout>
+				<s:TileLayout/>
+			</s:layout>
+		</s:DataGroup>
+	</s:NavigatorContent>
+	
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 snd="{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
 	</components:menuSuperior>
-    
+	
 	
 	<!-- Mapa -->
-	<components:menuDerecho animal="@{animal}"
+	<components:menuDerecho x="0" y="0"
+                            animal="@{animal}"
+							animalSource="@{animalSource}"
 							objetosComida = "{objetosComida}"
 							objetosJuguete= "{objetosJuguete}">
 	</components:menuDerecho>
-	
 </s:Group>

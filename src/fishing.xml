@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gallery>
+	<image title="Fishing Rod" type="fishing"
+           image="assets/mercado/pesca/cana.png"
+           price="50" />
+	<image title="Bait" type="fishing"
+           image="assets/mercado/pesca/fishing.png"
+           price="10" />
+	<image title="Fish" type="fishing"
+           image="assets/mercado/pesca/fish.png"
+           price="60" />
+</gallery>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gallery>
+	<image title="Water" type="food"
+           image="assets/mercado/comida/waterbottle.png"
+           price="20" />
+	<image title="Grape" type="food"
+           image="assets/mercado/comida/grape.png"
+           price="50" />
+	<image title="Wheat" type="food"
+           image="assets/mercado/comida/trigo.png"
+           price="30" />
+    <image title="Meat" type="food"
+           image="assets/mercado/comida/meat.png"
+           price="80" />
+	<image title="Turkey" type="food"
+           image="assets/mercado/comida/turkey.png"
+           price="100" />
+</gallery>

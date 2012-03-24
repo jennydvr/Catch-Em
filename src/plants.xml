@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gallery>
+	<image title="Bellflower" type="plant"
+           image="assets/mercado/plantas/flower5.png"
+           price="40" />
+	<image title="Purple Lily" type="plant"
+           image="assets/mercado/plantas/flower3.png"
+           price="50" />
+	<image title="Yellow Lily" type="plant"
+           image="assets/mercado/plantas/flower4.png"
+           price="50" />
+	<image title="Cayenne" type="plant"
+           image="assets/mercado/plantas/flower2.png"
+           price="70" />
+	<image title="Sunflower" type="plant"
+           image="assets/mercado/plantas/flower1.png"
+           price="80" />           
+</gallery>

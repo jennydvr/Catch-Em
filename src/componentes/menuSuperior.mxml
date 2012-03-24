@@ -5,9 +5,7 @@
 		 xmlns:components="components.*"
 		 xmlns:botones="fxg.botones.*"
 		 width="800" height="70" creationComplete="inicializarBarra()">
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
+         
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
@@ -97,6 +95,7 @@
 			
 		]]>
 	</fx:Script>
+    
 <mx:ViewStack id="menu">
 	<s:NavigatorContent width="800" height="70" backgroundAlpha="0.0" backgroundColor="#FEFFC4"
 						contentBackgroundAlpha="0.0">

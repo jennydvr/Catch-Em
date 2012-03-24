@@ -16,7 +16,9 @@
 			import mx.controls.Alert;
 			[Bindable]
 			public var animal:Animal;
+			[Bindable]
 			public var timer:Timer
+			[Bindable]
 			public var timerAviso:Timer
 			public var aviso:int = 0;
 			private var interval:uint;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gallery>
+	<image title="Bat" type="toy"
+           image="assets/mercado/juguetes/bat.png"
+           price="40" />
+	<image title="Duck" type="toy"
+           image="assets/mercado/juguetes/duck.png"
+           price="50" />
+	<image title="Car" type="toy"
+           image="assets/mercado/juguetes/car.png"
+           price="70" />
+	<image title="Teddy Bear" type="toy"
+           image="assets/mercado/juguetes/bear.png"
+           price="90" />
+</gallery>

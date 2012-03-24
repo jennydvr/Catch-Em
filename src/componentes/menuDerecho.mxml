@@ -4,9 +4,7 @@
 		 xmlns:mx="library://ns.adobe.com/flex/mx"
 		 xmlns:componentes="componentes.*"
 		 width="800" height="600">
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
+         
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
@@ -23,6 +21,7 @@
 			public var objetosJuguete:ArrayCollection;
 		]]>
 	</fx:Script>
+    
 	<s:states>
 		<s:State name="home"/>
 		<s:State name="map"/>
@@ -48,7 +47,7 @@
 			</s:NavigatorContent>
 			
 			<s:NavigatorContent id="mapa">
-				<componentes:mapa animal="{animal}"
+				<componentes:mapa animal="@{animal}"
                                   animalSource="@{animalSource}"
 								  objetosComida = "{objetosComida}"
 								  objetosJuguete= "{objetosJuguete}">

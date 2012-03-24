@@ -3,9 +3,7 @@
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
 		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
 		 xmlns:components="componentes.*">
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>	
+         
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
@@ -18,6 +16,14 @@
 			public var objetosComida:ArrayCollection; //Parametro
 			[Bindable]
 			public var objetosJuguete: ArrayCollection; //Parametro
+			[Bindable]
+			public var sndChannel:SoundChannel; //Parametro
+			[Bindable]
+			public var snd:Sound;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
 		]]>
 	</fx:Script>
     
@@ -35,6 +41,7 @@
 
 	<s:Button x="162" y="364" width="16%" height="21%"  skinClass="skins.interior.logros" rotation="-35"/>
 	<s:Button x="463" y="342" width="219" height="149" label="Baul" skinClass="skins.interior.baul"/>
+    
 	<components:menuDerecho x="0" y="0"
 							animal="@{animal}"
 							animalSource="@{animalSource}"

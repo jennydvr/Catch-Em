@@ -4,10 +4,6 @@
 		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
 		 xmlns:components="componentes.*">
 	
-	<fx:Declarations>
-		<!-- Place non-visual elements (e.g., services, value objects) here -->
-	</fx:Declarations>
-	
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
@@ -22,6 +18,14 @@
 			public var objetosComida:ArrayCollection;
 			[Bindable]
 			public var objetosJuguete:ArrayCollection;
+			[Bindable]
+			public var sndChannel:SoundChannel; //Parametro
+			[Bindable]
+			public var snd:Sound;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
 		]]>
 	</fx:Script>
 	
@@ -53,7 +57,7 @@
 		
 		<!-- Mercado -->
 		<s:NavigatorContent id="mercado">
-			<components:mercado animal="{animal}"
+			<components:mercado animal="@{animal}"
 							    objetosComida = "{objetosComida}"
 							    objetosJuguete="{objetosJuguete}">
 			</components:mercado>
@@ -61,7 +65,7 @@
 		
 		<!-- Minijuego: Carrera -->
 		<s:NavigatorContent id="carrera">
-			<components:miniJuego animal="{animal}"
+			<components:miniJuego animal="@{animal}"
 								  objetosComida = "{objetosComida}"
 								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>		
@@ -69,7 +73,7 @@
 		
 		<!-- Minijuego: Tiro -->
 		<s:NavigatorContent id="tiro">
-			<components:miniJuego animal="{animal}"
+			<components:miniJuego animal="@{animal}"
 								  objetosComida = "{objetosComida}"
 								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>		
@@ -77,7 +81,7 @@
 		
 		<!-- Minijuego: Pelea -->
 		<s:NavigatorContent id="pelea" >
-			<components:miniJuego animal="{animal}"
+			<components:miniJuego animal="@{animal}"
                                   objetosComida = "{objetosComida}"
 								  objetosJuguete="{objetosJuguete}">
 			</components:miniJuego>
@@ -85,7 +89,7 @@
 		
 		<!-- Minijuego: Perdidos y Encontrados -->
 		<s:NavigatorContent id="encontrado">
-			<components:perdidoEncontrado animal="{animal}"
+			<components:perdidoEncontrado animal="@{animal}"
                                           objetosComida = "{objetosComida}"
 										  objetosJuguete="{objetosJuguete}">
 			</components:perdidoEncontrado>
@@ -105,7 +109,11 @@
 	</mx:ViewStack>
 	
 	<!-- Menu general -->
-	<components:menuSuperior animal="@{animal}">
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 snd="{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
 	</components:menuSuperior>
 	
 

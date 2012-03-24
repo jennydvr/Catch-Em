@@ -11,13 +11,9 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
-			
 			import flash.media.*;
-			
 			import mx.collections.*;
 			import mx.controls.Alert; 
-			
-			
 			
 			[Bindable]
 			public var arregloSexo:ArrayList = new ArrayList ([ {label:"Select"},{label:"Female", data:"Femenino"},
@@ -150,48 +146,13 @@
 			/ Comida, Anzuelo, Juguete, Semilla
 			*/
 			public function inicializarObjetos(event:MouseEvent):void{
-				//5 comidas
-				[Embed(source="src/assets/apple.png")]
-			     var imagen:String;
-			 var c1:Comida = new Comida("Apple","30",imagen,10,5);
-			 [Embed(source="src/assets/meat.png")]
-			 var imagen2:String
-			 var c2:Comida = new Comida("Meat","70",imagen2,20,10);
-			 
-			 var c3:Comida = new Comida("Wheat", "60","src/assets/trigo.png",20,10);
-			 var c4:Comida = new Comida("Fish", "50", "src/assets/fish.png",20,10);
-			 var c5:Comida = new Comida("Bone", "20", "src/assets/bone.png",10,5); 
-				objetosComida.addItem(c1);
-/* 				objetosComida.addItem(c2);
-				objetosComida.addItem(c3);
-				objetosComida.addItem(c4);
-				objetosComida.addItem(c5); */
-			 // 4 jugetes
-				[Embed(source="src/assets/baseball.png")]
-				var imagen3:String
-			 var j1:Juguete = new Juguete("Baseball","60",imagen3,10,30);
-			/*  var j2:Juguete = new Juguete("Football","30","src/assets/ball.png",25,30); */
-				 objetosJuguete.addItem(j1);
-				/*  objetosJuguete.addItem(j2); */
-			 // 1 caña
-				 [Embed(source="src/assets/fishing.png")]
-				 var imagen4:String
-			 var p1:Anzuelo = new Anzuelo("First fish road","100",imagen4,20,60);
-				 objetosPesca.addItem(p1);
-			 // 1 semilla
-			 var s1:Semilla = new Semilla("Tomato seed","90","src/assets/plant.png",20,80);
-			 	 objetosSiembra.addItem(s1);
+				var c:Comida = new Comida("Water", "20", "src/assets/mercado/comida/waterbottle.png", 20, 10);
+				var j:Juguete = new Juguete("Bat", "40", "src/assets/mercado/juguetes/bat.png", 20, 10);
+				baul.objetos.addItem(c);
+				baul.objetos.addItem(j);
 				
-				 //Baul inicial para todos
-				
-				 baul.objetos.addItem(c1);
-				// baul.objetos.addItem(c2);
-			//	 baul.objetos.addItem(j2);
-				 baul.objetos.addItem(p1);
-				 baul.objetos.addItem(s1);
-				
-				 informacionAnimal(event);
-			 }
+				informacionAnimal(event);
+			}
 			
 			
 			/* Funcion para movernos por las imagenes de las mascotas. Flecha izquierda
@@ -265,7 +226,7 @@
 			<s:Image x="162" y="70" source="assets/titulo.png"/>
 			
 			<mx:TabNavigator x="390" y="200" width="345" height="285" backgroundAlpha="0"
-							 borderVisible.tigre="false" contentBackgroundAlpha.tigre="1.0">
+							 borderVisible="false" contentBackgroundAlpha="1.0">
 				
 				<!-- Primera pestana -->
 				<s:NavigatorContent width="100%" height="100%" backgroundAlpha="0" icon="@Embed('assets/num1.png')">
@@ -354,8 +315,7 @@
 			</mx:TabNavigator>
 				
 			
-			  <s:Image id="imagenTigre" includeIn="tigre" x="142" y="259" height="155"
-					   source="assets/gato.png"/>
+			  <s:Image id="imagenTigre" includeIn="tigre" x="142" y="259" height="155" source="assets/gato.png"/>
 			  <s:Image id="imagenDino" includeIn="dino" x="48" y="185" source="assets/dino.png"/>
 		 	  <s:Image id="imagenBuho" includeIn="buho" x="89" y="199" source="assets/buho.png"/>
 			  <s:Image id="imagenLobo" includeIn="lobo" x="148" y="256" source="assets/lobo.gif"/>
@@ -385,19 +345,14 @@
 									 animalSource="@{animalSource}" 
 									 animal="@{animal}"
 									 objetosComida="{objetosComida}"
-									 objetosJuguete="{objetosJuguete}"
+									 objetosJuguete="@{objetosJuguete}"
 									 sndChannel="{sndChannel}"
 									 snd="{snd}">
 				
 				
 		    </components:casaExterior>
 		</s:NavigatorContent>
-
-				
 	
 	</mx:ViewStack>
-	
-	
-
 	
 </s:Application>
