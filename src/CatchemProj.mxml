@@ -16,11 +16,11 @@
 			import mx.controls.Alert; 
 			
 			[Bindable]
-			public var arregloSexo:ArrayList = new ArrayList ([ {label:"Select"},{label:"Female", data:"Femenino"},
-				{label:"Male", data:"Masculino"}]);
+			public var arregloSexo:ArrayList = new ArrayList ([{label:"Female", data:"mujer"},
+				{label:"Male", data:"hombre"}]);
 			[Bindable]
-			public var arregloColor:ArrayList = new ArrayList ([{label:"Select"},{label:"Blue", data:"Azul"},
-				{label:"Red", data:"Rojo"}]);
+			public var arregloColor:ArrayList = new ArrayList ([{label:"Blue", data:"azul"},
+				{label:"Red", data:"rojo"},{label:"Yellow", data:"amarillo"},{label:"White", data:"blanco"}]);
 			[Bindable]
 			public var animalSource:CasaExterior;
 			[Bindable]
@@ -67,7 +67,7 @@
 		    // y llenamos el baul
 	
 			 if (currentState== "tigre"){
-				 animalSource.animal="assets/gato.png";
+				 animalSource.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num2.gif";
@@ -79,7 +79,7 @@
 				 animal.habVelocidad=90;
 			 }
 			 else if (currentState == "dino"){
-				 animalSource.animal="assets/dino.png";
+				 animalSource.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -93,7 +93,7 @@
 				 
 			 }
 			 else if(currentState =="buho"){
-				 animalSource.animal="assets/buho.png";
+				 animalSource.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -103,10 +103,10 @@
 				 //Habilidades
 				 animal.habFuerza=15;
 				 animal.habIntel=90;
-				 animal.habVelocidad=30;				 
+				 animal.habVelocidad=30;
 			 }
 			 else if(currentState == "lobo"){
-				 animalSource.animal="assets/lobo.gif";
+				 animalSource.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -146,8 +146,8 @@
 			/ Comida, Anzuelo, Juguete, Semilla
 			*/
 			public function inicializarObjetos(event:MouseEvent):void{
-				var c:Comida = new Comida("Water", "20", "src/assets/mercado/comida/waterbottle.png", 20, 10);
-				var j:Juguete = new Juguete("Bat", "40", "src/assets/mercado/juguetes/bat.png", 20, 10);
+				var c:Comida = new Comida("Water", "20", "assets/mercado/comida/waterbottle.png", 20, 10);
+				var j:Juguete = new Juguete("Bat", "40", "assets/mercado/juguetes/bat.png", 20, 10);
 				baul.objetos.addItem(c);
 				baul.objetos.addItem(j);
 				
@@ -224,7 +224,7 @@
 		<s:NavigatorContent id="pagPrincipal" width="800" height="600" backgroundAlpha="0.0">
 			<s:Image x="-2" y="0" source="assets/fondoprincipal.png"/>
 			<s:Image x="162" y="70" source="assets/titulo.png"/>
-			
+			<s:Image x="120" y="237" width="218" height="218" source="assets/diabetesbluecircle.png"/>
 			<mx:TabNavigator x="390" y="200" width="345" height="285" backgroundAlpha="0"
 							 borderVisible="false" contentBackgroundAlpha="1.0">
 				
@@ -313,14 +313,22 @@
 				
 
 			</mx:TabNavigator>
-				
 			
-			  <s:Image id="imagenTigre" includeIn="tigre" x="142" y="259" height="155" source="assets/gato.png"/>
-			  <s:Image id="imagenDino" includeIn="dino" x="48" y="185" source="assets/dino.png"/>
-		 	  <s:Image id="imagenBuho" includeIn="buho" x="89" y="199" source="assets/buho.png"/>
-			  <s:Image id="imagenLobo" includeIn="lobo" x="148" y="256" source="assets/lobo.gif"/>
+			
+   		    <s:Image id="imagenTigre" includeIn="tigre" x="127" y="237" width="200" height="200"
+					   scaleMode="letterbox" smooth="true" smoothingQuality="high"
+					   source="assets/pets/tigre/{color.selectedItem.data}/{sexo.selectedItem.data}.png"/>
+			<s:Image id="imagenLobo" includeIn="lobo" x="127" y="237" width="200" height="200"
+					 scaleMode="letterbox" smooth="true" smoothingQuality="high"
+					 source="assets/pets/lobo/{color.selectedItem.data}/{sexo.selectedItem.data}.png"/>
+			<s:Image id="imagenDino" includeIn="dino" x="127" y="237" width="200" height="200"
+					 scaleMode="letterbox" smooth="true" smoothingQuality="high"
+					 source="assets/pets/dino/{color.selectedItem.data}/{sexo.selectedItem.data}.png"/>
+			<s:Image id="imagenAve" includeIn="buho" x="127" y="237" width="200" height="200"
+					 scaleMode="letterbox" smooth="true" smoothingQuality="high"
+					 source="assets/pets/ave/{color.selectedItem.data}/{sexo.selectedItem.data}.png"/>
 		   
-			<s:Label x="148" y="213" color="#FFFFFF" fontFamily="Verdana" fontSize="16"
+			<s:Label x="159" y="225" color="#FFFFFF" fontFamily="Verdana" fontSize="16"
 					 fontWeight="bold" text="Select your pet"/>
 			
 			<!-- La transicion de las fotos de los animales -->
@@ -335,6 +343,7 @@
 					  cornerRadius="2" enabled="true" fontFamily="Verdana" fontSize="16"
 					  fontWeight="bold" mouseDownEffect="{sonidoClick}"
 					  skinClass="spark.skins.spark.ButtonSkin"/>
+			
 
 		</s:NavigatorContent>
 		
