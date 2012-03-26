@@ -19,6 +19,7 @@ package clases
 		public var habFuerza:int;
 		public var tipo:String;
 		public var nivelMax:int;
+		public var animal:String;
 
 		
 		public function Animal()

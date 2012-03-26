@@ -112,7 +112,7 @@
 			
 		</s:BorderContainer>
 		
-		<s:Image x="400" y="200" source="{animalSource.animal}"/>
+		<s:Image x="400" y="200" source="{animal.animal}"/>
 		
 		<components:menuIzquierdo x="12" y="104"
                                   animal="@{animal}"

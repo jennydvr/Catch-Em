@@ -64,8 +64,8 @@
 		]]>
 	</fx:Script>
 	
-	<s:Image width="800" height="600" fillMode="repeat" source="assets/pattern.png"
-			 source.fishing="@Embed('assets/pattern.png')"/>
+	<s:Image width="800" height="600" fillMode="repeat"
+			 source="@Embed('assets/pattern.png')"/>
 	
 	<s:Image x="127" y="144" width="542" height="334" scaleMode="stretch"
 			 smooth="true" source="@Embed('assets/texto.png')"/>

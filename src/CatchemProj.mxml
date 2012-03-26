@@ -67,7 +67,7 @@
 		    // y llenamos el baul
 	
 			 if (currentState== "tigre"){
-				 animalSource.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num2.gif";
@@ -79,7 +79,7 @@
 				 animal.habVelocidad=90;
 			 }
 			 else if (currentState == "dino"){
-				 animalSource.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -93,7 +93,7 @@
 				 
 			 }
 			 else if(currentState =="buho"){
-				 animalSource.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -106,7 +106,7 @@
 				 animal.habVelocidad=30;
 			 }
 			 else if(currentState == "lobo"){
-				 animalSource.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";

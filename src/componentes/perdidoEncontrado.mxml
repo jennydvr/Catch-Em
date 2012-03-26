@@ -9,6 +9,7 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.controls.Alert;
 			import mx.collections.ArrayCollection;
 			[Bindable]
 			public var animal:Animal;
@@ -16,6 +17,20 @@
 			public var objetosComida:ArrayCollection; //Parametro
 			[Bindable]
 			public var objetosJuguete: ArrayCollection; //Parametro
+			
+			public var elementos: int = 7;
+			public function desaparecer():void{
+				rayo.visible = false;
+			}
+			
+			public function verificar():void{
+				this.elementos = this.elementos -1;
+				if (this.elementos == 0){
+					Alert.show('Felicidades!! Has ganado');
+					
+				}
+				
+			}
 		]]>
 	</fx:Script>
 
@@ -29,26 +44,44 @@
 	</s:BorderContainer>
 	<s:NavigatorContent width="800" height="600" backgroundColor="#B0AAAA">
 
-		<s:BorderContainer x="0" y="73" width="800" height="330">
-			<s:Label x="347" y="142" text="Imagen juego"/>
-		</s:BorderContainer>
 		<s:BorderContainer x="0" y="401" width="800" height="184" backgroundColor="#FFFB8C">
+			<s:Label id="rayotag" x="168" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Lightning"/>
+			<s:Label id="manzatag" x="309" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Apple"/>
+			<s:Label id="estrellatag" x="441" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Star"/>
+			<s:Label id="peztag" x="563" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Fish"/>		
+			<s:Label id="monedatag" x="512" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Coin"/>
+			<s:Label id="jabontag" x="379" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Bar soap"/>
+			<s:Label id="pollotag" x="247" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Chicken"/>
 		</s:BorderContainer>	
+		<s:Image x="1" y="59" width="800" height="343" source="assets/park.png" />
+		<s:Image id="rayo" x="590" y="93" width="31" height="32" source="assets/extras/rayo.png" click="this.rayo.visible=false;
+				 	this.rayotag.visible=false; verificar();"/>
+		<s:Image id="manza" x="244" y="221" width="31" height="26" source="assets/apple.png" click="this.manza.visible=false;
+				 this.manzatag.visible=false; verificar();"/>
+		<s:Image id="pez" x="314" y="120" width="27" height="29" source="assets/fish.png" click="this.pez.visible=false;
+				 this.peztag.visible=false; verificar();"/>
+		<s:Image id="estrella" x="474" y="265" width="20" height="27" source="assets/extras/estrella.png" click="this.estrella.visible=false;
+				 this.estrellatag.visible=false; verificar();"/>
+		<s:Image id="moneda" x="236" y="370" width="19" height="23" source="assets/extras/moneda.png" click="this.moneda.visible=false;
+				 this.monedatag.visible=false; verificar();"/>
+		<s:Image id="jabon" x="316" y="210" width="20" height="22" source="assets/extras/jabon.png" click="this.jabon.visible=false;
+				 this.jabontag.visible=false; verificar();"/>
+		<s:Image id="pollo" x="433" y="319" width="32" height="22" source="assets/extras/pollo.png"  click="this.pollo.visible=false;
+				 this.pollotag.visible=false; verificar();"/>
+		<s:Image x="550" y="123" width="32" height="37" source="assets/grape.png"/>
+		<s:Image x="429" y="93" width="39" height="49" source="assets/mercado/juguetes/duck.png"/>
+		<s:Image x="503" y="319" width="106" source="assets/mercado/pesca/cana.png"/>
+		<s:Image x="171" y="227" width="65" height="65" source="assets/ball.png"/>
+		<s:Image x="590" y="153" width="53" height="53" source="assets/buho.png"/>
 	</s:NavigatorContent>
-		<s:Label x="107" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Apple"/>
-		<s:Label x="237" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Hat"/>
-		<s:Label x="386" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Card"/>
-		<s:Label x="550" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Cat"/>
-		<s:Label x="170" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Rainbow"/>
-		<s:Label x="320" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Bird"/>
-		<s:Label x="485" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Bowl"/>
+
 	</s:NavigatorContent>
 	
 	<components:menuSuperior animal="@{animal}">
@@ -58,8 +91,6 @@
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
 							objetosJuguete= "{objetosJuguete}">
-		
 	</components:menuDerecho>
-	
 
 </s:Group>
