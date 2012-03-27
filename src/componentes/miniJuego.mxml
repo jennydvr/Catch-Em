@@ -16,6 +16,16 @@
 			public var objetosComida:ArrayCollection; //Parametro
 			[Bindable]
 			public var objetosJuguete: ArrayCollection; //Parametro
+			[Bindable]
+			public var sndChannel:SoundChannel;
+			[Bindable]
+			public var sndTransform:SoundTransform;
+			[Bindable]
+			public var snd:Sound;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
 		]]>
 	</fx:Script>
 		
@@ -35,12 +45,12 @@
 		
 	</s:NavigatorContent>
     
-	<components:menuSuperior animal="@{animal}">
-	</components:menuSuperior>
-    
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
-							objetosJuguete= "{objetosJuguete}">
+							objetosJuguete= "{objetosJuguete}"
+							sndTransform="@{sndTransform}"
+							sndChannel="@{sndChannel}"
+							snd="@{snd}">
 	</components:menuDerecho>
 	
 </s:Group>

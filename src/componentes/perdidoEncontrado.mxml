@@ -2,64 +2,131 @@
 <s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
 		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
-		 xmlns:components="componentes.*">
+		 xmlns:components="componentes.*"
+		 creationComplete="playSound()">
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
 			import clases.Animal;
+			import mx.controls.Alert;
 			import mx.collections.ArrayCollection;
+			import mx.managers.PopUpManager;
 			[Bindable]
 			public var animal:Animal;
 			[Bindable] 
 			public var objetosComida:ArrayCollection; //Parametro
 			[Bindable]
 			public var objetosJuguete: ArrayCollection; //Parametro
+			[Bindable]
+			public var sndChannel:SoundChannel;
+			[Bindable]
+			public var sndTransform:SoundTransform;
+			[Bindable]
+			public var snd:Sound;
+			public var alert:Alert;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
+			
+			[Embed(source="src/assets/Iron Horse.mp3")]
+			public var filePerd:Class;
+			
+			public var sndPerd:Sound = new filePerd() as Sound;
+			public var elementos: int = 7;
+			
+			public function playSound():void{
+			 sndChannel.stop() //Detenemos musica del juego
+			 sndChannel = sndPerd.play(0,int.MAX_VALUE);
+			}
+			
+			public function desaparecer():void{
+				rayo.visible = false;
+			}
+			
+			public function verificar():void{
+				this.elementos = this.elementos -1;
+				if (this.elementos == 0){
+				   animal.experiencia = animal.experiencia +40;
+					alert = Alert.show('Congratulations!! You won! You earned Experience and gained Coins!');
+					animal.dinero = animal.dinero + 60;
+					setTimeout(musicaJuego,2000);
+					
+				}
+				
+			}
+			
+			public function musicaJuego():void{
+				PopUpManager.removePopUp(alert);
+				sndChannel = snd.play(0,int.MAX_VALUE,sndTransform);
+			}
 		]]>
 	</fx:Script>
 
 	<s:NavigatorContent>
 		
 
-	<s:BorderContainer x="10" y="78" width="780" height="321">
-		<s:Label x="347" y="142" text="Imagen juego"/>
-	</s:BorderContainer>
 	<s:BorderContainer x="10" y="406" width="781" height="184" backgroundColor="#FFFB8C">
 	</s:BorderContainer>
 	<s:NavigatorContent width="800" height="600" backgroundColor="#B0AAAA">
 
-		<s:BorderContainer x="0" y="73" width="800" height="330">
-			<s:Label x="347" y="142" text="Imagen juego"/>
-		</s:BorderContainer>
 		<s:BorderContainer x="0" y="401" width="800" height="184" backgroundColor="#FFFB8C">
+			<s:Label id="rayotag" x="168" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Lightning"/>
+			<s:Label id="manzatag" x="309" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Apple"/>
+			<s:Label id="estrellatag" x="441" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Star"/>
+			<s:Label id="peztag" x="563" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Fish"/>		
+			<s:Label id="monedatag" x="512" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Coin"/>
+			<s:Label id="jabontag" x="379" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Bar soap"/>
+			<s:Label id="pollotag" x="247" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+					 text="Chicken"/>
 		</s:BorderContainer>	
+		<s:Image x="1" y="59" width="800" height="343" source="assets/jungle.jpg" />
+		<s:Image id="rayo" x="590" y="93" width="31" height="32" source="assets/extras/rayo.png" click="this.rayo.visible=false;
+				 	this.rayotag.visible=false; verificar();"/>
+		<s:Image id="manza" x="244" y="221" width="31" height="26" source="assets/apple.png" click="this.manza.visible=false;
+				 this.manzatag.visible=false; verificar();"/>
+		<s:Image id="pez" x="314" y="120" width="27" height="29" source="assets/fish.png" click="this.pez.visible=false;
+				 this.peztag.visible=false; verificar();"/>
+		<s:Image id="estrella" x="474" y="265" width="20" height="27" source="assets/extras/estrella.png" click="this.estrella.visible=false;
+				 this.estrellatag.visible=false; verificar();"/>
+		<s:Image id="moneda" x="236" y="370" width="19" height="23" source="assets/extras/moneda.png" click="this.moneda.visible=false;
+				 this.monedatag.visible=false; verificar();"/>
+		<s:Image id="jabon" x="316" y="210" width="20" height="22" source="assets/extras/jabon.png" click="this.jabon.visible=false;
+				 this.jabontag.visible=false; verificar();"/>
+		<s:Image id="pollo" x="433" y="319" width="32" height="22" source="assets/extras/pollo.png"  click="this.pollo.visible=false;
+				 this.pollotag.visible=false; verificar();"/>
+		<s:Image x="550" y="123" width="32" height="37" source="assets/grape.png"/>
+		<s:Image x="429" y="93" width="39" height="49" source="assets/mercado/juguetes/duck.png"/>
+		<s:Image x="503" y="319" width="106" source="assets/mercado/pesca/cana.png"/>
+		<s:Image x="171" y="227" width="65" height="65" source="assets/ball.png"/>
+		<s:Image x="590" y="153" width="53" height="53" source="assets/buho.png"/>
 	</s:NavigatorContent>
-		<s:Label x="107" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Apple"/>
-		<s:Label x="237" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Hat"/>
-		<s:Label x="386" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Card"/>
-		<s:Label x="550" y="415" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Cat"/>
-		<s:Label x="170" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Rainbow"/>
-		<s:Label x="320" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Bird"/>
-		<s:Label x="485" y="474" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-				 text="Bowl"/>
+
 	</s:NavigatorContent>
 	
-	<components:menuSuperior animal="@{animal}">
-	</components:menuSuperior>
     
 	<!-- Mapa -->
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
-							objetosJuguete= "{objetosJuguete}">
-		
+							objetosJuguete= "{objetosJuguete}"
+							sndTransform="@{sndTransform}"
+							sndChannel="@{sndChannel}">
 	</components:menuDerecho>
 	
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 sndTransform="@{sndTransform}"
+							 snd="@{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
+	</components:menuSuperior>
 
 </s:Group>

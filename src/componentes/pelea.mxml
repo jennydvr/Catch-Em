@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
+		 xmlns:components="componentes.*"
+		 creationComplete="inicio();">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import clases.Animal;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.managers.PopUpManager;
+			[Bindable]
+			public var animal:Animal;
+			[Bindable] 
+			public var objetosComida:ArrayCollection; //Parametro
+			[Bindable]
+			public var objetosJuguete: ArrayCollection; //Parametro
+			[Bindable]
+			public var sndChannel:SoundChannel;
+			[Bindable]
+			public var sndTransform:SoundTransform;
+			[Bindable]
+			public var snd:Sound;
+			[Bindable]
+			public var timer:Timer; // Timer que se dispara cada 2 minutos
+			[Bindable]
+			public var timerAviso:Timer; //Timer cada 10 minutos
+			//Sonidos
+			[Embed(source="src/assets/win.mp3")]
+			public var fileWin:Class;
+			[Embed(source="src/assets/lose.mp3")]
+			public var fileLose:Class;
+			[Embed(source="src/assets/Movement Proposition.mp3")]
+			public var fileBattle:Class;
+			
+			public var sndWin:Sound = new fileWin() as Sound;
+			public var sndLose:Sound = new fileLose() as Sound;
+			public var sndBattle:Sound = new fileBattle() as Sound;
+			//Vida
+			public var vida:int;
+			public var vidaContrincante:int;
+			public var miDefensa:Boolean = false;
+			public var suDefensa:Boolean = false;
+			public var fin:Boolean = false;
+			public var alert:Alert;
+			public var hidden:Boolean = false;
+			
+			public function inicio():void{
+				vida = 100;
+				vidaContrincante = 100;
+				miVida.setProgress(vida,100);
+				vidaCont.setProgress(vidaContrincante,100);
+				sndChannel.stop();
+				sndChannel = sndBattle.play(0,int.MAX_VALUE);	
+			}
+			
+			public function atacar(dano:int):void {
+				var random:Number = Math.round(Math.random());
+				if (suDefensa){
+					alert = Alert.show("John evaded your attack");
+					setTimeout(evadido, 2000);
+				}
+				else{
+					if (random == 0){ //Ataque fallido
+						
+						alert = Alert.show("John evaded your attack");
+						setTimeout(evadido, 2000);
+					}
+					else{
+						alert = Alert.show("You just hit +"+dano+" damage on your enemy!");
+						setTimeout(atacando, 2000, dano);	
+					}
+				}
+				
+			//Atacar al contrincante
+			
+			}
+				// Ahora el contrincante ataca
+			public function atacarContrincante():void{
+				alert = Alert.show("John is thinking...");
+				setTimeout(accionAtaque, 2000);
+				
+			}
+			
+			public function accionAtaque():void{
+				PopUpManager.removePopUp(alert);
+				var random2:Number = Math.round(Math.random()*3);
+				
+				if (random2 == 0){ //Se defiende
+					alert = Alert.show("John just defended himself!");
+					setTimeout(evadido2, 2000);
+					suDefensa = true;
+				}
+				else if(random2==1){ //Punch
+					alert = Alert.show("John tries to punch you");
+					setTimeout(recibirAtaque,2000,20);
+				}
+				else{ // Kick
+					alert = Alert.show("John tries to kick you");
+					setTimeout(recibirAtaque,2000,30);
+				}
+				
+			}
+
+			
+			
+			public function recibirAtaque(dano:int):void{
+				PopUpManager.removePopUp(alert);
+				var random:Number = Math.round(Math.random());
+				if (miDefensa){
+					alert = Alert.show("You evaded the attack");
+					setTimeout(evadido2, 2000);
+					
+				}
+				else{
+					if (random == 0){ //Ataque fallido
+						alert = Alert.show("You evaded the attack");
+						setTimeout(evadido2, 2000);
+					}
+					else{
+						alert = Alert.show("John hit you +"+dano+" damage !");
+						setTimeout(recibidoAtaque, 2000, dano);
+						
+					}
+				}
+			}
+			
+			public function defender():void{
+				alert = Alert.show('You just defended yourself'); 
+				setTimeout(defendido, 2000);
+
+			}
+			
+			
+			private function evadido():void {
+				PopUpManager.removePopUp(alert);
+				hidden=true;
+				suDefensa = false;
+				if (!fin){
+					atacarContrincante();
+				}
+			}
+			
+			private function evadido2():void{
+				PopUpManager.removePopUp(alert);
+				miDefensa=false;
+			}
+			
+			private function atacando(dano:int):void{
+				PopUpManager.removePopUp(alert);
+				hidden=true;
+				if(vidaContrincante - dano <=0){
+					
+					vidaCont.setProgress(0,100);
+					animal.experiencia = animal.experiencia + 100;
+					animal.dinero = animal.dinero + 120;
+					sndChannel.stop(); //Detenemos la cancion de batalla
+					sndChannel = sndWin.play(0,1);
+					alert = Alert.show("Congratulations!! You've won! Now you gained Experience and earned Coins!!");
+					setTimeout(musicaJuego, 5000); //Reiniciamos musica del juego
+					
+					fin = true;
+				}
+				else{
+					vidaContrincante = vidaContrincante - dano;	
+					vidaCont.setProgress(vidaContrincante,100);	
+				}
+				suDefensa = false;
+				if (!fin){
+					atacarContrincante();
+				}
+				
+			}
+			
+			
+			public function recibidoAtaque(dano:int):void{
+				PopUpManager.removePopUp(alert);
+				if(vida - dano <=0){
+					miVida.setProgress(0,100);
+					animal.experiencia = animal.experiencia + 50;
+					animal.dinero = animal.dinero + 5;
+					sndChannel.stop(); //Detenemos la cancion de batalla
+					sndChannel = sndLose.play(0,1);
+					alert = Alert.show("Sorry!! You've lost!, Still you earned Experience!");
+					setTimeout(musicaJuego, 5000); 
+					sndChannel.addEventListener(Event.SOUND_COMPLETE, musicaJuego) //Reiniciamos la musica del juego
+					fin = true;
+				}
+				else{
+					vida = vida - dano;	
+					miVida.setProgress(vida,100);
+				}
+				miDefensa=false;
+			}
+			
+			public function defendido():void{
+				PopUpManager.removePopUp(alert);
+				miDefensa = true; 
+				atacarContrincante();
+			}
+			
+			public function musicaJuego():void{
+				PopUpManager.removePopUp(alert);
+				sndChannel = snd.play(0,int.MAX_VALUE,sndTransform);
+			}
+			
+		]]>
+	</fx:Script>
+
+	<s:NavigatorContent width="800" height="600">
+		<!-- Fondo -->
+		<s:Image x="0" y="0" source="assets/casa/cielo.png"/>
+		<s:Image x="0" y="160" source="assets/casa/grama.png"/>
+        
+		<s:Image x="5" y="180" source="assets/gente.png"/>
+        <s:Image x="202" y="180" source="assets/gente.png"/>
+		<s:Image x="401" y="180" source="assets/gente.png"/>
+		<s:Image x="599" y="180" source="assets/gente.png"/>
+		
+		<s:SkinnableContainer x="0" y="262" width="800" height="338" backgroundAlpha="0">
+			
+		
+		
+		</s:SkinnableContainer>
+		
+		<!-- Seccion de mi mascota -->
+		<mx:Accordion x="122" y="448" width="200" height="78" dropShadowVisible="true">
+			<s:NavigatorContent width="100%" height="100%" label="Attack">
+				<s:Button x="20" y="0" width="178" label="Punch (+20 Damage)" chromeColor="#FFF178" click="atacar(20);"/>
+				<s:Button x="20" y="19" width="178" label="Kick (+30 Damage)" chromeColor="#FFF178" click="atacar(30);"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent width="100%" height="100%" label="Defend">
+				<s:Button x="26" y="1" width="173" label="Evade" click="defender()"/>
+			</s:NavigatorContent>
+			
+		</mx:Accordion>
+		
+		<!-- Barra de vida de mi mascota -->
+		<mx:ProgressBar id="miVida" x="127" y="550" label="You" chromeColor="#EC3729" color="#F6F0F0"
+						labelPlacement="center" maximum="1000" minimum="0"
+						mode="manual"/>
+		
+		<!-- Seccion del contrincante -->
+		<mx:Accordion x="484" y="448" width="200" height="78" dropShadowVisible="true">
+			<s:NavigatorContent width="100%" height="100%" label="Attack">
+				<s:Button x="20" y="0" width="178" label="Punch (+20 Damage)" chromeColor="#FFF178" enabled="false"/>
+				<s:Button x="20" y="19" width="178" label="Kick (+30 Damage)" chromeColor="#FFF178" enabled="false"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent width="100%" height="100%" label="Defend">
+				<s:Button x="26" y="1" width="173" label="Evade" enabled="false"/>
+			</s:NavigatorContent>
+			
+		</mx:Accordion>
+		
+		<!-- Barra de vida del contrincante -->
+		<mx:ProgressBar id="vidaCont" x="484" y="550" label="John" chromeColor="#EC3729" color="#F6F0F0"
+						labelPlacement="center" maximum="1000" minimum="0"
+						mode="manual"/>
+		<s:Label x="385" y="545" color="#FFFFFF" fontFamily="Verdana" fontSize="29" text="VS"/>
+		
+		
+	</s:NavigatorContent>
+
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 sndTransform="@{sndTransform}"
+							 snd="@{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
+	</components:menuSuperior>
+	<components:menuDerecho animal="@{animal}"
+							objetosComida = "{objetosComida}"
+							objetosJuguete= "{objetosJuguete}"
+							sndTransform="@{sndTransform}"
+							sndChannel="@{sndChannel}"
+							snd="@{snd}">
+	</components:menuDerecho>
+
+	
+	
+</s:Group>

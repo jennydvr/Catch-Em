@@ -14,6 +14,9 @@
 			import flash.events.TimerEvent;
 			import flash.media.*;
 			import flash.utils.Timer;
+			import mx.events.SliderEvent;
+            import mx.controls.sliderClasses.Slider;
+
 
 			[Bindable]
 			public var animal:Animal;
@@ -28,9 +31,12 @@
 			[Bindable]
 			[Embed(source="src/assets/Main theme.mp3")]
 			public var sndCls:Class;
+			[Bindable]
 			public var snd:Sound; 
 			[Bindable]
 			public var sndChannel:SoundChannel;
+			[Bindable]
+			public var sndTransform:SoundTransform;
 			//Salir
 			private var browserType:String = "";
 			private var urlString:String;
@@ -42,6 +48,7 @@
 			public var timerAviso:Timer; //Timer cada 10 minutos
 		 	public var timerBar:Timer;//cada segundo
 			private var interval:uint;
+
 			
 			public function inicializarBarra():void{
 				interval = setInterval(incrementarBarra,1000);
@@ -65,33 +72,40 @@
 				experiencia = animal.experiencia;
 			}
 			
+		   /** Boton de pausa de juego: Pausa los timer **/
 			public function pause():void{
 				reanudar = reanudar + 1;
 				if (reanudar%2 == 0){
-				
-					sndChannel=snd.play(0,int.MAX_VALUE);
 					timer.start();
 					timerAviso.start();
 				}
 				else{
-					sndChannel.stop();
+					Alert.show("The game's been paused!. To resume, press pause again");
 					timer.stop();
 					timerAviso.stop();
 				}
 				
 			}
-			
+			/** Boton de salida: Cierra la pestana **/
 			private function exit():void
 			{
-				/**
-				 * For this to work in Firefox,
-				 * Type in "about:config" in firefox address bar 
-				 * set dom.allow_scripts_to_close_windows to true.
-				 */
+
 				urlString = "javascript:window.close();";
 				request = new URLRequest(urlString);
 				navigateToURL(request, "_self");    
 			}
+			
+			
+			/** Cambiar el volumen de la musica **/
+            private function cambioVolumen(event:SliderEvent):void {
+				
+                var currentSlider:Slider=Slider(event.currentTarget);
+				sndTransform.volume =currentSlider.value;
+				sndChannel.soundTransform = sndTransform;
+            }
+			
+			
+			
 			
 		]]>
 	</fx:Script>
@@ -125,6 +139,8 @@
 		<s:Image x="10" y="5" source="assets/extras/estrella.png"/>
 		<s:Image x="10" y="40" source="assets/extras/moneda.png"/>
 		
+		<mx:VSlider id="volume" x="759" y="65" height="107" change="cambioVolumen(event);"
+					maximum="1" minimum="0" value="0.5"/>
 	</s:NavigatorContent>
 	
 </mx:ViewStack>	

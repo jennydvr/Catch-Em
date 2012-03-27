@@ -11,7 +11,9 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
+			
 			import flash.media.*;
+			
 			import mx.collections.*;
 			import mx.controls.Alert; 
 			
@@ -46,11 +48,15 @@
 			[Bindable]
 			[Embed(source="src/assets/Main theme.mp3")]
 			public var sndCls:Class;
+			[Bindable]
 			public var snd:Sound = new sndCls() as Sound; 
+			[Bindable]
+			public var sndTransform:SoundTransform = new SoundTransform(0.8);
+			[Bindable]
 			public var sndChannel:SoundChannel;
 			
 			public function playSound():void {
-				sndChannel=snd.play(0,int.MAX_VALUE);
+				sndChannel=snd.play(0,int.MAX_VALUE,sndTransform);
 			}   
 			public function stopSound():void{
 				sndChannel.stop()
@@ -67,7 +73,7 @@
 		    // y llenamos el baul
 	
 			 if (currentState== "tigre"){
-				 animalSource.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num2.gif";
@@ -79,7 +85,7 @@
 				 animal.habVelocidad=90;
 			 }
 			 else if (currentState == "dino"){
-				 animalSource.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -93,7 +99,7 @@
 				 
 			 }
 			 else if(currentState =="buho"){
-				 animalSource.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -106,7 +112,8 @@
 				 animal.habVelocidad=30;
 			 }
 			 else if(currentState == "lobo"){
-				 animalSource.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -355,8 +362,9 @@
 									 animal="@{animal}"
 									 objetosComida="{objetosComida}"
 									 objetosJuguete="@{objetosJuguete}"
-									 sndChannel="{sndChannel}"
-									 snd="{snd}">
+									 sndTransform="@{sndTransform}"
+									 sndChannel="@{sndChannel}"
+									 snd="@{snd}">
 				
 				
 		    </components:casaExterior>

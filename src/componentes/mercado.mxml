@@ -42,6 +42,8 @@
 			[Bindable]
 			public var sndChannel:SoundChannel; //Parametro
 			[Bindable]
+			public var sndTransform:SoundTransform;
+			[Bindable]
 			public var snd:Sound;
 			[Bindable]
 			public var timer:Timer; // Timer que se dispara cada 2 minutos
@@ -55,17 +57,32 @@
 			}
 			
 			private function comprarArticulo(e:ListEvent):void{
-				Alert.show("You're buying: " + e.itemRenderer.data.nombre + " for: "+ e.itemRenderer.data.precio);
-				animal.dinero = animal.dinero - e.itemRenderer.data.precio;
-				animal.experiencia = animal.experiencia + 10;
-				animal.miBaul.objetos.addItem(e.itemRenderer.data);
+			
+				if (animal.dinero - e.itemRenderer.data.precio <= 0){
+					Alert.show("I'm sorry! You don't have enough money. Try winning some games!");
+				}
+				else{
+					animal.dinero = animal.dinero - e.itemRenderer.data.precio;
+					animal.experiencia = animal.experiencia + 10;
+					animal.miBaul.objetos.addItem(e.itemRenderer.data);
+					Alert.show("You're buying: " + e.itemRenderer.data.nombre + " for: "+ e.itemRenderer.data.precio);
+				}
+		
+				
 			}
 			
 		]]>
 	</fx:Script>
+	<components:menuSuperior animal="@{animal}"
+							 sndChannel="@{sndChannel}"
+							 sndTransform="@{sndTransform}"
+							 snd="@{snd}"
+							 timer="@{timer}"
+							 timerAviso="@{timerAviso}">
+	</components:menuSuperior>
 	
-	<s:Image width="800" height="600" fillMode="repeat" source="assets/pattern.png"
-			 source.fishing="@Embed('assets/pattern.png')"/>
+	<s:Image width="800" height="600" fillMode="repeat" source="@Embed('assets/pattern.png')"
+			 />
 	
 	<s:Image x="127" y="144" width="542" height="334" scaleMode="stretch"
 			 smooth="true" source="@Embed('assets/texto.png')"/>
@@ -84,19 +101,15 @@
 		</s:DataGroup>
 	</s:NavigatorContent>
 	
-	<components:menuSuperior animal="@{animal}"
-							 sndChannel="@{sndChannel}"
-							 snd="{snd}"
-							 timer="@{timer}"
-							 timerAviso="@{timerAviso}">
-	</components:menuSuperior>
-	
 	
 	<!-- Mapa -->
 	<components:menuDerecho x="0" y="0"
                             animal="@{animal}"
 							animalSource="@{animalSource}"
 							objetosComida = "{objetosComida}"
-							objetosJuguete= "{objetosJuguete}">
+							objetosJuguete= "{objetosJuguete}"
+							sndTransform="@{sndTransform}"
+							sndChannel="@{sndChannel}"
+							snd="@{snd}">
 	</components:menuDerecho>
 </s:Group>

@@ -132,8 +132,8 @@
 							enabled="true" fontSize="6" labelPlacement="left" maximum="100"
 							minimum="0" mode="manual"/>
 			
-			<s:Image x="13" y="107" source="assets/extras/risa.png"/>
-			<s:Image x="13" y="47" source="assets/extras/sueno.png"/>
+			<s:Image x="13" y="47" source="assets/extras/risa.png"/>
+			<s:Image x="13" y="107" source="assets/extras/sueno.png"/>
 			<s:Image x="13" y="17" source="assets/extras/pollo.png"/>
 			<s:Image x="13" y="78" source="assets/extras/jabon.png"/>
 			

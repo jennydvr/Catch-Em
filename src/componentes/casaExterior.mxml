@@ -8,6 +8,7 @@
 	<fx:Script>
 		<![CDATA[
 			import clases.*;
+			
 			import mx.collections.ArrayCollection;
 			import mx.controls.Alert;
 			import mx.managers.PopUpManager;
@@ -24,6 +25,8 @@
 			public var sndChannel:SoundChannel; //Parametro
 			[Bindable]
 			public var snd:Sound;
+			[Bindable]
+			public var sndTransform:SoundTransform;
 			//Timer
 			[Bindable]
 			public var timer:Timer = new Timer(120000); // Timer que se dispara cada 2 minutos
@@ -112,7 +115,7 @@
 			
 		</s:BorderContainer>
 		
-		<s:Image x="400" y="200" source="{animalSource.animal}"/>
+		<s:Image x="400" y="200" source="{animal.animal}"/>
 		
 		<components:menuIzquierdo x="12" y="104"
                                   animal="@{animal}"
@@ -130,7 +133,7 @@
 								objetosJuguete="{objetosJuguete}"
                                 animalSource="{animalSource}"
                                 sndChannel="@{sndChannel}"
-                                snd="{snd}"
+                                snd="@{snd}"
                                 timer="@{timer}"
                                 timerAviso="@{timerAviso}">
          </components:casaInterna>
@@ -144,7 +147,8 @@
 	
 	<components:menuSuperior animal="@{animal}"
 							 sndChannel="@{sndChannel}"
-							 snd="{snd}"
+							 sndTransform="@{sndTransform}"
+							 snd="@{snd}"
 							 timer="@{timer}"
 							 timerAviso="@{timerAviso}">
 	</components:menuSuperior>
@@ -153,7 +157,12 @@
                             animal="@{animal}"
 							animalSource="@{animalSource}"
 							objetosComida = "{objetosComida}"
-							objetosJuguete= "{objetosJuguete}">
+							objetosJuguete= "{objetosJuguete}"
+							sndChannel="@{sndChannel}"
+							sndTransform="@{sndTransform}"
+							snd="@{snd}"
+							timer="@{timer}"
+                            timerAviso="@{timerAviso}">
 	</components:menuDerecho>
 	
 </s:Group>
