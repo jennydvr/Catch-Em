@@ -144,5 +144,6 @@
 	</s:NavigatorContent>
 	
 </mx:ViewStack>	
+	<s:Image x="743" y="64" width="33" height="35" source="assets/volumen.png"/>
 
 </s:Group>

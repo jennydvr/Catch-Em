@@ -20,6 +20,7 @@ package clases
 		public var tipo:String;
 		public var nivelMax:int;
 		public var animal:String;
+		public var animalPelea:String;
 
 		
 		public function Animal()

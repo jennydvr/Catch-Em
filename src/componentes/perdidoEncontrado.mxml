@@ -66,28 +66,14 @@
 	</fx:Script>
 
 	<s:NavigatorContent>
-		
+			<s:Image width="800" height="600" fillMode="repeat" source="@Embed('assets/patternHoja.png')"
+			 />
 
-	<s:BorderContainer x="10" y="406" width="781" height="184" backgroundColor="#FFFB8C">
-	</s:BorderContainer>
-	<s:NavigatorContent width="800" height="600" backgroundColor="#B0AAAA">
+	<s:NavigatorContent width="800" height="600">
+		<s:Image width="459" height="184" x="171" y="401" fillMode="repeat" source="@Embed('assets/table.png')"
+				 />
 
-		<s:BorderContainer x="0" y="401" width="800" height="184" backgroundColor="#FFFB8C">
-			<s:Label id="rayotag" x="168" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Lightning"/>
-			<s:Label id="manzatag" x="309" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Apple"/>
-			<s:Label id="estrellatag" x="441" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Star"/>
-			<s:Label id="peztag" x="563" y="15" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Fish"/>		
-			<s:Label id="monedatag" x="512" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Coin"/>
-			<s:Label id="jabontag" x="379" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Bar soap"/>
-			<s:Label id="pollotag" x="247" y="63" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
-					 text="Chicken"/>
-		</s:BorderContainer>	
+	
 		<s:Image x="1" y="59" width="800" height="343" source="assets/jungle.jpg" />
 		<s:Image id="rayo" x="590" y="93" width="31" height="32" source="assets/extras/rayo.png" click="this.rayo.visible=false;
 				 	this.rayotag.visible=false; verificar();"/>
@@ -108,11 +94,23 @@
 		<s:Image x="503" y="319" width="106" source="assets/mercado/pesca/cana.png"/>
 		<s:Image x="171" y="227" width="65" height="65" source="assets/ball.png"/>
 		<s:Image x="590" y="153" width="53" height="53" source="assets/buho.png"/>
+		<s:Label id="rayotag" x="204" y="438" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Lightning"/>
+		<s:Label id="manzatag" x="322" y="438" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Apple"/>
+		<s:Label id="estrellatag" x="546" y="438" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Star"/>
+		<s:Label id="peztag" x="422" y="438" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Fish"/>
+		<s:Label id="monedatag" x="491" y="509" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Coin"/>
+		<s:Label id="jabontag" x="368" y="483" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Bar soap"/>
+		<s:Label id="pollotag" x="267" y="509" color="#103079" fontFamily="Verdana" fontSize="15" fontWeight="bold"
+				 text="Chicken"/>
 	</s:NavigatorContent>
 
 	</s:NavigatorContent>
-	
-    
 	<!-- Mapa -->
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
@@ -128,5 +126,7 @@
 							 timer="@{timer}"
 							 timerAviso="@{timerAviso}">
 	</components:menuSuperior>
+
+    
 
 </s:Group>

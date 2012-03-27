@@ -74,6 +74,7 @@
 	
 			 if (currentState== "tigre"){
 				 animal.animal="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animalPelea="assets/pets/tigre/" + color.selectedItem.data + "/" + sexo.selectedItem.data +"Pelea.png"
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num2.gif";
@@ -86,6 +87,7 @@
 			 }
 			 else if (currentState == "dino"){
 				 animal.animal="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animalPelea="assets/pets/dino/" + color.selectedItem.data + "/" + sexo.selectedItem.data +"Pelea.png"
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -100,6 +102,7 @@
 			 }
 			 else if(currentState =="buho"){
 				 animal.animal="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animalPelea="assets/pets/ave/" + color.selectedItem.data + "/" + sexo.selectedItem.data +"Pelea.png"
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";
@@ -113,7 +116,7 @@
 			 }
 			 else if(currentState == "lobo"){
 				 animal.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
-				 animal.animal="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data + ".png";
+				 animal.animalPelea="assets/pets/lobo/" + color.selectedItem.data + "/" + sexo.selectedItem.data +"Pelea.png"
 				 animalSource.imagenBaul="skins.casa.baul";
 				 animalSource.imagenCasa="src/assets/home.gif";
 				 animalSource.imagenSiembra="src/assets/num1.gif";

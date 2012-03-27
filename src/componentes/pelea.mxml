@@ -62,13 +62,13 @@
 			public function atacar(dano:int):void {
 				var random:Number = Math.round(Math.random());
 				if (suDefensa){
-					alert = Alert.show("John evaded your attack");
+					alert = Alert.show("Bob evaded your attack");
 					setTimeout(evadido, 2000);
 				}
 				else{
 					if (random == 0){ //Ataque fallido
 						
-						alert = Alert.show("John evaded your attack");
+						alert = Alert.show("Bob evaded your attack");
 						setTimeout(evadido, 2000);
 					}
 					else{
@@ -82,7 +82,7 @@
 			}
 				// Ahora el contrincante ataca
 			public function atacarContrincante():void{
-				alert = Alert.show("John is thinking...");
+				alert = Alert.show("Bob is thinking...");
 				setTimeout(accionAtaque, 2000);
 				
 			}
@@ -92,16 +92,16 @@
 				var random2:Number = Math.round(Math.random()*3);
 				
 				if (random2 == 0){ //Se defiende
-					alert = Alert.show("John just defended himself!");
+					alert = Alert.show("Bob just defended himself!");
 					setTimeout(evadido2, 2000);
 					suDefensa = true;
 				}
 				else if(random2==1){ //Punch
-					alert = Alert.show("John tries to punch you");
+					alert = Alert.show("Bob tries to punch you");
 					setTimeout(recibirAtaque,2000,20);
 				}
 				else{ // Kick
-					alert = Alert.show("John tries to kick you");
+					alert = Alert.show("Bob tries to kick you");
 					setTimeout(recibirAtaque,2000,30);
 				}
 				
@@ -123,7 +123,7 @@
 						setTimeout(evadido2, 2000);
 					}
 					else{
-						alert = Alert.show("John hit you +"+dano+" damage !");
+						alert = Alert.show("Bob hit you +"+dano+" damage !");
 						setTimeout(recibidoAtaque, 2000, dano);
 						
 					}
@@ -239,7 +239,7 @@
 			</s:NavigatorContent>
 			
 		</mx:Accordion>
-		
+		<s:Image x="173" y="313" source="{animal.animalPelea}"/>
 		<!-- Barra de vida de mi mascota -->
 		<mx:ProgressBar id="miVida" x="127" y="550" label="You" chromeColor="#EC3729" color="#F6F0F0"
 						labelPlacement="center" maximum="1000" minimum="0"
@@ -258,10 +258,12 @@
 		</mx:Accordion>
 		
 		<!-- Barra de vida del contrincante -->
-		<mx:ProgressBar id="vidaCont" x="484" y="550" label="John" chromeColor="#EC3729" color="#F6F0F0"
+		<mx:ProgressBar id="vidaCont" x="484" y="550" label="Bob" chromeColor="#EC3729" color="#F6F0F0"
 						labelPlacement="center" maximum="1000" minimum="0"
 						mode="manual"/>
 		<s:Label x="385" y="545" color="#FFFFFF" fontFamily="Verdana" fontSize="29" text="VS"/>
+			<s:Image x="484" y="269" width="189" height="218" source="@Embed('assets/otrobob.png')"/>
+	
 		
 		
 	</s:NavigatorContent>
@@ -272,6 +274,7 @@
 							 snd="@{snd}"
 							 timer="@{timer}"
 							 timerAviso="@{timerAviso}">
+							 
 	</components:menuSuperior>
 	<components:menuDerecho animal="@{animal}"
 							objetosComida = "{objetosComida}"
@@ -282,5 +285,6 @@
 	</components:menuDerecho>
 
 	
+
 	
 </s:Group>

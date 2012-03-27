@@ -2,7 +2,8 @@
 <s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
 		 xmlns:mx="library://ns.adobe.com/flex/mx" width="800" height="600"
-		 xmlns:components="componentes.*">
+		 xmlns:components="componentes.*"
+		 creationComplete="musicaJuego()">
 	
 	<fx:Script>
 		<![CDATA[
@@ -28,6 +29,11 @@
 			public var timer:Timer; // Timer que se dispara cada 2 minutos
 			[Bindable]
 			public var timerAviso:Timer; //Timer cada 10 minutos
+			
+			public function musicaJuego():void{
+			 sndChannel.stop() //Detenemos musica del juego
+			 sndChannel = snd.play(0,int.MAX_VALUE,sndTransform); //La iniciamos de nuevo
+			}
 		]]>
 	</fx:Script>
 	
@@ -95,12 +101,13 @@
 		<!-- Minijuego: Pelea -->
 		<s:NavigatorContent id="pelea" >
 			<components:pelea animal="@{animal}"
-                                  objetosComida = "{objetosComida}"
-								  objetosJuguete="{objetosJuguete}"
-								  sndTransform="@{sndTransform}"
-								  sndChannel="@{sndChannel}"
-								  timer="@{timer}"
-                                  timerAviso="@{timerAviso}">
+							  objetosComida = "{objetosComida}"
+							  objetosJuguete="{objetosJuguete}"
+							  snd="@{snd}"
+							  sndTransform="@{sndTransform}"
+							  sndChannel="@{sndChannel}"
+							  timer="@{timer}"
+							  timerAviso="@{timerAviso}">
 			</components:pelea>
 		</s:NavigatorContent>			
 		

@@ -3,7 +3,8 @@
 		 xmlns:s="library://ns.adobe.com/flex/spark"
 		 xmlns:mx="library://ns.adobe.com/flex/mx"
 		 width="800" height="600"
-		 xmlns:components="componentes.*">
+		 xmlns:components="componentes.*"
+		 creationComplete="musicaJuego()">
 
 	<fx:Script>
 		<![CDATA[
@@ -34,7 +35,12 @@
 			public var timerAviso:Timer = new Timer(600000); //Timer cada 10 minutos
 			
 			public var alert:Alert;
-            
+			
+            public function musicaJuego():void{
+			 sndChannel.stop() //Detenemos musica del juego
+			 sndChannel = snd.play(0,int.MAX_VALUE,sndTransform); //La iniciamos de nuevo
+			}
+			
 			/* Funcion para banar al animal */
 			public function banarse():void{
 				this.animal.higiene = 100;
